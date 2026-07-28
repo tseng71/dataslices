@@ -1,0 +1,327 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="3240" viewBox="0 0 1600 3240" role="img" aria-labelledby="title desc">
+  <title id="title">《城市突然熄灯时，太空看见了什么？》v2 视觉设计板</title>
+  <desc id="desc">包含桌面端首屏、恢复时间轴、最后百分之十、事件比较器和移动端的页面设计示意。</desc>
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090a12"/>
+      <stop offset="0.55" stop-color="#101322"/>
+      <stop offset="1" stop-color="#17152a"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#171a28"/>
+      <stop offset="1" stop-color="#0d0f19"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff7d8"/>
+      <stop offset="0.45" stop-color="#ffc85a"/>
+      <stop offset="1" stop-color="#ef8f3a"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#fff9d9" stop-opacity="1"/>
+      <stop offset="0.25" stop-color="#ffd369" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#ffb14a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="clouds" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="14" height="14" fill="#58728a" fill-opacity=".22"/>
+      <rect width="5" height="14" fill="#90a6b9" fill-opacity=".35"/>
+    </pattern>
+    <filter id="softGlow" x="-200%" y="-200%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+    <style>
+      .sans{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif}
+      .serif{font-family:"Noto Sans CJK SC","Songti SC","STSong",Georgia,serif}
+      .eyebrow{font-size:18px;letter-spacing:4px;fill:#f4b968;font-weight:700}
+      .h1{font-size:66px;fill:#fffaf0;font-weight:700}
+      .h2{font-size:38px;fill:#fffaf0;font-weight:700}
+      .h3{font-size:26px;fill:#fffaf0;font-weight:650}
+      .body{font-size:23px;fill:#d7d6df}
+      .small{font-size:17px;fill:#a9a9b8}
+      .tiny{font-size:14px;fill:#9696a6}
+      .number{font-size:52px;fill:#ffcf67;font-weight:700}
+      .chip{fill:#25283a;stroke:#44475e;stroke-width:1}
+      .frame{fill:url(#panel);stroke:#303346;stroke-width:2}
+      .hair{stroke:#44475e;stroke-width:1}
+      .road{fill:none;stroke:#30384a;stroke-width:4;stroke-linecap:round}
+      .coast{fill:#1a2130;stroke:#39445b;stroke-width:2}
+      .light{fill:#ffd264;filter:url(#softGlow)}
+      .dim{fill:#443d5b}
+      .recovered{fill:#ffbf4b}
+      .label{fill:#171922;stroke:#4a4d5e;stroke-width:1}
+    </style>
+  </defs>
+
+  <rect width="1600" height="3240" fill="url(#night)"/>
+  <circle cx="1360" cy="70" r="170" fill="url(#glow)" opacity=".18"/>
+
+  <g class="sans">
+    <text x="110" y="90" class="eyebrow">DATASLICES · V2 VISUAL DESIGN BOARD</text>
+    <text x="110" y="164" class="h1">城市突然熄灯时，</text>
+    <text x="110" y="235" class="h1">太空看见了什么？</text>
+    <text x="110" y="282" class="body">关键页面布局与视觉语言示意 · 非最终数据 · 2026-07-28</text>
+    <g transform="translate(1110,170)">
+      <rect width="380" height="106" rx="18" class="chip"/>
+      <circle cx="35" cy="35" r="8" fill="#ffd264"/>
+      <text x="56" y="41" class="small">暖黄：可检测夜光</text>
+      <rect x="27" y="62" width="16" height="16" fill="#443d5b"/>
+      <text x="56" y="77" class="small">紫灰：相对基线变暗</text>
+      <rect x="226" y="26" width="16" height="16" fill="url(#clouds)"/>
+      <text x="253" y="41" class="small">斜纹：观测无效</text>
+      <circle cx="234" cy="70" r="8" fill="none" stroke="#82d0e9" stroke-width="2"/>
+      <text x="253" y="77" class="small">外圈：关键设施</text>
+    </g>
+  </g>
+
+  <!-- Frame 1 -->
+  <g transform="translate(90,350)" filter="url(#shadow)">
+    <rect width="1420" height="610" rx="26" class="frame"/>
+    <g class="sans">
+      <text x="54" y="50" class="eyebrow">01 · DESKTOP HERO</text>
+      <text x="54" y="108" class="h2">停电后的第一夜</text>
+      <text x="54" y="147" class="small">圣胡安都会区 · Hurricane Maria · 同一范围 / 同一亮度标尺</text>
+    </g>
+    <clipPath id="mapclip1"><rect x="520" y="30" width="870" height="550" rx="18"/></clipPath>
+    <g clip-path="url(#mapclip1)">
+      <rect x="520" y="30" width="870" height="550" fill="#0b101a"/>
+      <path d="M500 510 C670 410 720 500 840 420 C1000 312 1100 337 1430 240 L1430 610 L500 610Z" class="coast"/>
+      <path d="M540 470 C680 420 765 436 858 372 S1100 324 1360 232" class="road"/>
+      <path d="M650 548 C770 445 850 461 960 389 S1180 360 1350 320" class="road"/>
+      <path d="M730 304 C850 366 920 337 1030 272 S1220 249 1380 176" class="road"/>
+      <!-- left baseline lights -->
+      <g>
+        <circle cx="605" cy="470" r="9" class="light"/><circle cx="638" cy="452" r="7" class="light"/>
+        <circle cx="676" cy="435" r="8" class="light"/><circle cx="710" cy="424" r="6" class="light"/>
+        <circle cx="746" cy="407" r="11" class="light"/><circle cx="786" cy="390" r="7" class="light"/>
+        <circle cx="825" cy="372" r="10" class="light"/><circle cx="860" cy="354" r="7" class="light"/>
+        <circle cx="904" cy="330" r="9" class="light"/><circle cx="938" cy="314" r="6" class="light"/>
+      </g>
+      <!-- right post-event -->
+      <g opacity=".88">
+        <circle cx="965" cy="304" r="7" class="dim"/><circle cx="1004" cy="294" r="6" class="dim"/>
+        <circle cx="1044" cy="280" r="7" class="dim"/><circle cx="1085" cy="270" r="5" class="dim"/>
+        <circle cx="1128" cy="254" r="7" class="light"/><circle cx="1165" cy="244" r="5" class="dim"/>
+        <circle cx="1208" cy="230" r="8" class="dim"/><circle cx="1250" cy="215" r="5" class="light"/>
+        <circle cx="1292" cy="204" r="6" class="dim"/><circle cx="1330" cy="190" r="5" class="dim"/>
+      </g>
+      <rect x="1164" y="90" width="226" height="188" fill="url(#clouds)" opacity=".56"/>
+      <line x1="952" y1="30" x2="952" y2="580" stroke="#fffaf0" stroke-width="3"/>
+      <circle cx="952" cy="316" r="25" fill="#fffaf0"/>
+      <path d="M943 306 L934 316 L943 326 M961 306 L970 316 L961 326" fill="none" stroke="#1a1c29" stroke-width="3"/>
+      <g class="sans">
+        <rect x="548" y="62" width="156" height="38" rx="19" class="label"/>
+        <text x="626" y="87" text-anchor="middle" class="small">灾前基线</text>
+        <rect x="1190" y="62" width="170" height="38" rx="19" class="label"/>
+        <text x="1275" y="87" text-anchor="middle" class="small">灾后观测</text>
+      </g>
+    </g>
+    <g class="sans">
+      <text x="54" y="222" class="body">城市没有在一瞬间变成纯黑。</text>
+      <text x="54" y="258" class="body">有些地方消失了，有些地方只剩一点光。</text>
+      <rect x="54" y="302" width="388" height="56" rx="28" fill="#f2b851"/>
+      <text x="248" y="338" text-anchor="middle" style="font-size:20px;fill:#171922;font-weight:700">拖动分界线，看同一片城市</text>
+      <text x="54" y="404" class="small">9 月 6—16 日基线</text>
+      <text x="54" y="446" class="small">9 月 22 日后第一组有效观测</text>
+      <text x="54" y="520" class="tiny">底部始终显示：日期 · 有效观测覆盖率 · 数据来源</text>
+    </g>
+  </g>
+
+  <!-- Frame 2 -->
+  <g transform="translate(90,1010)" filter="url(#shadow)">
+    <rect width="1420" height="670" rx="26" class="frame"/>
+    <g class="sans">
+      <text x="54" y="50" class="eyebrow">02 · STICKY RECOVERY SCROLLY</text>
+      <text x="54" y="106" class="h2">光不是一起回来的</text>
+      <text x="54" y="146" class="small">左侧每个滚动步骤只说一个结论；右侧地图与曲线保持固定</text>
+      <g transform="translate(54,196)">
+        <rect width="360" height="112" rx="16" fill="#232638" stroke="#f1b95c" stroke-width="2"/>
+        <text x="22" y="36" class="small" fill="#ffcf67">第 1 夜</text>
+        <text x="22" y="70" class="body">城市碎成光岛。</text>
+        <text x="22" y="96" class="tiny">不是所有黑暗都能被观测</text>
+        <rect y="136" width="360" height="105" rx="16" class="chip"/>
+        <text x="22" y="172" class="small">第 30 夜</text>
+        <text x="22" y="207" class="body">密集区域先连成片。</text>
+        <rect y="265" width="360" height="105" rx="16" class="chip"/>
+        <text x="22" y="301" class="small">第 90 夜</text>
+        <text x="22" y="336" class="body">总体数字掩盖了尾部。</text>
+        <rect y="394" width="360" height="105" rx="16" class="chip"/>
+        <text x="22" y="430" class="small">第 120 夜</text>
+        <text x="22" y="465" class="body">仍未恢复的街区是谁？</text>
+      </g>
+    </g>
+    <g transform="translate(470,185)">
+      <rect width="890" height="310" rx="16" fill="#0a0e17" stroke="#35384b"/>
+      <path d="M20 280 C130 210 220 264 310 192 C420 105 548 142 875 62 L875 315 L20 315Z" class="coast"/>
+      <path d="M58 256 C190 198 260 218 354 166 S594 146 812 80" class="road"/>
+      <g>
+        <rect x="86" y="231" width="13" height="13" class="recovered"/>
+        <rect x="107" y="222" width="13" height="13" class="recovered"/>
+        <rect x="128" y="212" width="13" height="13" class="recovered"/>
+        <rect x="149" y="205" width="13" height="13" class="recovered"/>
+        <rect x="170" y="194" width="13" height="13" class="recovered"/>
+        <rect x="191" y="185" width="13" height="13" class="recovered"/>
+        <rect x="212" y="177" width="13" height="13" class="dim"/>
+        <rect x="233" y="169" width="13" height="13" class="dim"/>
+        <rect x="254" y="158" width="13" height="13" class="recovered"/>
+        <rect x="275" y="150" width="13" height="13" class="dim"/>
+        <rect x="296" y="141" width="13" height="13" class="dim"/>
+        <rect x="317" y="132" width="13" height="13" class="dim"/>
+        <rect x="338" y="124" width="13" height="13" class="recovered"/>
+        <rect x="359" y="116" width="13" height="13" class="dim"/>
+        <circle cx="345" cy="128" r="20" fill="none" stroke="#82d0e9" stroke-width="2"/>
+        <circle cx="583" cy="129" r="20" fill="none" stroke="#82d0e9" stroke-width="2"/>
+      </g>
+      <rect x="610" y="25" width="250" height="82" rx="13" class="label"/>
+      <text x="630" y="54" class="small">当日有效覆盖率</text>
+      <text x="630" y="88" class="h3">82%</text>
+      <text x="720" y="88" class="tiny">云层区域不计入停电</text>
+    </g>
+    <g transform="translate(470,525)" class="sans">
+      <line x1="0" y1="100" x2="890" y2="100" class="hair"/>
+      <line x1="0" y1="0" x2="0" y2="100" class="hair"/>
+      <path d="M0 88 C90 82 130 63 210 56 S340 45 430 38 S590 31 690 25 S795 22 890 17" fill="none" stroke="url(#amber)" stroke-width="5"/>
+      <path d="M375 44 L430 38" stroke="#171a28" stroke-width="8" stroke-dasharray="8 8"/>
+      <circle cx="430" cy="38" r="8" fill="#ffc85a"/>
+      <text x="0" y="128" class="tiny">第 1 夜</text>
+      <text x="278" y="128" class="tiny">第 30 夜</text>
+      <text x="560" y="128" class="tiny">第 60 夜</text>
+      <text x="824" y="128" class="tiny">第 120 夜</text>
+      <text x="12" y="20" class="tiny">相对灾前夜光</text>
+      <rect x="670" y="2" width="220" height="34" rx="17" class="label"/>
+      <text x="780" y="24" text-anchor="middle" class="tiny">断线 = 没有合格观测</text>
+    </g>
+  </g>
+
+  <!-- Frame 3 -->
+  <g transform="translate(90,1730)" filter="url(#shadow)">
+    <rect width="1420" height="560" rx="26" class="frame"/>
+    <g class="sans">
+      <text x="54" y="50" class="eyebrow">03 · THE LAST 10%</text>
+      <text x="54" y="106" class="h2">90%之后，谁还没亮？</text>
+      <text x="54" y="145" class="small">总体恢复率退到背景，未恢复区域成为主角</text>
+      <text x="54" y="234" class="number">90%</text>
+      <text x="54" y="272" class="body">全岛总体恢复</text>
+      <text x="54" y="332" class="small">但在同一个夜晚，部分外围街区</text>
+      <text x="54" y="365" class="small">仍显著低于灾前基线。</text>
+      <rect x="54" y="414" width="300" height="50" rx="25" class="chip"/>
+      <text x="204" y="446" text-anchor="middle" class="small">按等待时间重新着色</text>
+    </g>
+    <g transform="translate(505,50)">
+      <rect width="850" height="460" rx="18" fill="#0a0e17" stroke="#35384b"/>
+      <path d="M20 390 C180 280 285 360 390 250 S640 224 840 110 L840 470 L20 470Z" class="coast"/>
+      <path d="M70 353 C205 302 290 308 402 244 S645 211 800 130" class="road"/>
+      <g>
+        <rect x="130" y="322" width="18" height="18" fill="#ffd361"/>
+        <rect x="158" y="308" width="18" height="18" fill="#ffd361"/>
+        <rect x="186" y="296" width="18" height="18" fill="#f7b852"/>
+        <rect x="214" y="286" width="18" height="18" fill="#e4944d"/>
+        <rect x="242" y="270" width="18" height="18" fill="#b46b58"/>
+        <rect x="270" y="258" width="18" height="18" fill="#754c67"/>
+        <rect x="298" y="246" width="18" height="18" fill="#493e5d"/>
+        <rect x="326" y="231" width="18" height="18" fill="#493e5d"/>
+        <rect x="354" y="219" width="18" height="18" fill="#754c67"/>
+        <rect x="382" y="205" width="18" height="18" fill="#e4944d"/>
+        <rect x="410" y="193" width="18" height="18" fill="#ffd361"/>
+        <rect x="438" y="180" width="18" height="18" fill="#ffd361"/>
+        <rect x="466" y="169" width="18" height="18" fill="#f7b852"/>
+      </g>
+      <g class="sans">
+        <rect x="540" y="32" width="270" height="118" rx="14" class="label"/>
+        <text x="562" y="61" class="small">每格颜色 = 等待时间</text>
+        <rect x="562" y="83" width="38" height="11" fill="#ffd361"/>
+        <rect x="600" y="83" width="38" height="11" fill="#e4944d"/>
+        <rect x="638" y="83" width="38" height="11" fill="#754c67"/>
+        <rect x="676" y="83" width="38" height="11" fill="#493e5d"/>
+        <text x="562" y="123" class="tiny">短 ←────────→ 长</text>
+        <path d="M320 250 L485 318" stroke="#82d0e9" stroke-width="1.5"/>
+        <rect x="472" y="294" width="258" height="70" rx="12" class="label"/>
+        <text x="492" y="323" class="small">外围低密度住宅区</text>
+        <text x="492" y="348" class="tiny">需要地面数据解释原因</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Frame 4 -->
+  <g transform="translate(90,2340)" filter="url(#shadow)">
+    <rect width="1420" height="540" rx="26" class="frame"/>
+    <g class="sans">
+      <text x="54" y="50" class="eyebrow">04 · EVENT COMPARATOR</text>
+      <text x="54" y="106" class="h2">四种黑暗，四种恢复节奏</text>
+      <text x="54" y="145" class="small">比较相对变化，不用不同城市的绝对亮度排名</text>
+      <g transform="translate(54,190)">
+        <rect width="250" height="52" rx="26" fill="#f2b851"/>
+        <text x="125" y="33" text-anchor="middle" style="font-size:18px;fill:#171922;font-weight:700">Maria · 2017</text>
+        <rect y="66" width="250" height="52" rx="26" class="chip"/>
+        <text x="125" y="99" text-anchor="middle" class="small">Caracas · 2019</text>
+        <rect y="132" width="250" height="52" rx="26" class="chip"/>
+        <text x="125" y="165" text-anchor="middle" class="small">Ian · 2022</text>
+        <rect y="198" width="250" height="52" rx="26" class="chip"/>
+        <text x="125" y="231" text-anchor="middle" class="small">Beryl · 2024</text>
+      </g>
+    </g>
+    <g transform="translate(365,175)" class="sans">
+      <line x1="0" y1="270" x2="940" y2="270" class="hair"/>
+      <line x1="0" y1="0" x2="0" y2="270" class="hair"/>
+      <line x1="0" y1="135" x2="940" y2="135" stroke="#343748" stroke-dasharray="5 7"/>
+      <text x="-18" y="15" text-anchor="end" class="tiny">100%</text>
+      <text x="-18" y="142" text-anchor="end" class="tiny">50%</text>
+      <text x="-18" y="275" text-anchor="end" class="tiny">0%</text>
+      <text x="0" y="304" class="tiny">事件发生</text>
+      <text x="870" y="304" class="tiny">灾后天数</text>
+      <path d="M0 35 C40 240 110 210 180 185 S330 160 440 110 S660 66 940 42" fill="none" stroke="#ffc85a" stroke-width="6"/>
+      <path d="M0 36 C28 176 60 150 110 124 S210 74 330 55 S620 42 940 36" fill="none" stroke="#82d0e9" stroke-width="3" stroke-dasharray="8 8" opacity=".75"/>
+      <circle cx="440" cy="110" r="9" fill="#ffc85a"/>
+      <rect x="466" y="74" width="240" height="72" rx="12" class="label"/>
+      <text x="486" y="103" class="small">第 60 天</text>
+      <text x="486" y="130" class="tiny">总体恢复掩盖空间尾部</text>
+      <rect x="723" y="180" width="188" height="58" rx="13" class="chip"/>
+      <text x="817" y="204" text-anchor="middle" class="tiny">切换观察节点</text>
+      <text x="817" y="227" text-anchor="middle" class="small">最暗 / 50% / 90%</text>
+    </g>
+  </g>
+
+  <!-- Mobile -->
+  <g transform="translate(90,2930)" class="sans">
+    <text x="0" y="34" class="eyebrow">05 · MOBILE BEHAVIOR</text>
+    <text x="0" y="82" class="h2">不是把桌面页面缩小</text>
+    <text x="0" y="118" class="small">地图先于文字；拖动控件同时提供按钮；时间轴改为离散节点</text>
+    <g transform="translate(670,0)">
+      <rect x="0" y="0" width="210" height="260" rx="28" fill="#0c0f18" stroke="#52566d" stroke-width="2"/>
+      <rect x="14" y="30" width="182" height="120" rx="13" fill="#111827"/>
+      <path d="M15 135 C60 100 94 125 126 92 S170 83 198 65 L198 150 L15 150Z" class="coast"/>
+      <circle cx="80" cy="108" r="5" class="light"/><circle cx="102" cy="97" r="5" class="dim"/><circle cx="125" cy="86" r="5" class="light"/>
+      <line x1="104" y1="30" x2="104" y2="150" stroke="#fff" stroke-width="2"/>
+      <rect x="14" y="166" width="84" height="42" rx="21" fill="#f2b851"/>
+      <rect x="112" y="166" width="84" height="42" rx="21" class="chip"/>
+      <text x="56" y="192" text-anchor="middle" style="font-size:13px;fill:#171922;font-weight:700">灾前</text>
+      <text x="154" y="192" text-anchor="middle" class="tiny">灾后</text>
+      <text x="18" y="235" class="tiny">有效覆盖率 82%</text>
+    </g>
+    <g transform="translate(930,0)">
+      <rect x="0" y="0" width="210" height="260" rx="28" fill="#0c0f18" stroke="#52566d" stroke-width="2"/>
+      <text x="18" y="52" class="tiny">恢复时间</text>
+      <path d="M18 121 C55 118 82 93 110 88 S164 65 192 53" fill="none" stroke="#ffc85a" stroke-width="4"/>
+      <circle cx="110" cy="88" r="7" fill="#ffc85a"/>
+      <rect x="16" y="146" width="44" height="42" rx="14" class="chip"/><text x="38" y="172" text-anchor="middle" class="tiny">1</text>
+      <rect x="66" y="146" width="44" height="42" rx="14" class="chip"/><text x="88" y="172" text-anchor="middle" class="tiny">30</text>
+      <rect x="116" y="146" width="44" height="42" rx="14" fill="#f2b851"/><text x="138" y="172" text-anchor="middle" style="font-size:13px;fill:#171922">60</text>
+      <rect x="166" y="146" width="44" height="42" rx="14" class="chip"/><text x="188" y="172" text-anchor="middle" class="tiny">120</text>
+      <text x="18" y="224" class="tiny">按日期跳转，避免细小拖杆</text>
+    </g>
+    <g transform="translate(1190,0)">
+      <rect x="0" y="0" width="210" height="260" rx="28" fill="#0c0f18" stroke="#52566d" stroke-width="2"/>
+      <text x="18" y="48" class="tiny">数据表替代路径</text>
+      <line x1="18" y1="70" x2="192" y2="70" class="hair"/>
+      <text x="18" y="99" class="tiny">区域</text><text x="190" y="99" text-anchor="end" class="tiny">等待天数</text>
+      <line x1="18" y1="112" x2="192" y2="112" class="hair"/>
+      <text x="18" y="140" class="tiny">都会核心</text><text x="190" y="140" text-anchor="end" class="tiny">62</text>
+      <line x1="18" y1="153" x2="192" y2="153" class="hair"/>
+      <text x="18" y="181" class="tiny">外围住宅</text><text x="190" y="181" text-anchor="end" class="tiny">114</text>
+      <line x1="18" y1="194" x2="192" y2="194" class="hair"/>
+      <text x="18" y="224" class="tiny">可排序 · 可键盘访问</text>
+    </g>
+  </g>
+</svg>
