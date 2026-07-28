@@ -20,7 +20,7 @@
 
 ## 故事文档
 
-每个完整故事目录包含概念设计、故事板、正文母稿、数据说明、方法、来源、实现追溯和质量检查。
+每个完整故事目录包含概念设计、故事板、正文母稿、数据说明、方法、来源、实现追溯和质量检查。最新故事使用 Svelte 5 / SvelteKit 静态预渲染；早期故事仍为独立静态页面。
 
 ### 《城市突然熄灯时》
 
@@ -42,11 +42,15 @@
 
 ## 本地预览
 
+最新故事：
+
 ```bash
-python3 -m http.server 8000
+cd stories/lights-out
+npm install
+npm run dev
 ```
 
-推送到 `main` 后，`.github/workflows/pages.yml` 会校验五个故事的入口、样式与 JavaScript 语法，并部署完整静态站点。
+全站静态页面可在仓库根目录启动普通静态服务器预览。推送到 `main` 后，`.github/workflows/pages.yml` 会先构建并检查 Svelte 故事，再与四篇早期静态故事一起部署。
 
 ## 内容原则
 

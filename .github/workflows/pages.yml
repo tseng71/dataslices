@@ -23,10 +23,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Validate static stories
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: stories/lights-out/package-lock.json
+      - name: Install lights-out dependencies
+        working-directory: stories/lights-out
+        run: npm ci
+      - name: Build lights-out story
+        working-directory: stories/lights-out
+        env:
+          BASE_PATH: /dataslices/stories/lights-out
+        run: |
+          npm run check
+          npm run build
+      - name: Validate stories
         run: |
           test -s index.html
-          for story in lights-out battery-world-map disappearing-stars ai-cost nyc-heat; do
+          test -s stories/lights-out/build/index.html
+          test -s stories/lights-out/build/assets/ian-before.jpg
+          test -s stories/lights-out/build/docs/story-brief.md
+          for story in battery-world-map disappearing-stars ai-cost nyc-heat; do
             test -s "stories/$story/index.html"
             test -s "stories/$story/story.css"
             test -s "stories/$story/story.js"
@@ -42,12 +61,22 @@ jobs:
           test -s stories/battery-world-map/docs/02-storyboard-wireframes-v2.md
           test -s stories/battery-world-map/docs/methodology.md
           test -s stories/battery-world-map/docs/sources.md
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git' \
+            --exclude='_site' \
+            --exclude='stories/lights-out' \
+            . _site/
+          mkdir -p _site/stories/lights-out
+          cp -R stories/lights-out/build/. _site/stories/lights-out/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
