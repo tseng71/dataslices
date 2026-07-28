@@ -1,25 +1,8 @@
-:root {
-  color-scheme: dark;
-  --bg: #07101b;
-  --panel: #0d1927;
-  --text: #edf4fb;
-  --muted: #9eacbc;
-  --accent: #8fd3ff;
-  --line: rgba(255,255,255,.12);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at 50% -10%,#13263d 0,#07101b 42%,#050a11 100%);color:var(--text);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;min-height:100vh}
-a{color:inherit}
-.site-shell{width:min(1120px,calc(100% - 36px));margin:auto}
-header{padding:32px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
-.brand{font-weight:700;letter-spacing:.12em}.brand span{color:var(--accent)}
-.hero{padding:90px 0 60px}.eyebrow{color:var(--accent);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
-h1{font-size:clamp(2.6rem,8vw,6.6rem);line-height:.98;margin:.3em 0;letter-spacing:-.055em;max-width:900px}
-.lead{font-size:clamp(1.05rem,2.2vw,1.35rem);color:var(--muted);max-width:700px;line-height:1.8}
-.story-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;padding:38px 0 100px}
-.story-card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.022));border:1px solid var(--line);border-radius:24px;padding:28px;text-decoration:none;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;transition:.25s transform,.25s border-color}
-.story-card:hover{transform:translateY(-5px);border-color:rgba(143,211,255,.55)}
-.story-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 18%,rgba(143,211,255,.22),transparent 35%);pointer-events:none}
-.story-card h2{font-size:2rem;line-height:1.15;margin:0 0 12px}.story-card p{color:var(--muted);line-height:1.7;margin:0}.tag{display:inline-flex;align-self:flex-start;margin-bottom:auto;border:1px solid var(--line);border-radius:999px;padding:7px 11px;color:var(--accent);font-size:.78rem}
-footer{padding:32px 0 60px;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+:root{color-scheme:dark;--bg:#07101b;--panel:#0d1927;--text:#edf4fb;--muted:#9eacbc;--accent:#8fd3ff;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,#18304a 0,#07101b 40%,#050a11 100%);color:var(--text);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;min-height:100vh}a{color:inherit}.site-shell{width:min(1160px,calc(100% - 36px));margin:auto}
+header{padding:30px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}.brand{text-decoration:none;font-weight:800;letter-spacing:.12em}.brand span{color:var(--accent)}.edition{color:var(--muted);font-size:.86rem}
+.hero{padding:86px 0 58px}.eyebrow{color:var(--accent);letter-spacing:.16em;text-transform:uppercase;font-size:.75rem}h1{font-size:clamp(2.7rem,7.5vw,6.6rem);line-height:.98;margin:.32em 0;letter-spacing:-.055em;max-width:960px}.lead{font-size:clamp(1.03rem,2.2vw,1.35rem);color:var(--muted);max-width:720px;line-height:1.8}
+.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding:34px 0 100px}.story-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.022));border:1px solid var(--line);border-radius:26px;padding:26px;text-decoration:none;min-height:420px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:.25s transform,.25s border-color}.story-card.featured{grid-column:1/-1;min-height:500px}.story-card:hover,.story-card:focus-visible{transform:translateY(-5px);border-color:rgba(143,211,255,.7);outline:none}.story-card h2{font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.08;margin:auto 0 14px;letter-spacing:-.035em}.story-card:not(.featured) h2{font-size:2rem}.story-card p{color:var(--muted);line-height:1.7;margin:0;max-width:700px}.number{position:absolute;right:24px;top:20px;color:rgba(255,255,255,.34);font:700 .85rem/1 ui-monospace,monospace}.tag{display:inline-flex;align-self:flex-start;border:1px solid var(--line);border-radius:999px;padding:7px 11px;color:var(--accent);font-size:.75rem;z-index:1}.read{margin-top:20px;color:var(--accent);font-size:.88rem}.card-art{position:absolute;right:5%;top:14%;width:42%;height:42%;opacity:.82}.battery-art{display:flex;gap:5px;align-items:center;justify-content:center;transform:rotate(-12deg)}.battery-art:after{content:"";position:absolute;inset:8% 0;border:1px solid rgba(255,255,255,.5);border-radius:12px}.battery-art i{width:16%;height:70%;border-radius:6px;background:#e3b341;box-shadow:0 0 30px rgba(227,179,65,.22)}.battery-art i:nth-child(2){background:#e77c49}.battery-art i:nth-child(3){background:#87c4a3}.battery-art i:nth-child(4){background:#8897ad}.stars-art{background:radial-gradient(circle at 20% 35%,#fff 0 1px,transparent 2px),radial-gradient(circle at 75% 22%,#fff 0 1px,transparent 2px),radial-gradient(circle at 55% 70%,#9fd8ff 0 2px,transparent 3px),radial-gradient(circle at 25% 85%,#fff 0 1px,transparent 2px);filter:drop-shadow(0 0 8px #8fd3ff)}.heat-art{display:flex;gap:10px;align-items:center}.heat-art i{display:block;width:90px;aspect-ratio:1;border-radius:50%;background:#ff8b5c}.heat-art i:nth-child(2){width:70px;background:#ffd36c}.heat-art i:nth-child(3){width:48px;background:#8acb9c}.ai-art:before,.ai-art:after{content:"";position:absolute;left:0;right:0;height:3px;transform-origin:left center}.ai-art:before{top:25%;background:#ff8b6a;transform:rotate(18deg)}.ai-art:after{top:75%;background:#79d4ff;transform:rotate(-18deg)}.ai-art i{position:absolute;width:8px;height:8px;border-radius:50%;background:white}.ai-art i:first-child{left:10%;top:52%}.ai-art i:last-child{right:10%;top:48%}
+footer{padding:30px 0 60px;color:var(--muted);border-top:1px solid var(--line);font-size:.88rem;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:720px){.edition{display:none}.hero{padding:58px 0 38px}.story-grid{grid-template-columns:1fr}.story-card.featured{grid-column:auto;min-height:500px}.story-card{min-height:390px}.card-art{width:60%;right:-4%}.story-card h2,.story-card:not(.featured) h2{font-size:1.85rem}footer{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.story-card{transition:none}}
