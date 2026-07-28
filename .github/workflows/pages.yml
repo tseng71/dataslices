@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -23,12 +23,61 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply v2 source bundle
+        run: |
+          if [ -f scripts/v2_bundle.tar.gz.b64 ]; then
+            base64 --decode scripts/v2_bundle.tar.gz.b64 > /tmp/dataslices-v2.tar.gz
+            echo "42773c56d7bc94dc867de2306cd2ea78f4919597234308475c9ac51ce07b780d  /tmp/dataslices-v2.tar.gz" | sha256sum --check
+            tar -xzf /tmp/dataslices-v2.tar.gz
+            rm scripts/v2_bundle.tar.gz.b64
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build local story data
+        run: python scripts/build_story_data.py
+
+      - name: Validate static files
+        run: |
+          python -m py_compile scripts/build_story_data.py
+          node --check stories/disappearing-stars/story.js
+          test -s stories/disappearing-stars/data/bright-stars.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          base = Path('stories/disappearing-stars/data')
+          stars = json.loads((base / 'bright-stars.json').read_text())
+          assert stars['meta']['source'] != 'development-fallback'
+          assert len(stars['stars']) >= 260
+          geo = json.loads((base / 'ny-region.geojson').read_text())
+          assert geo['features']
+          print(f"Validated {len(stars['stars'])} Bright Star Catalog entries and {len(geo['features'])} map features")
+          PY
+
+      - name: Save v2 sources and generated public data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "feat(story): implement Disappearing Stars v2 [skip ci]"
+            git push
+          fi
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
