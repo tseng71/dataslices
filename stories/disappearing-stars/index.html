@@ -1,95 +1,17 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="从城市灯光到肉眼夜空：一篇关于光污染、星空、生态与夜晚记忆的数据故事。">
-  <meta name="theme-color" content="#060910">
-  <title>消失的星空｜数据切片</title>
-  <link rel="stylesheet" href="story.css">
-</head>
-<body>
-  <a class="skip-link" href="#story">跳到正文</a>
-  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
-
-  <header class="hero section-dark" id="top">
-    <canvas id="heroSky" aria-label="同一片真实规则驱动的星空随城市光穹增强而逐渐失去暗星和银河"></canvas>
-    <div class="horizon" aria-hidden="true"></div>
-    <div class="hero-copy">
-      <a class="brand" href="../../index.html">DataSlices / 数据切片</a>
-      <p class="eyebrow">一个关于光、记忆与夜晚的故事</p>
-      <h1>消失的星空</h1>
-      <p class="deck">一代人失去了多少颗星？</p>
-      <p class="lead">如果你长期住在大城市，你可能从未真正见过银河。</p>
-      <div class="scroll-cue" aria-hidden="true">↓ 向下滚动</div>
-    </div>
-    <p class="hero-exit">星星没有消失。消失的，是夜晚。</p>
-  </header>
-
-  <main id="story">
-    <section class="prose intro" aria-labelledby="intro-title">
-      <h2 id="intro-title" class="visually-hidden">很多人从未见过真正的暗夜</h2>
-      <p class="dropcap">夜晚降临后，你抬头看见几颗亮星。它们看起来很清楚，于是你很容易以为：城市里的夜空，本来就是这个样子。</p>
-      <p>但在远离人造灯光、没有月光而且空气清澈的地方，夜空不是一块黑布上零散钉着几颗白点。星星会填满视野，银河会像一层淡淡的云，从天空一侧延伸到另一侧。</p>
-      <aside class="big-fact"><strong>超过 80%</strong><span>的世界人口生活在人造光影响的夜空下。2016 年的世界人工夜空亮度图还估计，银河已从超过三分之一人类的日常视野中消失。</span></aside>
-      <p>很多人不是“很久没有见过银河”。他们可能从未见过。</p>
-    </section>
-
-    <section class="age-story section-panel" id="ageStory" aria-labelledby="age-title">
-      <div class="sticky-viz">
-        <canvas id="ageSky" aria-label="同一片天空从约250颗可见星减少到约100颗的代际情景"></canvas>
-        <div class="age-readout"><span id="ageValue">0</span><small>岁</small></div>
-        <div class="star-readout">约 <strong id="starCount">250</strong> 颗可见星</div>
-      </div>
-      <div class="steps">
-        <article class="step is-active" data-age="0"><p class="kicker">一个情景</p><h2 id="age-title">250 颗星，怎样变成 100 颗</h2><p>假设一个孩子出生时，在自家附近晴朗、无月的夜晚可以看到约 250 颗星。</p></article>
-        <article class="step" data-age="6"><p class="step-age">6 岁</p><p>夜空每年只比前一年亮一点。变化很慢，慢到肉眼很难记住。</p></article>
-        <article class="step" data-age="12"><p class="step-age">12 岁</p><p>最暗的一批星先消失，熟悉的星座仍在。人很容易误以为什么也没有改变。</p></article>
-        <article class="step" data-age="18"><p class="step-age">18 岁</p><p>当可见极限持续下降，同一片天空可能只剩约 100 颗星。</p><p class="note">按研究中的全球平均天空辉光增长情景推演；不是对纽约、深圳或任何具体地点的精确预测。</p></article>
-      </div>
-    </section>
-
-    <section class="prose"><h2>星星没有熄灭</h2><p>2011—2022 年间，研究人员分析了超过 5 万次 Globe at Night 公众观测。参与者观察指定星座，再选择最接近自己所见的星图。研究估计，人眼感受到的天空辉光平均每年增长约 9.6%。</p><p class="pullquote">这种变化不是一夜发生的。它慢到足以骗过记忆，却快到足以改变一代人的夜晚。</p></section>
-
-    <section class="interactive section-dark compact" id="limitSection" aria-labelledby="limit-title">
-      <div class="interactive-copy"><p class="eyebrow">可见极限</p><h2 id="limit-title">同一片天空，可以像两个宇宙</h2><p>拖动滑杆。恒星位置始终不变，只改变肉眼可见极限和天空背景。</p><label for="magSlider">肉眼可见极限：<output id="magOutput">6.0</output> 等</label><input id="magSlider" type="range" min="2" max="6.5" value="6" step="0.1"><div class="legend-row"><span>高亮度城市</span><span>真正暗夜</span></div></div>
-      <div class="sky-card"><canvas id="limitSky" aria-label="根据极限星等筛选同一套恒星的天空"></canvas><div class="sky-caption" id="limitCaption" aria-live="polite">银河和丰富暗星有机会被看见</div></div>
-    </section>
-
-    <section class="mechanism section-light" aria-labelledby="mechanism-title">
-      <div class="prose narrow"><p class="eyebrow">机制</p><h2 id="mechanism-title">地面如何点亮天空</h2><p>光污染不是“天上多了一层灯”。地面灯光的用途、方向、反射和大气散射共同抬高了天空背景。</p></div>
-      <div class="light-diagram" role="img" aria-label="地面灯具亮起，直接向上光和地面反射光在大气中散射，城市上方形成光穹">
-        <div class="atmosphere"><i></i><i></i><i></i><i></i></div><div class="beam b1"></div><div class="beam b2"></div><div class="beam b3"></div><div class="city"><span class="tower"></span><span class="block"></span><span class="lamp"></span><span class="block low"></span></div>
-        <ol class="mechanism-legend"><li>直接向上光</li><li>地面反射光</li><li>大气散射</li><li>形成光穹</li></ol>
-      </div>
-      <div class="prose narrow"><p>卫星从上方测量离开地面的辐亮度；人在地面看到的是经过方向、光谱、大气和周边城市共同影响后的天空。二者相关，但不能直接画等号。</p></div>
-    </section>
-
-    <section class="locations section-panel" aria-labelledby="location-title">
-      <div class="prose narrow"><p class="eyebrow">空间</p><h2 id="location-title">从时代广场到更暗地点</h2><p>选择地点。右侧始终使用同一天区和同一套恒星，只改变背景亮度与可见阈值。区间是环境情景，不是实时天气。</p></div>
-      <div class="location-grid">
-        <div class="map-schematic" role="group" aria-label="纽约市及长岛地理位置选择器">
-          <svg class="geo-map" viewBox="0 0 760 620" role="img" aria-label="纽约港、曼哈顿、布鲁克林、皇后区、布朗克斯和长岛的简化地理图">
-            <rect width="760" height="620" class="map-water"/><path class="map-land" d="M80 45 L205 28 250 86 230 170 198 242 155 322 112 400 68 490 20 470 34 350 62 245 48 130 Z"/><path class="map-land" d="M240 185 L310 145 365 184 345 270 300 350 268 455 226 430 244 330 Z"/><path class="map-land" d="M325 235 L470 172 630 190 735 245 710 350 588 392 472 360 390 310 Z"/><path class="map-land" d="M470 360 L610 330 755 370 748 515 610 548 505 500 430 430 Z"/><path class="map-land island" d="M585 500 L748 470 760 540 620 590 520 570 Z"/>
-          </svg>
-          <button class="pin active" style="left:34%;top:51%" data-location="times-square" aria-pressed="true">时代广场</button><button class="pin" style="left:36%;top:39%" data-location="central-park" aria-pressed="false">中央公园</button><button class="pin" style="left:62%;top:65%" data-location="jamaica-bay" aria-pressed="false">牙买加湾</button><button class="pin" style="left:49%;top:25%" data-location="pelham-bay" aria-pressed="false">佩勒姆湾</button><button class="pin" style="left:88%;top:77%" data-location="montauk" aria-pressed="false">更暗参照地</button>
-        </div>
-        <div class="location-sky"><canvas id="locationSky" aria-label="所选地点环境情景下的同一天区星空"></canvas><div class="location-meta"><h3 id="locationName">时代广场</h3><p id="locationDesc">高强度商业照明与都市光穹下，通常只剩最亮恒星与行星。</p><dl><div><dt>可见极限区间</dt><dd id="locationMag">2.7—3.2 等</dd></div><div><dt>银河</dt><dd id="locationMilky">不可见</dd></div></dl><small>环境情景，不代表实时天气、云量或具体夜晚。</small></div></div>
-      </div>
-    </section>
-
-    <section class="two-rulers section-dark compact" aria-labelledby="rulers-title"><div class="prose narrow"><p class="eyebrow">两把尺子</p><h2 id="rulers-title">卫星和人眼测量的不是同一件事</h2></div><div class="rulers"><article><div class="icon satellite" aria-hidden="true">⌁</div><h3>卫星从上往下看</h3><p>记录从地面离开的夜间辐亮度，适合观察道路、开发区和城市边缘变化。</p><small>不直接等于人眼看到的天空亮度。</small></article><div class="equals" aria-hidden="true">≠</div><article><div class="icon eye" aria-hidden="true">◉</div><h3>人从下往上看</h3><p>通过星座匹配估计肉眼可见极限，更接近“今晚还能看到多暗的星”。</p><small>公众观测的空间分布并不均匀。</small></article></div><blockquote>卫星测量从地面离开的光。<br>人眼测量最终留在天空中的星。</blockquote></section>
-
-    <section class="comparison section-light" aria-labelledby="comparison-title"><div class="prose narrow"><p class="eyebrow">同一天空</p><h2 id="comparison-title">五种环境，五个版本的宇宙</h2><p>五个窗口使用同一时间假设、同一星表和同一投影，只改变背景亮度与可见阈值。首版使用环境类型，不做缺乏可比数据的城市排名。</p></div><div class="sky-multiples" id="skyMultiples"></div><div class="prose narrow comparison-note"><p>最先失去的不是最亮的主星，而是周围大量暗星。随后星座之间原本连续的结构被切断，天空从有深度的空间退化成平面背景。</p></div></section>
-
-    <section class="ecology section-panel" aria-labelledby="ecology-title"><div class="prose narrow"><p class="eyebrow">生态</p><h2 id="ecology-title">一盏灯改变一条路径</h2><p>黑暗不只是审美资源。大量鸟类在夜间迁徙；高强度城市灯光可能吸引部分鸟类偏离路线、盘旋，并增加进入危险建筑环境的概率。</p></div><div class="bird-demo"><div class="bird-sky" id="birdSky" aria-label="迁徙鸟类在灯光开启时向光源偏转，关闭后逐渐恢复稳定方向的机制动画"><div class="city-glow"></div><div class="lamp-core"></div></div><button id="lightToggle" class="primary-button" aria-pressed="true">关闭高强度灯光</button><p id="birdCaption" aria-live="polite">灯光开启：部分轨迹向光源偏转并出现盘旋。</p></div><div class="prose narrow"><p>动画只解释研究观察到的机制和方向，不表示所有物种、城市和天气条件下的效应完全相同。</p></div></section>
-
-    <section class="lighting-lab section-dark compact" aria-labelledby="lab-title"><div class="prose narrow"><p class="eyebrow">照明治理实验室</p><h2 id="lab-title">不是把城市关掉</h2><p>试着改变用途、方向、亮度、时间和色温。地面仍可被照亮，而无效向上光可以减少。</p></div><div class="lab-grid"><div class="controls" id="lightingControls"><label><input type="checkbox" data-effect="useful" checked>只保留有明确用途的灯光</label><label><input type="checkbox" data-effect="shielded">灯具完全遮罩并向下定向</label><label><input type="checkbox" data-effect="dimmed">亮度不超过实际需要</label><label><input type="checkbox" data-effect="timed">无人或深夜时段自动调暗</label><label>色温 <input id="tempSlider" type="range" min="2200" max="5000" step="100" value="4500"><output id="tempOutput">4500K</output></label></div><div class="lab-viz"><canvas id="labSky" aria-label="照明设置改变相对天空辉光但保持地面照明的示意"></canvas><div class="ground-light"><span></span><span></span><span></span></div><div class="lab-score"><span>相对天空辉光</span><strong id="glowScore">78</strong><small>示意指数，不是任意城市的通用实测结果</small></div></div></div></section>
-
-    <section class="ending section-dark"><canvas id="endingSky" aria-label="相对暗但没有虚假完全恢复的夜空"></canvas><div class="ending-copy"><p class="eyebrow">今晚</p><h2>重新观察你的天空</h2><p>不要只寻找最亮的几颗星。试着观察它们之间还有多少微弱星点，天空背景接近黑色，还是带着灰白、橙黄或蓝紫色的光。</p><p>我们总以为星空非常遥远。真正把它从视野中带走的，却是地面上离我们最近的光。</p><a class="primary-button" href="#top">重新看一次夜空</a></div></section>
-
-    <section class="methods section-light"><details><summary>方法、数据与不确定性</summary><div class="method-columns"><p>所有星空窗口共享同一套本地固定星表、同一投影和同一阈值逻辑。天空背景和光穹是机制驱动的相对模拟，不代表具体夜晚实测。</p><p>“250→100”是统一阈值函数下的代际情景；地点章节使用可见极限区间；五地比较改用环境类型；鸟类和照明章节只表达机制与相对方向。</p></div><p><a href="docs/methodology.md">完整方法</a> · <a href="docs/sources.md">来源清单</a> · <a href="docs/02-storyboard-wireframes-v2.md">v2 设计稿</a> · <a href="docs/implementation-traceability.md">设计—实现追溯</a></p></details><footer><span>DataSlices / 数据切片</span><span>《消失的星空》v0.9 · 2026-07-28</span></footer></section>
-  </main>
-  <script src="story.js"></script>
-</body>
-</html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="一篇关于城市灯光、星空与夜晚记忆的数据故事"><meta property="og:title" content="消失的星空｜DataSlices"><meta property="og:description" content="一代人失去了多少颗星？"><title>消失的星空｜DataSlices</title><link rel="stylesheet" href="story.css"></head><body>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+<header class="hero" id="top"><canvas id="heroSky" aria-label="同一片真实规则驱动的星空随天空背景变亮而逐渐失去暗星"></canvas><div class="hero-glow"></div><div class="hero-copy"><a class="brand" href="../../index.html">DataSlices / 数据切片</a><p class="eyebrow">一个关于光、记忆与夜晚的故事</p><h1>消失的星空</h1><p class="deck">一代人失去了多少颗星？</p><p class="lead">如果你长期住在大城市，你可能从未真正见过银河。</p><p class="scroll-cue">向下滚动，让城市慢慢点亮 ↓</p></div><p class="hero-exit">星星没有消失。消失的，是夜晚。</p></header>
+<main>
+<section class="prose intro"><p class="dropcap">夜晚降临后，你抬头看见几颗亮星。它们看起来很清楚，于是你很容易以为：城市里的夜空，本来就是这个样子。</p><p>但在远离人造灯光、没有月光而且空气清澈的地方，天空不是一块黑布上零散钉着几颗白点。星星会填满视野，银河像一层淡云横跨天空。</p><aside class="big-fact"><strong>超过 80%</strong><span>的世界人口生活在人造光影响的夜空之下。很多人不是很久没见过银河，而是从未见过。</span></aside></section>
+<section class="age-story panel" id="ageStory"><div class="sticky-viz"><canvas id="ageSky" aria-label="0至18岁间可见星数从约250颗下降至约100颗的情景"></canvas><div class="age-readout"><span id="ageValue">0</span><small>岁</small></div><div class="star-readout">约 <strong id="starCount">250</strong> 颗可见星</div></div><div class="steps"><article class="step" data-age="0"><p class="eyebrow">代际情景</p><h2>250颗星，怎样变成100颗</h2><p>假设一个孩子出生时，在附近晴朗、无月的夜晚能看到约250颗星。</p></article><article class="step" data-age="6"><h3>6岁</h3><p>一年变化很小，小到记忆无法留下清晰对照。最暗的星先从背景里消失。</p></article><article class="step" data-age="12"><h3>12岁</h3><p>熟悉星座的亮星仍在，星座之间的细密结构却已断裂。</p></article><article class="step" data-age="18"><h3>18岁</h3><p>同一套情景下，夜空可能只剩约100颗星。</p><p class="note">按公开研究中的全球平均天空辉光增长情景推演；不是对纽约、深圳或任何具体地点的精确预测。</p></article></div></section>
+<section class="prose"><h2>变化慢到足以骗过记忆</h2><p>公众观测研究显示，人眼感受到的天空辉光增长速度可能明显快于卫星记录的地面夜光变化。星星没有熄灭，改变的是星星与天空背景之间的对比。</p><p class="pullquote">它慢到足以骗过记忆，却快到足以改变一代人的夜晚。</p></section>
+<section class="interactive dark" id="limitSection"><div class="interactive-copy"><p class="eyebrow">亲手调亮夜空</p><h2>同一片天空，可以像两个宇宙</h2><p>恒星位置、投影和时间假设保持不变，只改变肉眼可见极限与天空背景。</p><label for="magSlider">肉眼可见极限：<output id="magOutput">6.0</output> 等</label><input id="magSlider" type="range" min="2" max="6.5" value="6" step="0.1"><div class="legend-row"><span>明亮市中心</span><span>真正暗夜</span></div></div><div class="sky-card"><canvas id="limitSky" aria-label="可见极限滑杆控制的同一天区星空"></canvas><div class="sky-caption" id="limitCaption">银河和丰富暗星有机会被看见</div></div></section>
+<section class="mechanism light"><div class="prose narrow"><p class="eyebrow">机制</p><h2>地面如何点亮天空</h2><p>光污染不是天上多了一层灯，而是地面灯光方向、反射和大气散射共同抬高天空背景。</p></div><div class="mechanism-diagram" role="img" aria-label="路灯与建筑光直接向上或经地面反射，再在大气中散射形成光穹"><div class="sky-label">暗星首先失去对比</div><div class="scatter s1">↗</div><div class="scatter s2">↖</div><div class="scatter s3">↗</div><div class="air">分子 · 水汽 · 颗粒</div><div class="beam direct"></div><div class="beam reflected"></div><div class="ground"><span class="tower"></span><span class="building"></span><span class="lamp"></span><span class="road"></span></div></div><div class="prose narrow"><p>灯具直接向上的光、落到地面再反射的光，都可能被大气散射回视线，形成城市光穹。</p></div></section>
+<section class="locations panel"><div class="prose narrow"><p class="eyebrow">空间</p><h2>从时代广场，到更暗的夜晚</h2><p>选择地点。右侧始终使用同一片星空。区间是环境类型的叙事情景，不是实时天气，也不是单次实测。</p></div><div class="location-grid"><div class="map-wrap"><svg class="ny-map" viewBox="0 0 720 560" role="img" aria-label="纽约市及长岛相对位置图"><path class="water-shape" d="M0 0h720v560H0z"/><path class="land-shape" d="M205 35l85 35 33 91-10 105-42 98-55 57-55-12-22-102 34-109 3-92z"/><path class="land-shape" d="M302 242l182-43 205 56-39 87-172 26-154-39z"/><path class="land-shape" d="M118 95l69 34-18 69-61 23-42-51z"/><path class="shore" d="M314 242c77-27 155-42 237-30"/></svg><div class="pin-layer"><button class="pin active" style="left:38%;top:48%" data-location="times-square">时代广场</button><button class="pin" style="left:40%;top:39%" data-location="central-park">中央公园</button><button class="pin" style="left:61%;top:63%" data-location="jamaica-bay">牙买加湾</button><button class="pin" style="left:57%;top:30%" data-location="pelham-bay">佩勒姆湾</button><button class="pin" style="left:88%;top:57%" data-location="montauk">更暗参照地</button></div><p class="map-note">相对位置图 · 地点坐标用于定位，不表示实时光照</p></div><div class="location-sky"><canvas id="locationSky" aria-label="选中地点对应的同一天区星空"></canvas><div class="location-meta"><h3 id="locationName">时代广场</h3><p id="locationDesc"></p><dl><div><dt>可见极限情景</dt><dd id="locationMag"></dd></div><div><dt>银河</dt><dd id="locationMilky"></dd></div></dl></div></div></div></section>
+<section class="two-rulers dark"><div class="prose narrow"><p class="eyebrow">两把尺子</p><h2>卫星和人眼测量的不是同一件事</h2></div><div class="rulers"><article><div class="ruler-icon">◒</div><h3>卫星从上往下看</h3><p>记录离开地面的辐亮度，擅长追踪道路、开发区与城市边缘变化。</p><small>传感器光谱响应不等于人眼。</small></article><div class="not-equal">≠</div><article><div class="ruler-icon">◉</div><h3>人从下往上看</h3><p>通过星座匹配估计肉眼可见极限，更接近真实观星体验。</p><small>云、气溶胶、方向和地形都会改变结果。</small></article></div><blockquote>卫星测量从地面离开的光。<br>人眼测量最终留在天空中的星。</blockquote></section>
+<section class="comparison light"><div class="prose narrow"><p class="eyebrow">统一比较</p><h2>不同版本的宇宙</h2><p>同一天区、同一投影、同一星表，只改变环境类型对应的背景亮度与可见阈值。</p></div><div class="sky-multiples" id="skyMultiples"></div></section>
+<section class="ecology panel"><div class="prose narrow"><p class="eyebrow">生态</p><h2>一盏灯，改变一条路径</h2><p>夜间迁徙鸟类可能被高强度城市灯光吸引，改变方向、聚集和盘旋。动画只解释机制与方向，不把一个研究地点的效应推广到所有物种。</p></div><div class="bird-demo"><div class="bird-sky" id="birdSky" aria-label="迁徙鸟类在开灯和关灯状态下的轨迹变化"><div class="city-glow"></div><div class="lamp-core"></div></div><button id="lightToggle" class="primary-button" aria-pressed="true">关闭高强度灯光</button><p id="birdCaption">灯光开启：部分轨迹向光源聚集并盘旋。</p></div></section>
+<section class="lighting-lab dark"><div class="prose narrow"><p class="eyebrow">照明治理实验室</p><h2>不是把城市关掉</h2><p>目标是减少无效向上光，同时保留必要的地面照明。</p></div><div class="lab-grid"><div class="controls" id="lightingControls"><label><input type="checkbox" data-effect="useful" checked>只保留有明确用途的灯光</label><label><input type="checkbox" data-effect="shielded">灯具完全遮罩并向下定向</label><label><input type="checkbox" data-effect="dimmed">亮度不超过实际需要</label><label><input type="checkbox" data-effect="timed">无人或深夜时自动调暗</label><label>色温 <input id="tempSlider" type="range" min="2200" max="5000" step="100" value="4500"><output id="tempOutput">4500K</output></label></div><div class="lab-viz"><canvas id="labSky" aria-label="照明策略对相对天空辉光的影响"></canvas><div class="ground-light"><span></span><span></span><span></span></div><div class="lab-score"><span>相对天空辉光</span><strong id="glowScore">78</strong><small>示意指数，不是任意城市的通用实测结果</small></div></div></div></section>
+<section class="ending dark"><canvas id="endingSky" aria-label="相对较暗但并非完全恢复的夜空"></canvas><div class="ending-copy"><p class="eyebrow">今晚</p><h2>重新观察你的夜空</h2><p>不要只寻找最亮的几颗星。试着观察它们之间还有多少微弱星点，天空背景接近黑色，还是带着灰白、橙黄或蓝紫色的光。</p><p>我们总以为星空非常遥远。真正把它从视野中带走的，却是地面上离我们最近的光。</p><a class="primary-button" href="#top">重新看一次夜空</a></div></section>
+<section class="methods light"><details><summary>方法、数据与不确定性</summary><div class="method-columns"><p><strong>星空：</strong>所有场景使用同一固定星表、投影和视星等阈值。暗星按对比度依次淡出，不随机飞散。</p><p><strong>代际情景：</strong>250→100是把公开研究中的平均天空辉光增长情景转化为直观叙事，不代表具体城市预测。</p><p><strong>地点：</strong>采用真实地点坐标和环境类型区间。天气、月相、透明度和个体视力会改变当晚结果。</p><p><strong>生态与治理：</strong>鸟类动画和天空辉光指数用于解释机制，不是通用效应量或城市实测。</p></div><p><a href="docs/methodology.md">完整方法</a> · <a href="docs/sources.md">来源清单</a> · <a href="docs/02-storyboard-wireframes-v2.md">v2设计稿</a> · <a href="https://github.com/tseng71/dataslices/commits/main">版本记录</a></p></details><footer><span>DataSlices / 数据切片</span><span>《消失的星空》v1.0 · 2026-07-28</span></footer></section>
+</main><script src="story.js"></script></body></html>
