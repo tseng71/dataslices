@@ -3,54 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="数据切片：用数据、视觉与叙事切开熟悉世界。">
+  <meta name="description" content="数据切片：从具体问题出发，用互动、视觉与叙事逐层打开数据背后的联系。">
+  <meta property="og:title" content="数据切片 · DataSlices">
+  <meta property="og:description" content="切开熟悉世界，看见数据里面的另一层。">
   <title>数据切片 · DataSlices</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="site-shell">
-    <header>
-      <a class="brand" href="./">DATA<span>SLICES</span> / 数据切片</a>
-      <div class="edition">数据叙事档案 · 2026</div>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="eyebrow">Data stories for curious minds</div>
-        <h1>切开熟悉世界，<br>看见数据里面的另一层。</h1>
-        <p class="lead">从一个具体问题出发，沿着数字、空间与时间留下的线索，逐层打开事物背后的联系。新的切片仍会继续加入。</p>
-      </section>
-      <section class="story-grid" aria-label="故事列表">
-        <a class="story-card battery featured" href="stories/battery-world-map/">
-          <span class="number">04</span><span class="tag">矿物 · 制造 · 供应链</span>
-          <div class="card-art battery-art" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-          <h2>拆开一块电池，<br>里面藏着一张世界地图</h2>
-          <p>从一枚电芯出发，沿着锂、钴、镍和石墨，穿过一条比产品本身大得多的全球供应链。</p>
-          <span class="read">进入故事 →</span>
+  <div class="reading-progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <header class="masthead">
+    <a class="brand" href="./">DATA<b>SLICES</b> / 数据切片</a>
+    <span class="publication">互动数据杂志</span>
+    <a class="archive-link" href="#archive">故事档案</a>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <span class="side-note">不断生长的数据故事档案</span>
+      <div class="hero-copy">
+        <p class="kicker">Data stories for curious minds</p>
+        <h1>切开熟悉世界，<br>看见数据里面<br>的另一层。</h1>
+        <p class="lead">从一个具体问题出发，沿着数字、空间与时间留下的线索，逐层打开事物背后的联系。</p>
+        <a class="continue" href="#latest"><span>向下进入最新切片</span><i></i></a>
+      </div>
+
+      <div class="object-stage" aria-label="一枚方形电芯被切开，露出锂、钴、镍和石墨材料层">
+        <span class="cut-label">CUT / 电池</span>
+        <span class="callout callout-li"><i></i>锂 / 正极</span>
+        <span class="callout callout-metals"><i></i>钴与镍</span>
+        <span class="callout callout-c">石墨 / 负极<i></i></span>
+        <div class="material-layer layer-li" data-symbol="Li"></div>
+        <div class="material-layer layer-co" data-symbol="Co"></div>
+        <div class="material-layer layer-ni" data-symbol="Ni"></div>
+        <div class="material-layer layer-c" data-symbol="C"></div>
+        <div class="cell-shell"><span class="terminal"></span></div>
+      </div>
+    </section>
+
+    <section class="latest" id="latest">
+      <p class="section-label">Latest story / 最新切片</p>
+      <div class="latest-visual">
+        <svg viewBox="0 0 1000 520" role="img" aria-labelledby="latestMapTitle latestMapDesc">
+          <title id="latestMapTitle">电池材料供应链世界图</title>
+          <desc id="latestMapDesc">不同颜色的路线连接矿山、精炼地与电芯制造环节，说明一枚电芯包含跨国供应链。</desc>
+          <path class="world" d="M56 123l127-70 126 20 40 89-56 76-91-3-51 97-86-48-16-93zM301 326l62 24 48 117-72 38-55-122zM431 96l91-49 77 32 22 55-40 48 25 81-47 42-34 128-62-64-7-139-52-45zM596 72l161-38 159 53 31 83-75 65-91-4-43 74-80-54-73-22-19-97zM790 351l98-29 70 49-19 80-91 22-71-63z"/>
+          <path class="route route-red" d="M815 395Q706 229 550 300T290 385"/>
+          <path class="route route-yellow" d="M186 406Q353 150 702 148"/>
+          <path class="route route-green" d="M532 325Q686 443 824 394"/>
+          <circle class="point red" cx="815" cy="395" r="15"/><circle class="point yellow" cx="550" cy="300" r="22"/>
+          <circle class="point green" cx="290" cy="385" r="12"/><circle class="point gray" cx="702" cy="148" r="19"/>
+        </svg>
+        <div class="map-legend" aria-hidden="true"><span>矿山</span><span>精炼</span><span>电芯</span></div>
+      </div>
+      <div class="latest-copy">
+        <p class="story-type">供应链 · 矿物 · 制造</p>
+        <h2>拆开一块电池，<br>里面藏着一张<br>世界地图</h2>
+        <p class="story-deck">从一枚电芯出发，沿着锂、钴、镍和石墨，穿过一条比产品本身大得多的全球供应链。</p>
+        <div class="story-meta"><span>约 9 分钟</span><span>滚动叙事 · 互动地图</span></div>
+        <a class="read-story" href="stories/battery-world-map/"><span>进入这个故事</span><i></i></a>
+      </div>
+    </section>
+
+    <section class="archive" id="archive">
+      <header class="archive-heading">
+        <p class="section-label">Story archive / 故事档案</p>
+        <h2>继续往里切。</h2>
+        <p>每个故事从一件具体事物开始，再把视野推向它背后的系统。</p>
+      </header>
+
+      <div class="archive-list">
+        <a class="archive-row stars-row" href="stories/disappearing-stars/">
+          <div class="row-index"><span>天文 · 城市</span><time datetime="2026">2026</time></div>
+          <div class="row-art stars-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><span></span></div>
+          <div class="row-copy"><h3>消失的星空</h3><p>一代人失去了多少颗星？追踪城市如何把夜空一颗颗抹去。</p><span class="row-action">进入故事 →</span></div>
         </a>
-        <a class="story-card" href="stories/disappearing-stars/">
-          <span class="number">03</span><span class="tag">天文 · 城市 · 光污染</span>
-          <div class="card-art stars-art" aria-hidden="true"></div>
-          <h2>消失的星空</h2>
-          <p>一代人失去了多少颗星？从真实星表、公众观测与夜间灯光数据出发，追踪城市如何把夜空一颗颗抹去。</p>
-          <span class="read">进入故事 →</span>
+
+        <a class="archive-row heat-row" href="stories/nyc-heat/">
+          <div class="row-index"><span>城市 · 气候</span><time datetime="2026">2026</time></div>
+          <div class="row-copy"><h3>一个城市，<br>两个温度</h3><p>天气预报给城市一个数字，街道却把热重新分配。</p><span class="row-action">进入故事 →</span></div>
+          <div class="row-art heat-art" aria-hidden="true"><i>89.0°</i><i>92.5°</i><i>93.9°</i></div>
         </a>
-        <a class="story-card" href="stories/nyc-heat/">
-          <span class="number">02</span><span class="tag">城市 · 气候 · 公平</span>
-          <div class="card-art heat-art" aria-hidden="true"><i></i><i></i><i></i></div>
-          <h2>一个城市，两个温度</h2>
-          <p>同一个傍晚，几条街之间也会有不同的热。树荫、硬质地面与不平等如何叠在一张地图上？</p>
-          <span class="read">进入故事 →</span>
+
+        <a class="archive-row ai-row" href="stories/ai-cost/">
+          <div class="row-index"><span>AI · 成本</span><time datetime="2026">2026</time></div>
+          <div class="row-art ai-art" aria-hidden="true"><span class="axis"></span><i class="up"></i><i class="down"></i><b class="ai-start">制造</b><b class="ai-end">使用</b></div>
+          <div class="row-copy"><h3>AI 的两条<br>价格曲线</h3><p>制造最前沿模型越来越贵；使用成熟能力却越来越便宜。</p><span class="row-action">进入故事 →</span></div>
         </a>
-        <a class="story-card" href="stories/ai-cost/">
-          <span class="number">01</span><span class="tag">AI · 成本 · 不平等</span>
-          <div class="card-art ai-art" aria-hidden="true"><i></i><i></i></div>
-          <h2>AI 的两条价格曲线</h2>
-          <p>制造最前沿模型越来越贵；使用已经成熟的能力却越来越便宜。两条曲线，指向两种不平等。</p>
-          <span class="read">进入故事 →</span>
-        </a>
-      </section>
-    </main>
-    <footer><span>© 2026 DataSlices</span><span>继续切开，继续发现。</span></footer>
-  </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#top">DATA<b>SLICES</b> / 数据切片</a>
+    <p>继续切开，继续发现。</p>
+    <span>© 2026</span>
+  </footer>
+  <script src="home.js"></script>
 </body>
 </html>
