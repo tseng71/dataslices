@@ -2,23 +2,24 @@
 
 DataSlices 只使用 **GitHub 仓库 + GitHub Pages**。ChatGPT Sites 不再作为发布目标。
 
-## 发布前提
+## 发布状态
 
 - 仓库：`tseng71/dataslices`
+- 可见性：**Public**
 - 默认分支：`main`
 - Pages 工作流：`.github/workflows/pages.yml`
 - 目标网址：`https://tseng71.github.io/dataslices/`
+- 故事网址：`https://tseng71.github.io/dataslices/stories/disappearing-stars/`
+- 2026-07-27：仓库公开后提交本次部署触发更新。
 
 ## 首次发布
 
-1. 将仓库可见性改为 **Public**；
+1. 仓库保持 **Public**；
 2. 打开 **Settings → Pages**；
 3. 在 **Build and deployment** 中将 **Source** 设为 **GitHub Actions**；
 4. 打开 **Actions**，确认 `Deploy DataSlices to GitHub Pages` 成功；
-5. 访问 `https://tseng71.github.io/dataslices/`；
-6. 检查首页与 `/stories/disappearing-stars/`；
-7. 在 README 中记录正式版本和 commit；
-8. 正式完成后创建 tag，例如 `story-disappearing-stars-v1.0`。
+5. 访问首页与 `/stories/disappearing-stars/`；
+6. 正式完成后创建 tag，例如 `story-disappearing-stars-v1.0`。
 
 ## 每次更新
 
