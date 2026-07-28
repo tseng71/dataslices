@@ -2,7 +2,7 @@
 
 > 版本：v2  
 > 详细布局：见 `02-storyboard-wireframes-v2.md`  
-> 状态：等待用户确认
+> 状态：用户已确认；v1.0 已按本故事板实现
 
 ## Visual system
 
