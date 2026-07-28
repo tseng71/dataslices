@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="制造最前沿 AI 越来越贵，使用成熟能力越来越便宜。"><title>AI 的两条价格曲线｜DataSlices</title><link rel="stylesheet" href="story.css"></head>
+<body>
+<div class="progress"><span id="progressBar"></span></div>
+<header class="hero" id="top"><a class="brand" href="../../index.html">DataSlices / 数据切片</a><div class="lines" aria-hidden="true"><i></i><i></i></div><div class="hero-copy"><p class="eyebrow">两条曲线，两种不平等</p><h1>AI 的两条<br>价格曲线</h1><p>制造最前沿模型越来越贵。使用已经成熟的能力，却越来越便宜。</p><a href="#story">沿着两条曲线向下 ↓</a></div></header>
+<main id="story">
+<section class="intro"><p class="dropcap">“AI 变贵了”与“AI 变便宜了”，都可能是真的。问题在于，它们谈论的不是同一件商品：一条曲线估算训练最前沿模型的计算成本；另一条曲线追踪完成固定能力任务的推理价格。</p><blockquote>不要把两条曲线放在同一个纵轴上。<br>它们的单位不同，问题也不同。</blockquote></section>
+<section class="split">
+  <article class="up"><p class="eyebrow">曲线 A · 制造</p><h2>向上：训练最前沿模型</h2><div class="chart" role="img" aria-label="重要语言模型的估算训练计算成本从2020年约200万美元上升到2024年约3.9亿美元"><svg viewBox="0 0 600 340"><path d="M50 285C165 278 215 265 305 215S440 115 550 48"/><circle cx="50" cy="285" r="6"/><circle cx="550" cy="48" r="8"/></svg><span class="start">2020<br><b>约 $200 万</b></span><span class="end">2024<br><b>约 $3.9 亿</b></span></div><p>Epoch AI 对重要语言模型的估算显示，前沿训练计算成本在这段时期快速上升，长期趋势约为每年 3.5 倍。它衡量的是创造最前沿模型的门槛。</p></article>
+  <article class="down"><p class="eyebrow">曲线 B · 使用</p><h2>向下：购买固定能力</h2><div class="chart" role="img" aria-label="达到MMLU 64.8能力的每百万token价格从2022年约20美元降至2024年约0.07美元"><svg viewBox="0 0 600 340"><path d="M50 52C175 60 250 135 335 205S455 275 550 288"/><circle cx="50" cy="52" r="6"/><circle cx="550" cy="288" r="8"/></svg><span class="start">2022.11<br><b>$20 / 百万 token</b></span><span class="end">2024.10<br><b>$0.07 / 百万 token</b></span></div><p>Stanford AI Index 固定在 MMLU 64.8 的能力水平后，推理价格在不到两年里下降约 286 倍。它衡量的是使用已经成熟能力的门槛。</p></article>
+</section>
+<section class="budget dark"><div><p class="eyebrow">把预算放上去</p><h2><label for="budget">如果你有 <output id="budgetOut">$20</output></label></h2><input id="budget" type="range" min="1" max="100" value="20" step="1"><p>只改变预算，价格使用上面的两个固定时间点。token 数不等于答案质量，也不包含应用开发成本。</p></div><div class="budget-result"><article><span>2022 年价格</span><b id="oldTokens">1.0M</b><small>token</small></article><i>vs</i><article><span>2024 年价格</span><b id="newTokens">286M</b><small>token</small></article></div></section>
+<section class="meaning"><p class="eyebrow">两种不平等</p><h2>制造能力集中，使用能力扩散</h2><div class="cards"><article><h3>谁能制造下一条曲线？</h3><p>资本、芯片、电力、数据和人才把前沿训练推向少数公司与国家。</p></article><article><h3>谁能从下降的曲线受益？</h3><p>价格下降让个人、小团队和公共机构获得曾经昂贵的能力，但网络、语言、技能与治理仍决定实际可及性。</p></article></div><blockquote>便宜的调用，不会自动消除昂贵的控制权。</blockquote></section>
+<section class="methods"><details open><summary>方法与来源</summary><p>训练成本采用 Epoch AI 对重要模型训练计算的估算；推理价格采用 Stanford AI Index 2025 中固定 MMLU 64.8 能力的名义价格。两条序列不能相除，也不代表模型总开发成本与最终用户总拥有成本。</p><p><a href="https://epoch.ai/data-insights/how-much-does-it-cost-to-train-frontier-ai-models">Epoch AI</a> · <a href="https://hai.stanford.edu/ai-index/2025-ai-index-report">Stanford AI Index 2025</a></p></details><footer><span>DataSlices / 数据切片</span><span>归档重建版 · 2026</span></footer></section>
+</main><script src="story.js"></script>
+</body></html>
