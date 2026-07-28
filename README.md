@@ -4,11 +4,27 @@
 
 ## 当前状态
 
-- 仓库：已建立并持续提交
+- 仓库：Public
 - 当前故事：《消失的星空》
-- 当前版本：**v0.1 交互原型，不是正式完成版**
-- 发布目标：仅使用 GitHub Pages
-- 待完成：真实星表、正式地图与地点数据、真机测试、阅读时长测试和公开部署
+- 当前版本：**v1.0，已按照 v2 逐章设计稿完成网页实现**
+- 发布目标：GitHub Pages
+- 正式网址：https://tseng71.github.io/dataslices/
+- 故事网址：https://tseng71.github.io/dataslices/stories/disappearing-stars/
+
+## v1.0 已实现
+
+- 12个完整场景与8—10分钟长篇叙事结构；
+- Hero滚动星空、代际情景、可见极限滑杆；
+- 光穹形成机制图；
+- 纽约地点相对位置图与同一天区星空联动；
+- 卫星与人眼“两把尺子”；
+- 五种可比环境类型的小倍数星空；
+- 迁徙鸟类灯光实验；
+- 照明治理实验室；
+- 桌面端和移动端响应式布局；
+- 键盘操作、Canvas替代文字、焦点状态与 `prefers-reduced-motion`；
+- 方法、来源、设计稿和版本记录入口；
+- GitHub Pages自动验证与部署工作流。
 
 ## 设计与文档入口
 
@@ -27,40 +43,9 @@
 - [方法与不确定性](stories/disappearing-stars/docs/methodology.md)
 - [来源清单](stories/disappearing-stars/docs/sources.md)
 
-## 项目结构
-
-```text
-dataslices/
-├── index.html
-├── styles.css
-├── docs/
-│   ├── dataslices-overall-design.md
-│   ├── editorial-principles.md
-│   └── story-template.md
-├── stories/
-│   └── disappearing-stars/
-│       ├── index.html
-│       ├── story.css
-│       ├── story.js
-│       ├── docs/
-│       │   ├── 01-concept-design-v1.md
-│       │   ├── 02-storyboard-wireframes-v2.md
-│       │   ├── implementation-traceability.md
-│       │   ├── manuscript.md
-│       │   ├── methodology.md
-│       │   └── sources.md
-│       ├── data/
-│       │   ├── locations.json
-│       │   └── sky-scenarios.json
-│       └── assets/
-└── .github/workflows/pages.yml
-```
-
 ## 网页实现依据
 
-网页实现必须依次追溯到：总体设计 → v1 概念设计 → v2 逐章线框 → 正文与方法 → 实现对照表。设计发生变化时，先更新文档，再修改网页。
-
-目前网页的初始原型是在完整设计稿尚未进入仓库时，根据聊天中的 v1、v2 方案和后补摘要编写。这一流程缺陷已经在 `implementation-traceability.md` 中记录；后续不再以聊天记录作为唯一开发依据。
+网页实现依次追溯到：总体设计 → v1 概念设计 → v2 逐章线框 → 正文与方法 → 实现对照表。
 
 ## 本地预览
 
@@ -70,15 +55,9 @@ python3 -m http.server 8000
 
 然后访问 `http://localhost:8000/`。
 
-## GitHub Pages
+## 发布
 
-仓库已经包含 GitHub Pages Actions 工作流。仓库设为公开并在 **Settings → Pages → Source** 中选择 **GitHub Actions** 后，每次推送到 `main` 都会自动发布。
-
-预期网址：
-
-```text
-https://tseng71.github.io/dataslices/
-```
+推送到 `main` 后，`.github/workflows/pages.yml` 会检查首页、故事页、样式文件和 JavaScript 语法，然后部署到 GitHub Pages。
 
 ## 当前故事
 
@@ -89,4 +68,4 @@ https://tseng71.github.io/dataslices/
 - 可视化必须推进叙事，不作为装饰。
 - 明确区分观测、模型、估算与情景模拟。
 - 不把卫星夜间灯光直接等同于地面天空亮度。
-- 阅读时间以上线后的真实测试中位数为准。
+- 地点与治理模块中的数值明确标记为区间或示意指数。
