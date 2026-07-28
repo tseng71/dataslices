@@ -1,0 +1,25 @@
+:root {
+  color-scheme: dark;
+  --bg: #07101b;
+  --panel: #0d1927;
+  --text: #edf4fb;
+  --muted: #9eacbc;
+  --accent: #8fd3ff;
+  --line: rgba(255,255,255,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 50% -10%,#13263d 0,#07101b 42%,#050a11 100%);color:var(--text);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;min-height:100vh}
+a{color:inherit}
+.site-shell{width:min(1120px,calc(100% - 36px));margin:auto}
+header{padding:32px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+.brand{font-weight:700;letter-spacing:.12em}.brand span{color:var(--accent)}
+.hero{padding:90px 0 60px}.eyebrow{color:var(--accent);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(2.6rem,8vw,6.6rem);line-height:.98;margin:.3em 0;letter-spacing:-.055em;max-width:900px}
+.lead{font-size:clamp(1.05rem,2.2vw,1.35rem);color:var(--muted);max-width:700px;line-height:1.8}
+.story-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;padding:38px 0 100px}
+.story-card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.022));border:1px solid var(--line);border-radius:24px;padding:28px;text-decoration:none;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;transition:.25s transform,.25s border-color}
+.story-card:hover{transform:translateY(-5px);border-color:rgba(143,211,255,.55)}
+.story-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 18%,rgba(143,211,255,.22),transparent 35%);pointer-events:none}
+.story-card h2{font-size:2rem;line-height:1.15;margin:0 0 12px}.story-card p{color:var(--muted);line-height:1.7;margin:0}.tag{display:inline-flex;align-self:flex-start;margin-bottom:auto;border:1px solid var(--line);border-radius:999px;padding:7px 11px;color:var(--accent);font-size:.78rem}
+footer{padding:32px 0 60px;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
