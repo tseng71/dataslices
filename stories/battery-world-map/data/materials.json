@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "mineYear": 2025,
+    "mineSource": "USGS Mineral Commodity Summaries 2026",
+    "processingYear": 2024,
+    "processingSource": "IEA Global Critical Minerals Outlook 2025",
+    "note": "Mine shares use 2025 estimated output. Processing values are rounded synthesis values and are not directly comparable with reserves, trade or announced capacity."
+  },
+  "materials": {
+    "lithium": {
+      "name": "锂", "symbol": "Li", "color": "#e7b84b", "role": "在正极与电解液之间搬运电荷的核心元素",
+      "mine": [{"country":"澳大利亚","share":31.7,"x":82,"y":74},{"country":"中国","share":21.4,"x":73,"y":39},{"country":"智利","share":19.3,"x":28,"y":75},{"country":"津巴布韦","share":9.7,"x":55,"y":69},{"country":"阿根廷","share":7.9,"x":30,"y":78},{"country":"其他","share":10,"x":48,"y":48}],
+      "process": [{"country":"中国","share":65,"x":73,"y":39},{"country":"智利","share":20,"x":28,"y":75},{"country":"阿根廷等","share":15,"x":30,"y":78}]
+    },
+    "cobalt": {
+      "name": "钴", "symbol": "Co", "color": "#de7358", "role": "帮助部分高镍正极稳定结构并提升寿命",
+      "mine": [{"country":"刚果（金）","share":73,"x":53,"y":61},{"country":"印度尼西亚","share":14,"x":78,"y":66},{"country":"俄罗斯","share":2.5,"x":69,"y":25},{"country":"其他","share":10.5,"x":46,"y":48}],
+      "process": [{"country":"中国","share":79,"x":73,"y":39},{"country":"芬兰","share":10,"x":54,"y":20},{"country":"其他","share":11,"x":45,"y":48}]
+    },
+    "nickel": {
+      "name": "镍", "symbol": "Ni", "color": "#73b7a2", "role": "在高镍正极里提高单位质量可储存的能量",
+      "mine": [{"country":"印度尼西亚","share":66.7,"x":78,"y":66},{"country":"菲律宾","share":6.9,"x":79,"y":53},{"country":"俄罗斯","share":5.1,"x":69,"y":25},{"country":"加拿大","share":3.6,"x":20,"y":25},{"country":"其他","share":17.7,"x":48,"y":48}],
+      "process": [{"country":"印度尼西亚","share":44,"x":78,"y":66},{"country":"中国","share":24,"x":73,"y":39},{"country":"日本等","share":12,"x":83,"y":40},{"country":"其他","share":20,"x":45,"y":48}]
+    },
+    "graphite": {
+      "name": "石墨", "symbol": "C", "color": "#8c98ab", "role": "构成多数锂离子电池的负极，接住充电时到来的锂离子",
+      "mine": [{"country":"中国","share":82,"x":73,"y":39},{"country":"马达加斯加","share":5,"x":59,"y":72},{"country":"莫桑比克","share":4,"x":55,"y":68},{"country":"巴西","share":4,"x":34,"y":67},{"country":"其他","share":5,"x":48,"y":48}],
+      "process": [{"country":"中国","share":95,"x":73,"y":39},{"country":"其他","share":5,"x":45,"y":48}]
+    }
+  }
+}
