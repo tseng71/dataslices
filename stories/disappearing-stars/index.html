@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="从城市灯光到肉眼夜空：一篇关于光污染、星空与夜晚记忆的数据故事。">
+  <title>消失的星空｜数据切片</title>
+  <link rel="stylesheet" href="story.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <header class="hero section-dark" id="top">
+    <canvas id="heroSky" aria-label="随城市天空变亮而逐渐消失的星空"></canvas>
+    <div class="horizon"></div>
+    <div class="hero-copy">
+      <a class="brand" href="../../index.html">数据切片 · DataSlices</a>
+      <p class="eyebrow">一个关于光、记忆与夜晚的故事</p>
+      <h1>消失的星空</h1>
+      <p class="deck">一代人失去了多少颗星？</p>
+      <p class="lead">如果你长期住在大城市，你可能从未真正见过银河。</p>
+      <div class="scroll-cue">向下滚动，让城市慢慢点亮</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="prose intro">
+      <p class="dropcap">夜晚降临后，你抬头看见几颗亮星。它们看起来很清楚，于是你很容易以为：城市里的夜空，本来就是这个样子。</p>
+      <p>但在远离人造灯光、没有月光而且空气清澈的地方，夜空不是一块黑布上零散钉着几颗白点。星星会填满视野，银河会像一层淡淡的云，从天空一侧延伸到另一侧。</p>
+      <aside class="big-fact"><strong>超过 80%</strong><span>的世界人口生活在人造光影响下的夜空之中。2016年的世界人工夜空亮度图还估计，银河已从超过三分之一人类的日常视野中消失。</span></aside>
+      <p>很多人不是“很久没有见过银河”。他们可能从未见过。</p>
+    </section>
+
+    <section class="age-story section-panel" id="ageStory">
+      <div class="sticky-viz">
+        <canvas id="ageSky" aria-label="从250颗可见星逐渐减少到100颗的情景模拟"></canvas>
+        <div class="age-readout"><span id="ageValue">0</span><small>岁</small></div>
+        <div class="star-readout">约 <strong id="starCount">250</strong> 颗可见星</div>
+      </div>
+      <div class="steps">
+        <article class="step" data-age="0"><p class="kicker">一个情景</p><h2>250颗星，怎样变成100颗</h2><p>假设一个孩子出生时，在自家附近的晴朗夜晚可以看到250颗星。</p></article>
+        <article class="step" data-age="6"><p>夜空每年只比前一年亮一点。变化很慢，慢到肉眼很难记住。</p></article>
+        <article class="step" data-age="12"><p>最暗的一批星先消失，熟悉的星座仍在。你很容易误以为什么也没有改变。</p></article>
+        <article class="step" data-age="18"><p>按照一项全球公众观测研究所估算的平均天空辉光增长情景，18年后，同一地点可能只剩约100颗星可见。</p><p class="note">这是把研究中的全球平均变化率转化为直观情景，不是对某座城市的精确预报。</p></article>
+      </div>
+    </section>
+
+    <section class="prose">
+      <h2>星星没有熄灭</h2>
+      <p>2011年至2022年，研究人员分析了超过5万次 Globe at Night 公众观测。参与者观察指定星座，再选择最接近自己所见的星图。研究估计，人眼感受到的天空辉光平均每年增长约9.6%。</p>
+      <p>星星仍在那里。改变的是星星与背景之间的对比。光污染最容易骗过的，可能正是人的记忆。</p>
+    </section>
+
+    <section class="interactive section-dark compact" id="limitSection">
+      <div class="interactive-copy">
+        <p class="eyebrow">亲手调亮夜空</p>
+        <h2>同一片天空，可以像两个宇宙</h2>
+        <p>拖动滑杆。恒星位置始终不变，只有肉眼可见极限和天空背景发生变化。</p>
+        <label for="magSlider">肉眼可见极限：<output id="magOutput">6.0</output> 等</label>
+        <input id="magSlider" type="range" min="2" max="6.5" value="6" step="0.1">
+        <div class="legend-row"><span>市中心</span><span>真正暗夜</span></div>
+      </div>
+      <div class="sky-card"><canvas id="limitSky" aria-label="根据极限星等显示不同数量恒星的天空"></canvas><div class="sky-caption" id="limitCaption">银河可见，暗星丰富</div></div>
+    </section>
+
+    <section class="mechanism section-light">
+      <div class="prose narrow"><p class="eyebrow">机制</p><h2>变亮的是地面，也变亮了天空</h2><p>路灯、幕墙和广告牌发出的光并不会全部落到需要照亮的地方。一部分直接射向天空；另一部分经路面和建筑反射，再被空气分子、水汽与颗粒散射。</p></div>
+      <div class="light-diagram" role="img" aria-label="城市灯光向上逸散并在大气中散射，形成光穹">
+        <div class="atmosphere"><i></i><i></i><i></i><i></i></div>
+        <div class="beam b1"></div><div class="beam b2"></div><div class="beam b3"></div>
+        <div class="city"><span class="tower"></span><span class="block"></span><span class="lamp"></span><span class="block low"></span></div>
+      </div>
+      <div class="prose narrow"><p>卫星适合告诉我们地面哪里变亮；人的眼睛告诉我们天空中的星星怎样消失。两把尺子测量的是同一个问题的不同侧面。</p></div>
+    </section>
+
+    <section class="locations section-panel">
+      <div class="prose narrow"><p class="eyebrow">空间</p><h2>从城市中心，到更暗的夜晚</h2><p>选择一个地点。右侧始终是同一片星空，只改变天空背景和可见极限。数值为叙事原型中的分级情景，正式数据版将接入经过校验的天空辉光模型。</p></div>
+      <div class="location-grid">
+        <div class="map-schematic" aria-label="纽约及周边地点示意图">
+          <div class="water"></div><div class="land l1"></div><div class="land l2"></div>
+          <button class="pin active" style="left:43%;top:52%" data-location="times-square">时代广场</button>
+          <button class="pin" style="left:48%;top:37%" data-location="central-park">中央公园</button>
+          <button class="pin" style="left:67%;top:63%" data-location="jamaica-bay">牙买加湾</button>
+          <button class="pin" style="left:78%;top:28%" data-location="pelham-bay">佩勒姆湾</button>
+          <button class="pin" style="left:89%;top:76%" data-location="montauk">更暗参照地</button>
+        </div>
+        <div class="location-sky"><canvas id="locationSky"></canvas><div class="location-meta"><h3 id="locationName">时代广场</h3><p id="locationDesc">最亮的恒星和行星仍容易辨认，大量暗星被背景光淹没。</p><dl><div><dt>可见极限</dt><dd id="locationMag">约3.0等</dd></div><div><dt>银河</dt><dd id="locationMilky">不可见</dd></div></dl></div></div>
+      </div>
+    </section>
+
+    <section class="two-rulers section-dark compact">
+      <div class="prose narrow"><p class="eyebrow">方法</p><h2>我们用两把尺子记录夜晚</h2></div>
+      <div class="rulers">
+        <article><div class="icon satellite">⌁</div><h3>卫星从上往下看</h3><p>NASA Black Marble 记录地面夜间辐亮度，适合观察道路、开发区和城市边缘怎样变化。</p><small>它不直接等于人眼看到的天空亮度。</small></article>
+        <div class="equals">≠</div>
+        <article><div class="icon eye">◉</div><h3>人从下往上看</h3><p>Globe at Night 通过星座匹配估计肉眼可见极限，更接近“今晚还能看到多暗的星”。</p><small>公众观测的空间分布并不均匀。</small></article>
+      </div>
+      <blockquote>卫星测量从地面离开的光。<br>人眼测量最终留在天空中的星。</blockquote>
+    </section>
+
+    <section class="comparison section-light">
+      <div class="prose narrow"><p class="eyebrow">比较</p><h2>城市居民看见的是不同版本的宇宙</h2><p>以下五个窗口使用同一套恒星位置。差异首先出现在最不起眼的暗星，随后星座之间的结构被切断，银河变成无法辨认的背景。</p></div>
+      <div class="sky-multiples" id="skyMultiples"></div>
+    </section>
+
+    <section class="ecology section-panel">
+      <div class="prose narrow"><p class="eyebrow">代价</p><h2>消失的不只是浪漫</h2><p>黑暗不只是为了观星而存在。大量鸟类在夜间迁徙；人工灯光可能吸引它们进入更危险的环境，改变飞行方向并增加与建筑物碰撞的风险。</p></div>
+      <div class="bird-demo">
+        <div class="bird-sky" id="birdSky"><div class="city-glow"></div><div class="lamp-core"></div></div>
+        <button id="lightToggle" class="primary-button" aria-pressed="true">关闭高强度灯光</button>
+        <p id="birdCaption">灯光开启：部分迁徙轨迹向光源聚集并盘旋。</p>
+      </div>
+      <div class="prose narrow"><p>一项高强度城市灯光研究观察到，灯光关闭后，迁徙鸟类受到的干扰随之消失。这并不代表所有物种和城市都完全相同，却说明至少一部分影响可以通过具体管理迅速改善。</p></div>
+    </section>
+
+    <section class="lighting-lab section-dark compact">
+      <div class="prose narrow"><p class="eyebrow">行动</p><h2>城市不必在安全与星空之间二选一</h2><p>关键不是把城市关掉，而是让光只出现在需要的地方、需要的时间，并保持足够而不过量的亮度。</p></div>
+      <div class="lab-grid">
+        <div class="controls" id="lightingControls">
+          <label><input type="checkbox" data-effect="useful" checked>只保留有明确用途的灯光</label>
+          <label><input type="checkbox" data-effect="shielded">灯具向下定向并加遮罩</label>
+          <label><input type="checkbox" data-effect="dimmed">亮度不超过实际需要</label>
+          <label><input type="checkbox" data-effect="timed">无人时段自动调暗</label>
+          <label>色温 <input id="tempSlider" type="range" min="2200" max="5000" step="100" value="4500"><output id="tempOutput">4500K</output></label>
+        </div>
+        <div class="lab-viz"><canvas id="labSky"></canvas><div class="ground-light"><span></span><span></span><span></span></div><div class="lab-score"><span>相对天空辉光</span><strong id="glowScore">78</strong><small>示意指数，不是通用实测值</small></div></div>
+      </div>
+    </section>
+
+    <section class="ending section-dark">
+      <canvas id="endingSky"></canvas>
+      <div class="ending-copy"><p class="eyebrow">今晚</p><h2>你所在的地方，还剩下多少星？</h2><p>不要只寻找最亮的几颗星。试着观察它们之间还有多少微弱星点，天空背景接近黑色，还是带着灰白、橙黄或蓝紫色的光。</p><p>我们总以为星空非常遥远。真正把它从视野中带走的，却是地面上离我们最近的光。</p><a class="primary-button" href="#top">重新看一次夜空</a></div>
+    </section>
+
+    <section class="methods section-light">
+      <details><summary>方法、数据与不确定性</summary><div class="method-columns"><p>本原型明确区分真实研究结论、数据驱动显示和叙事情景。星空画面使用固定的合成星表，按视星等阈值筛选；“250到100”依据公开研究的平均天空辉光增长情景构造，不代表任一具体城市的预测。</p><p>地点分级目前用于交互原型。正式发布版应以人工天空辉光模型为基线，并用 NASA Black Marble 的地面夜光变化与 Globe at Night 地面观测交叉校验。</p></div><p><a href="docs/methodology.md">查看完整方法文档</a> · <a href="docs/sources.md">查看来源清单</a></p></details>
+      <footer><span>数据切片 · DataSlices</span><span>故事原型 v0.1 · 2026</span></footer>
+    </section>
+  </main>
+  <script src="story.js"></script>
+</body>
+</html>
