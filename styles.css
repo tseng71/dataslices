@@ -56,6 +56,22 @@ main{padding:38px 3.7vw 130px}
 .story-link h2{font-family:var(--serif);font-size:clamp(1.7rem,2.25vw,2.65rem);line-height:1.14;letter-spacing:-.045em;margin:15px 0 5px}
 .story-link p{font-size:.93rem;line-height:1.55;color:var(--muted);margin:0;max-width:95%}
 
+.lights-thumb{background:#080e18;color:#fff}
+.lights-grid{position:absolute;inset:0;background:
+  radial-gradient(circle at 12% 18%,#ffe37c 0 2px,transparent 3px),
+  radial-gradient(circle at 38% 27%,#ff9b54 0 3px,transparent 5px),
+  radial-gradient(circle at 27% 61%,#ffd869 0 2px,transparent 4px),
+  radial-gradient(circle at 56% 42%,#f0698d 0 2px,transparent 4px),
+  linear-gradient(31deg,transparent 45%,rgba(105,130,164,.26) 46% 47%,transparent 48%),
+  linear-gradient(109deg,transparent 48%,rgba(105,130,164,.2) 49% 50%,transparent 51%);
+  background-size:83px 77px,121px 113px,95px 104px,148px 139px,88px 88px,73px 73px
+}
+.lights-dark{position:absolute;inset:0 0 0 54%;background:rgba(3,6,12,.82);backdrop-filter:saturate(.3)}
+.lights-divider{position:absolute;left:54%;top:0;bottom:0;width:2px;background:#fff;box-shadow:0 0 16px #fff}
+.lights-divider:after{content:"↔";position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#111;font-style:normal}
+.lights-thumb b{position:absolute;top:20px;font-size:.62rem;letter-spacing:.18em}.lights-thumb b:nth-of-type(1){left:18px;color:#ffd66b}.lights-thumb b:nth-of-type(2){right:18px;color:#8190a4}
+.lights-caption{position:absolute;left:18px;bottom:14px;font-size:.7rem;letter-spacing:.1em;max-width:70%}
+
 .battery-thumb{background:var(--orange)}
 .battery-thumb svg{position:absolute;inset:5%;width:90%;height:90%}
 .battery-thumb .land{fill:#f9bd56;stroke:var(--ink);stroke-width:2}

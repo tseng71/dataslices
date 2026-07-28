@@ -26,12 +26,19 @@ jobs:
       - name: Validate static stories
         run: |
           test -s index.html
-          for story in battery-world-map disappearing-stars ai-cost nyc-heat; do
+          for story in lights-out battery-world-map disappearing-stars ai-cost nyc-heat; do
             test -s "stories/$story/index.html"
             test -s "stories/$story/story.css"
             test -s "stories/$story/story.js"
             node --check "stories/$story/story.js"
           done
+          test -s stories/lights-out/data/evidence.json
+          test -s stories/lights-out/docs/story-brief.md
+          test -s stories/lights-out/docs/data-notes.md
+          test -s stories/lights-out/docs/storyboard.md
+          test -s stories/lights-out/docs/methodology.md
+          test -s stories/lights-out/docs/sources.md
+          test -s stories/lights-out/docs/qa-notes.md
           test -s stories/battery-world-map/docs/02-storyboard-wireframes-v2.md
           test -s stories/battery-world-map/docs/methodology.md
           test -s stories/battery-world-map/docs/sources.md

@@ -1,0 +1,53 @@
+{
+  "updated": "2026-07-28",
+  "stories": [
+    {
+      "id": "maria",
+      "event": "Hurricane Maria",
+      "place": "Puerto Rico",
+      "event_date": "2017-09-20",
+      "observed_windows": ["2017-09-20/2017-11-20", "2018-01-21/2018-03-20"],
+      "statistics": {
+        "customer_hours_lost_billions": 3.9,
+        "rural_long_outage_percent": 41,
+        "urban_long_outage_percent": 29,
+        "rural_share_customer_hours_percent": 61,
+        "utility_agreement_r": 0.839,
+        "utility_agreement_days": 195,
+        "san_juan_recovery_bins_percent": [4, 40, 53, 3]
+      },
+      "evidence_level": "satellite + utility + modeled downscaling",
+      "sources": [
+        "https://science.nasa.gov/earth/earth-observatory/night-lights-show-slow-recovery-from-maria-144371/",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0218883"
+      ]
+    },
+    {
+      "id": "caracas",
+      "event": "2019 Venezuelan blackouts",
+      "place": "Caracas",
+      "event_date": "2019-03-07",
+      "observed_windows": ["2019-03-01/2019-03-28"],
+      "evidence_level": "nighttime light + geolocated social media",
+      "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC10687289/"]
+    },
+    {
+      "id": "ian",
+      "event": "Hurricane Ian",
+      "place": "Southwest Florida",
+      "event_date": "2022-09-28",
+      "observed_dates": ["2022-08-30", "2022-09-30"],
+      "evidence_level": "NASA published before/after imagery",
+      "sources": ["https://svs.gsfc.nasa.gov/5058/"]
+    },
+    {
+      "id": "beryl",
+      "event": "Hurricane Beryl",
+      "place": "Houston",
+      "event_date": "2024-07-08",
+      "observed_dates": ["2024-07-09"],
+      "evidence_level": "NASA/NOAA published aftermath imagery",
+      "sources": ["https://www.earthdata.nasa.gov/news/worldview-image-archive/houston-power-outages-due-hurricane-beryl"]
+    }
+  ]
+}

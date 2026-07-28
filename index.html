@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -26,7 +26,7 @@
       <span class="sr-only">寻找故事</span>
       <input id="storySearch" type="search" placeholder="寻找一个故事…" autocomplete="off">
     </label>
-    <div class="filters" aria-label="故事分类">
+    <div class="filters" role="group" aria-label="故事分类">
       <button class="filter is-active" type="button" data-filter="all">全部</button>
       <button class="filter" type="button" data-filter="science">科学</button>
       <button class="filter" type="button" data-filter="city">城市</button>
@@ -37,6 +37,21 @@
   <main id="stories">
     <h1 class="sr-only">数据切片故事档案</h1>
     <section class="story-grid" aria-live="polite">
+      <article class="story-card" data-category="science city" data-search="城市 停电 夜间灯光 卫星 VIIRS 飓风 Maria Ian Beryl 加拉加斯">
+        <div class="story-meta"><span class="number">#005</span><time datetime="2026-07">2026 年 7 月</time></div>
+        <a class="story-link" href="stories/lights-out/">
+          <div class="thumbnail lights-thumb" role="img" aria-label="一条分界线把城市夜间灯光分成明亮与熄灭两侧">
+            <span class="lights-grid"></span>
+            <span class="lights-dark"></span>
+            <i class="lights-divider"></i>
+            <b>ON</b><b>OFF</b>
+            <span class="lights-caption">从太空追踪一座城市的熄灭与恢复</span>
+          </div>
+          <h2>城市突然熄灯时，太空看见了什么？</h2>
+          <p>卫星看见灯光消失，也看见不同街区用了多久才重新亮起。</p>
+        </a>
+      </article>
+
       <article class="story-card" data-category="science technology" data-search="电池 世界地图 锂 钴 镍 石墨 供应链">
         <div class="story-meta"><span class="number">#004</span><time datetime="2026-07">2026 年 7 月</time></div>
         <a class="story-link" href="stories/battery-world-map/">
