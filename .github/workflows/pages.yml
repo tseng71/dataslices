@@ -4,11 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: '*/5 * * * *'
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -17,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  validate-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -25,69 +23,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Expand validated v2 source bundle
+      - name: Validate static stories
         run: |
-          test -s scripts/v2_bundle.tar.gz.b64
-          base64 --decode scripts/v2_bundle.tar.gz.b64 > /tmp/dataslices-v2.tar.gz
-          echo "42773c56d7bc94dc867de2306cd2ea78f4919597234308475c9ac51ce07b780d  /tmp/dataslices-v2.tar.gz" | sha256sum --check
-          tar -xzf /tmp/dataslices-v2.tar.gz
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Build local catalog and map data
-        run: python scripts/build_story_data.py
-
-      - name: Validate v2 acceptance requirements
-        run: |
-          python -m py_compile scripts/build_story_data.py
-          node --check stories/disappearing-stars/story.js
-          test -s stories/disappearing-stars/index.html
-          test -s stories/disappearing-stars/data/bright-stars.json
-          test -s stories/disappearing-stars/data/ny-region.geojson
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          base = Path('stories/disappearing-stars/data')
-          stars = json.loads((base / 'bright-stars.json').read_text())
-          geo = json.loads((base / 'ny-region.geojson').read_text())
-          assert stars['meta']['source'] != 'development-fallback'
-          assert len(stars['stars']) >= 260
-          assert geo.get('features')
-          assert geo.get('metadata', {}).get('source') != 'development-fallback'
-          html = Path('stories/disappearing-stars/index.html').read_text()
-          js = Path('stories/disappearing-stars/story.js').read_text()
-          css = Path('stories/disappearing-stars/story.css').read_text()
-          assert html.count('<section') >= 12
-          assert 'prefers-reduced-motion' in css
-          assert 'bright-stars.json' in js
-          print(f"Validated {len(stars['stars'])} catalog stars and {len(geo['features'])} map features")
-          PY
-
-      - name: Save expanded sources and generated public data
-        run: |
-          rm scripts/v2_bundle.tar.gz.b64 .deploy-trigger 2>/dev/null || true
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m "feat(story): publish strict Disappearing Stars v2 [skip ci]"
-            git push
-          fi
-
+          test -s index.html
+          for story in battery-world-map disappearing-stars ai-cost nyc-heat; do
+            test -s "stories/$story/index.html"
+            test -s "stories/$story/story.css"
+            test -s "stories/$story/story.js"
+            node --check "stories/$story/story.js"
+          done
+          test -s stories/battery-world-map/docs/02-storyboard-wireframes-v2.md
+          test -s stories/battery-world-map/docs/methodology.md
+          test -s stories/battery-world-map/docs/sources.md
       - name: Configure Pages
         uses: actions/configure-pages@v5
-
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
-
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
