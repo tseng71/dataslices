@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="从一枚电芯出发，沿着锂、钴、镍和石墨，穿过全球电池供应链。">
+  <meta property="og:title" content="拆开一块电池，里面藏着一张世界地图｜DataSlices">
+  <meta property="og:description" content="矿从哪里来，与材料在哪里被加工，是两张不同的地图。">
+  <title>拆开一块电池，里面藏着一张世界地图｜DataSlices</title>
+  <link rel="stylesheet" href="story.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <header class="hero" id="top">
+    <a class="brand" href="../../index.html">DataSlices / 数据切片</a>
+    <div class="hero-cell" aria-hidden="true"><span></span><i></i><i></i><i></i><i></i><b></b></div>
+    <div class="hero-copy">
+      <p class="eyebrow">一枚电芯的全球旅行</p>
+      <h1>拆开一块电池，<br>里面藏着一张世界地图</h1>
+      <p class="deck">从一枚电芯出发，沿着锂、钴、镍和石墨，穿过一条比产品本身大得多的全球供应链。</p>
+      <p class="scroll-cue">向下滚动，拆开它 ↓</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="opening prose">
+      <p class="dropcap">一块电动车电池看起来像一个封闭的工业品。外壳之内，正极、负极、隔膜与电解液紧密叠在一起；外壳之外，它的材料却从几大洲出发，经过矿山、化学转化、活性材料制造与电芯装配，才在同一处相遇。</p>
+      <p class="pull">真正决定供应链韧性的，不只是矿藏在哪里，<br>更是材料在哪里被加工。</p>
+    </section>
+
+    <section class="scrolly" id="cellStory">
+      <div class="sticky-stage">
+        <div class="cell-exploded" id="cellExploded" role="img" aria-label="方形电芯由外壳、集流体、正极、隔膜、负极和电解液组成">
+          <div class="layer case">外壳</div><div class="layer cathode">正极</div><div class="layer separator">隔膜</div><div class="layer anode">负极</div><div class="layer electrolyte">电解液</div>
+        </div>
+        <div class="material-readout" id="materialReadout" aria-live="polite">先从外壳开始。</div>
+      </div>
+      <div class="steps">
+        <article class="step" data-cell-step="0"><p class="eyebrow">01 / 拆解</p><h2>先把银色外壳拿开</h2><p>外壳保护内部卷芯，却不是故事的终点。真正负责储存与释放能量的，是更薄、更密集的材料层。</p></article>
+        <article class="step" data-cell-step="1"><h3>正极：最常被谈论的一面</h3><p>NMC 正极可能包含锂、镍、锰和钴；LFP 正极则以锂、铁和磷为主。化学体系不同，地图也会改变。</p></article>
+        <article class="step" data-cell-step="2"><h3>负极：常被忽略的另一半</h3><p>今天的大多数锂离子电池仍使用石墨负极。换掉钴和镍，并不等于摆脱所有集中依赖。</p></article>
+      </div>
+    </section>
+
+    <section class="materials light" id="materials">
+      <div class="section-copy"><p class="eyebrow">02 / 九种材料，九种工作</p><h2>电池不是一块“锂”</h2><p>选择一种材料，看它在电芯中负责什么。颜色会在后面的地图、流程与化学体系中保持一致。</p></div>
+      <div class="material-grid" role="group" aria-label="电池材料">
+        <button data-material="lithium" class="active"><b>Li</b><span>锂</span></button>
+        <button data-material="nickel"><b>Ni</b><span>镍</span></button>
+        <button data-material="cobalt"><b>Co</b><span>钴</span></button>
+        <button data-material="graphite"><b>C</b><span>石墨</span></button>
+        <button data-static="manganese"><b>Mn</b><span>锰</span></button>
+        <button data-static="iron"><b>Fe</b><span>铁</span></button>
+        <button data-static="phosphorus"><b>P</b><span>磷</span></button>
+        <button data-static="copper"><b>Cu</b><span>铜</span></button>
+        <button data-static="aluminium"><b>Al</b><span>铝</span></button>
+      </div>
+      <p class="material-role" id="materialRole">锂：在正极与电解液之间搬运电荷的核心元素。</p>
+    </section>
+
+    <section class="map-section dark" id="supplyMap">
+      <div class="map-header">
+        <div><p class="eyebrow">03 / 两张地图</p><h2>矿从哪里来？材料又在哪里被加工？</h2></div>
+        <div class="switches">
+          <div class="segmented" role="group" aria-label="材料选择">
+            <button data-map-material="lithium" class="active">锂</button><button data-map-material="cobalt">钴</button><button data-map-material="nickel">镍</button><button data-map-material="graphite">石墨</button>
+          </div>
+          <div class="segmented stage-switch" role="group" aria-label="供应链阶段">
+            <button data-stage="mine" class="active">矿山</button><button data-stage="process">加工</button>
+          </div>
+        </div>
+      </div>
+      <div class="map-layout">
+        <div class="world-map" id="worldMap" role="img" aria-label="选中材料的主要矿山或加工国家份额地图">
+          <svg viewBox="0 0 1000 500" aria-hidden="true">
+            <path d="M74 105l113-50 100 28 35 69-42 65-82-2-45 80-65-35-24-79zM279 314l58 16 46 99-52 55-57-117zM443 78l69-39 76 19 31 50-34 29 20 64-45 23-29 106-55-55-10-108-48-22zM587 73l159-40 150 46 30 72-70 59-79-3-40 65-70-48-74-16-20-84zM776 329l88-24 76 42-18 72-87 25-72-55z"/>
+          </svg>
+          <div id="mapDots"></div>
+        </div>
+        <div class="ranking"><p id="mapLabel">2025 年估算矿山产量份额</p><ol id="rankingList"></ol><p class="map-note">圆点面积与份额近似对应；“加工”采用 IEA 2024 口径的四舍五入综合值。矿山产量、储量、加工、贸易与规划产能不是同一指标。</p></div>
+      </div>
+    </section>
+
+    <section class="chain light">
+      <div class="section-copy"><p class="eyebrow">04 / 路径</p><h2>一块矿石，还不是一块电池</h2><p>每前进一步，材料纯度、设备、知识与资本门槛都会改变。控制矿山，不等于控制下一道工序。</p></div>
+      <div class="chain-row" aria-label="电池材料供应链四阶段">
+        <article><span>01</span><h3>开采</h3><p>矿石或卤水离开地下。</p></article><i>→</i><article><span>02</span><h3>精炼</h3><p>转化为电池级化学品。</p></article><i>→</i><article><span>03</span><h3>活性材料</h3><p>形成正负极所需粉体。</p></article><i>→</i><article><span>04</span><h3>电芯</h3><p>涂布、叠片、注液与化成。</p></article>
+      </div>
+      <aside class="big-stat"><strong>86%</strong><span>2024 年，关键能源矿物前三大精炼国的平均份额。2020 年约为 82%。</span></aside>
+    </section>
+
+    <section class="cobalt dark">
+      <div class="section-copy"><p class="eyebrow">05 / 高集中度</p><h2>100 份钴矿里，约 73 份来自一个国家</h2><p>USGS 估算，2025 年刚果民主共和国占全球钴矿产量约 73%。这不是“非洲”这个宽泛标签，而是一个高度具体、同时包含大型工业矿山与手工小矿的生产系统。</p></div>
+      <div class="hundred" id="cobaltDots" role="img" aria-label="100个圆点中73个代表刚果民主共和国2025年钴矿份额"></div>
+      <div class="cobalt-caption"><b>73</b><span>刚果（金）</span><b>14</b><span>印度尼西亚</span><b>13</b><span>其他地区</span></div>
+      <p class="caveat">劳动与环境风险不能从一个国家份额直接推出。工业采矿与手工/小规模采矿需要分别讨论；本故事只用份额说明集中度，并链接 ILO 的劳工背景材料。</p>
+    </section>
+
+    <section class="chemistry light" id="chemistry">
+      <div class="section-copy"><p class="eyebrow">06 / 化学体系</p><h2>换一种正极，地图会重画</h2><p>同一枚参考电芯，在 NMC 与 LFP 之间切换。变化不是“有矿物”与“没有矿物”，而是依赖从一组材料转向另一组材料。</p></div>
+      <div class="chem-controls segmented" role="group" aria-label="电池化学体系">
+        <button data-chem="nmc" class="active">NMC</button><button data-chem="lfp">LFP</button>
+      </div>
+      <div class="chem-panel">
+        <div class="chem-cell" id="chemCell"><span class="chip lithium">锂</span><span class="chip nickel">镍</span><span class="chip cobalt">钴</span><span class="chip manganese">锰</span><span class="chip graphite">石墨</span></div>
+        <div class="chem-copy"><h3 id="chemTitle">NMC：更高能量密度，更多金属组合</h3><p id="chemDesc">NMC 以镍、锰、钴和锂构成正极；高镍路线减少钴，却提高对镍品质与加工的要求。</p><div class="metric-row"><div><span>能量密度</span><b id="densityMetric">相对较高</b></div><div><span>2025 平均成本</span><b id="costMetric">基准</b></div><div><span>关键变化</span><b id="shiftMetric">镍 / 钴</b></div></div></div>
+      </div>
+      <p class="note">IEA 报告称，2025 年 LFP 的平均每千瓦时成本比 NMC 替代方案低 40% 以上；这是市场平均，不是任意车型的保证。LFP 仍依赖锂、石墨与高纯磷酸。</p>
+    </section>
+
+    <section class="stress dark" id="stressTest">
+      <div class="section-copy"><p class="eyebrow">07 / 静态压力测试</p><h2>如果一个环节受阻，哪条路线暴露更多？</h2><p>选择化学体系、材料和阶段。结果只把当前集中度翻译成“暴露份额”，不预测价格、停产时间或替代速度。</p></div>
+      <div class="stress-controls">
+        <label>化学体系<select id="stressChem"><option value="nmc">NMC</option><option value="lfp">LFP</option></select></label>
+        <label>材料<select id="stressMaterial"><option value="lithium">锂</option><option value="cobalt">钴</option><option value="nickel">镍</option><option value="graphite">石墨</option></select></label>
+        <label>阶段<select id="stressStage"><option value="mine">矿山</option><option value="process">加工</option></select></label>
+      </div>
+      <div class="stress-result"><div class="gauge"><span id="gaugeFill"></span><b id="exposureValue">32%</b></div><div><h3 id="exposureTitle">澳大利亚 · 锂矿</h3><p id="exposureText">当前选择中，最大单一国家约占 32%。这表示地理集中暴露，不等于 32% 的电池会立即停产。</p></div></div>
+    </section>
+
+    <section class="responses light">
+      <div class="section-copy"><p class="eyebrow">08 / 韧性</p><h2>没有一颗银弹，只有四条同时推进的路</h2></div>
+      <div class="response-grid">
+        <article><b>01</b><h3>多元化开采</h3><p>让更多地区进入供应，但新矿需要时间、许可与当地社会协商。</p></article>
+        <article><b>02</b><h3>多元化加工</h3><p>最容易被忽略、也最需要资本和化学工程能力的一环。</p></article>
+        <article><b>03</b><h3>化学替代</h3><p>减少某种高风险材料，同时承认依赖会迁移到别处。</p></article>
+        <article><b>04</b><h3>回收与减量</h3><p>让材料再次进入循环，并用更小电池、共享出行减少原生需求。</p></article>
+      </div>
+      <aside class="big-stat green"><strong>⅔</strong><span>2020 年以来，全球新增电池回收产能中约三分之二位于中国。回收本身也有一张集中度地图。</span></aside>
+    </section>
+
+    <section class="ending dark">
+      <div class="closing-cell" aria-hidden="true"><i></i><i></i><i></i><i></i><span></span></div>
+      <div class="ending-copy"><p class="eyebrow">重新装回去</p><h2>电池又变回一块安静的银色长方体</h2><p>地图消失在外壳里，但没有消失在供应链里。下一次看到电动车、手机或储能站时，可以多问两层：矿从哪里来？谁把它变成电池级材料？</p><p class="pull">一块电池不是一个地点。<br>它是一条被折叠起来的世界。</p><a class="button" href="#top">重新拆开</a></div>
+    </section>
+
+    <section class="methods light">
+      <details open><summary>方法、数据与不确定性</summary>
+        <div class="method-columns">
+          <p><strong>矿山：</strong>2025 年估算产量份额来自 USGS《Mineral Commodity Summaries 2026》。美国锂产量因商业保密未公开；世界总量和国家值均可能四舍五入。</p>
+          <p><strong>加工：</strong>IEA《Global Critical Minerals Outlook 2025》的 2024 年精炼与加工集中度。页面中的单国份额为便于叙事的四舍五入综合值，不与矿山产量做精确相减。</p>
+          <p><strong>化学体系：</strong>比较描述方向与供应链构成；不同厂商、尺寸、正极配方和系统设计会改变能量密度与成本。</p>
+          <p><strong>压力测试：</strong>只显示最大供应国份额，是静态暴露指标；不包含库存、合同、替代、价格弹性、跨境贸易或恢复时间。</p>
+        </div>
+        <p class="doc-links"><a href="docs/methodology.md">完整方法</a> · <a href="docs/sources.md">来源清单</a> · <a href="docs/02-storyboard-wireframes-v2.md">确认版 v2 设计稿</a> · <a href="data/materials.json">页面数据</a></p>
+      </details>
+      <footer><span>DataSlices / 数据切片</span><span>《拆开一块电池》v1.0 · 2026-07-28</span></footer>
+    </section>
+  </main>
+  <script src="story.js"></script>
+</body>
+</html>
