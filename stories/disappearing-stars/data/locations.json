@@ -1,0 +1,7 @@
+[
+  {"id":"times-square","name":"时代广场","subtitle":"直射光与城市光穹叠加","limit":3.2,"skyglow":0.88,"milkyWay":false},
+  {"id":"central-park","name":"中央公园","subtitle":"局部眩光减少，但仍在城市光穹内","limit":4.1,"skyglow":0.68,"milkyWay":false},
+  {"id":"jamaica-bay","name":"牙买加湾","subtitle":"远离中城，暗星逐渐回来","limit":4.8,"skyglow":0.49,"milkyWay":false},
+  {"id":"pelham-bay","name":"佩勒姆湾公园","subtitle":"城市边缘的过渡夜空","limit":5.2,"skyglow":0.36,"milkyWay":false},
+  {"id":"dark-reference","name":"暗夜参照地","subtitle":"远离大型城市光穹的情景参照","limit":6.3,"skyglow":0.08,"milkyWay":true}
+]
