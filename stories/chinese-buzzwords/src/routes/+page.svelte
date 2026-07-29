@@ -5,236 +5,277 @@
   import { createStoryState } from "$lib/state/story.svelte.js";
   import Scrolly from "$lib/components/Scrolly.svelte";
   import StoryGraphic from "$lib/components/StoryGraphic.svelte";
+  import WordRail from "$lib/components/WordRail.svelte";
   import Explorer from "$lib/components/Explorer.svelte";
   import StaticArchive from "$lib/components/StaticArchive.svelte";
 
-  const authoredScenes = [
-    { id: "encoding-year" },
-    { id: "encoding-lanes" },
-    { id: "cohort-2021" },
-    { id: "archive-overview" },
-    { id: "archive-method-breaks" },
-    { id: "life-paths" },
-    { id: "register-migration" },
-    { id: "template-reveal" },
-    { id: "template-comparison" },
-    { id: "semantic-fields" }
-  ];
-
-  const story = createStoryState(authoredScenes);
-  let testState = "";
-  let initialQuery = "YYDS";
-
   const steps = [
     {
-      id: "encoding-year",
-      chapter: "01 / 一条记录",
-      heading: "先只确认一件事",
+      id: "field-intro",
+      chapter: "00 / 先看词",
+      heading: "这些词，你还认得几个？",
       paragraphs: [
-        "YYDS 被列入 <strong>2021 年度十大网络用语</strong>。",
-        "这能证明它在那一年进入一份年度语言档案，却不能告诉我们它第一次在哪一天出现，也不能告诉我们今天还有多少人在说。"
+        "页面周围只是跨年份挑选的一组词，不是全部 140 条。",
+        "它们先作为语言环境出现，而不是被塞进卡片和表格。"
       ],
-      note: "“入选过”不是“流行了多久”。年度名单是一张快照，不是一张心电图。"
+      note: "本章人口：约 40 个跨年份策展词。"
     },
     {
-      id: "encoding-lanes",
-      chapter: "02 / 证据轨道",
-      heading: "不同来源，回答不同问题",
+      id: "field-color",
+      chapter: "01 / 时间显影",
+      heading: "颜色先教会你时间",
       paragraphs: [
-        "年度入选、网络语境、搜索关注和新闻或公共表达，是四条不同的证据轨道。",
-        "搜索上升可能是人们在查含义；新闻出现可能是媒体在解释现象。它们彼此有关，却不能互相替代。"
+        "朱红来自较早年份，蓝色来自中段，紫色来自最近几年。",
+        "YYDS 只是其中一个可追踪对象。"
       ],
-      note: "缺数据不是零，更不是死亡。"
+      note: "字号表示叙事焦点，不表示热度。"
     },
     {
-      id: "cohort-2021",
-      chapter: "03 / 同一年",
-      heading: "它不是孤零零的一句缩写",
+      id: "title-reveal",
+      chapter: "02 / 标题",
+      heading: "从一句话，到一种说话方式",
       paragraphs: [
-        "YYDS 和“破防”“躺平”“绝绝子”“元宇宙”等九个词共同记录了 2021。",
-        "同年的并排只是时代上下文，不是重要性或热度排名。"
+        "2012—2025，十四份年度名单留下 140 种说法。",
+        "我们不计算它们的寿命，而是看名单里的语言形式怎样改变。"
       ],
-      note: "来源：国家语言资源监测与研究中心年度十大网络用语。"
+      note: "标题在词场之后出现。"
     },
     {
-      id: "archive-overview",
-      chapter: "04 / 14 年",
-      heading: "140 个词，排成一圈年轮",
+      id: "year-focus",
+      chapter: "03 / 2021",
+      heading: "先落到一个年份",
       paragraphs: [
-        "2012 年的“元芳，你怎么看”，2016 年的“蓝瘦香菇”，2024 年的“班味儿”，都留在同一套年度档案里。",
-        "早年的名单常像一句完整台词；近年的短词、标签和混写更醒目。但旧形式并没有消失。"
+        "YYDS 与“破防”“绝绝子”“躺平”等词共同进入 2021 年度记录。",
+        "同年并列只是时代上下文，不是热度排序。"
       ],
-      note: "主数据覆盖 2012—2025；2005—2011 只保留历史框架，不补造缺失词条。"
+      note: "本章人口：2021 年十词；其它年份仅作背景定位。"
     },
     {
-      id: "archive-method-breaks",
-      chapter: "05 / 方法边界",
-      heading: "同列，不等于同一榜单",
+      id: "year-river",
+      chapter: "04 / 年份河流",
+      heading: "十四年，完整 140 个词",
       paragraphs: [
-        "“给力”出现在更早的媒体流行语记录中；本文的 140 条主数据来自同名的“年度十大网络用语”。",
-        "不同系列观察的语域、语料和方法不同，不能直接拼成一条连续排行。"
+        "向两边展开以后，每个年份都由十个真实词组成。",
+        "没有“+7”，也没有用圆点替代读者真正想看的词。"
       ],
-      note: "页面发布顺序也不被解释为热度名次。"
+      note: "本章人口：完整 140 词。右侧词表可随时检查。"
     },
     {
-      id: "life-paths",
-      chapter: "06 / 后来的路",
-      heading: "热词不都活成同一种样子",
+      id: "form-short",
+      chapter: "05 / 构词流带",
+      heading: "先看短词和标签",
       paragraphs: [
-        "有的词被官方解读记录了仿写，有的记录了语域扩展。",
-        "对绝大多数词，我们只知道它在某年被选中。没有后续证据，就不替它写结局。"
+        "140 个词离开年份列，汇入四条构词流带。",
+        "59 个被编码为短词或标签：锦鲤、佛系、硬核、破防、班味儿。"
       ],
-      note: "“尚不能判断”和有证据的路径同等可见。"
+      note: "带宽表示本项目编辑编码后的词条数量。"
     },
     {
-      id: "register-migration",
-      chapter: "07 / 搬家",
-      heading: "一个词离开原来的语境以后",
+      id: "form-phrase",
+      chapter: "06 / 完整句式",
+      heading: "早年的名单更常保留整句话",
       paragraphs: [
-        "2025 年的官方解读追溯“情绪价值”到营销学，并记录它后来扩展到人际关系、职场等场景。",
-        "词形没有变，使用的地方变了。迁移不自动等于成功，也不能用来推算寿命。"
+        "64 个词条属于固定短语或完整句式。",
+        "“小伙伴们都惊呆了”“世界那么大，我想去看看”把原场景一起带进名单。"
       ],
-      note: "图中只连接来源明确的扩展；搜索轨道保持缺失。"
+      note: "这是年度名单的形式构成，不代表整个中文社会。"
     },
     {
-      id: "template-reveal",
-      chapter: "08 / 拆开",
-      heading: "原句退场以后，槽位还在",
+      id: "form-template",
+      chapter: "07 / 模板",
+      heading: "有些句子，后来变成了骨架",
       paragraphs: [
-        "2019 年官方解读记录了网友如何把“道路千万条，安全第一条”拆成“××千万条，××第一条”。",
-        "结构不变，替换内容，原句开始生产新的句子。"
+        "严格门槛下，只有四个词进入明确模板组。",
+        "数量很少，但它们揭示了一种不同的留下方式：词退到后面，槽位继续工作。"
       ],
-      note: "留下来的，也许不是原句，而是一个还能继续造句的结构。"
+      note: "本组 4 个；不把“看起来能仿写”自动算作模板。"
     },
     {
-      id: "template-comparison",
-      chapter: "09 / 保守计算",
-      heading: "14 年里，只确认四个明确模板",
+      id: "form-mixed",
+      chapter: "08 / 混写",
+      heading: "还有十三个词，不只使用汉字",
       paragraphs: [
-        "按严格门槛，只有词条带“××”、名称明确标“体”，或官方解读明确记载仿写结构，才算明确模板。",
-        "四条分散在 2012、2019、2023 和 2025。它们不能证明模板比原词活得更久。"
+        "数字、字母、英文和汉字在同一个词里并置：996、YYDS、村BA、City不City。",
+        "它们不是一路增加的单一趋势，而是名单里反复出现的书写策略。"
       ],
-      note: "可以仿写，和资料中确实记录了仿写，是两件不同的事。"
+      note: "本组 13 个缩写、数字或中英混写词。"
     },
     {
-      id: "semantic-fields",
-      chapter: "10 / 没画出来的图",
-      heading: "有些空白比漂亮比例更诚实",
+      id: "length-scatter",
+      chapter: "09 / 长短",
+      heading: "把 140 个词放到字符长度轴上",
       paragraphs: [
-        "我们原本想比较技术、工作、情绪等语义主题，但当前只有单人编辑编码。",
-        "没有独立复核，就不发布一个看似精确的主题变化图。"
+        "从一个字的“怼”，到十四字的“明明可以靠脸吃饭却偏偏靠才华”，每个词先保留自己的位置。",
+        "字符数去除常见标点，只描述书写长度。"
       ],
-      note: "语义分类留在待复核清单，不进入发布数据。"
+      note: "本章人口：完整 140 词。"
+    },
+    {
+      id: "length-density",
+      chapter: "10 / 聚合",
+      heading: "聚合以后，才能看见名单形状",
+      paragraphs: [
+        "2018—2021 的名单更集中在短词一端，之后长句又重新出现。",
+        "这只能说明这些年度名单的组成改变，不能外推为“中文越来越短”。"
+      ],
+      note: "聚合曲线仍能回到组成它的词。"
+    },
+    {
+      id: "template-engine",
+      chapter: "11 / 拆开",
+      heading: "模板章只需要四个词",
+      paragraphs: [
+        "“道路千万条，安全第一条”露出“××千万条，××第一条”的槽位。",
+        "“主打一个××”和“××基础××不基础”把槽位直接写进词条。"
+      ],
+      note: "其余 136 个词不需要在本章充当背景装饰。"
+    },
+    {
+      id: "evidence-paths",
+      chapter: "12 / 有多少证据",
+      heading: "只有五个词进入后续路径",
+      paragraphs: [
+        "四个词有官方记录的变体说明，一个词有语域扩展说明。",
+        "数据不足以支撑宏大的作用域圆环，所以这里直接画五条来源路径。"
+      ],
+      note: "本章人口：5 个有官方后续说明的词。"
+    },
+    {
+      id: "evidence-results",
+      chapter: "13 / 去了哪里",
+      heading: "词移动到资料记录的终点",
+      paragraphs: [
+        "“来财”连接到“来分、来 offer”；“情绪价值”连接到人际关系和职场。",
+        "路径只证明来源中记录过后续用法，不证明因果、成功或寿命。"
+      ],
+      note: "没有来源的终点不画。"
+    },
+    {
+      id: "evidence-matrix",
+      chapter: "14 / 我们不知道什么",
+      heading: "五个有说明，另外一百三十五个呢？",
+      paragraphs: [
+        "完整 140 词再次出现为 140 个单元。",
+        "灰色单元表示目前只有年度入选记录——不是死亡，只是我们不知道后来的路。"
+      ],
+      note: "本章人口：完整 140 词；已知 5，未知 135。"
+    },
+    {
+      id: "mixed-stream",
+      chapter: "15 / 抽出一个子集",
+      heading: "把十三个混写词重新读一遍",
+      paragraphs: [
+        "江南Style、打call、skr、C位、996、YYDS、村BA、人工智能+、City不City、DeepSeek……",
+        "它们从矩阵里被抽出，恢复成一条可读的词流。"
+      ],
+      note: "这是书写形式子集，不是赢家排行榜。"
+    },
+    {
+      id: "return-field",
+      chapter: "16 / 回到词场",
+      heading: "退潮以后，留下了什么？",
+      paragraphs: [
+        "结尾回到跨年份策展词场，而不是只剩一个 YYDS。",
+        "有些留下词形，有些留下槽位，有些只留下年度档案中的一格。"
+      ],
+      note: "完整 140 词仍在常驻词表、探索器与静态档案中。"
     }
   ];
+
+  const story = createStoryState(steps);
+  let testState = "";
+  let initialQuery = "YYDS";
+  let selectedTermId = "2021-02";
+
+  $: railVisible = !["field-intro", "field-color"].includes(story.activeId);
 
   onMount(() => {
     const params = new URLSearchParams(window.location.search);
     testState = params.get("test-state") ?? "";
     const queryTerm = params.get("term");
     initialQuery = queryTerm?.toLowerCase() === "yyds" ? "YYDS" : queryTerm ?? "YYDS";
+    const selected = data.terms.find(
+      (term) => term.term.toLowerCase() === initialQuery.toLowerCase()
+    );
+    if (selected) selectedTermId = selected.term_id;
     const forcedScene = params.get("scene");
     if (forcedScene) story.setActive(forcedScene);
     story.setReducedMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   });
 
-  function handleScene(id) {
-    story.setActive(id);
+  function selectTerm(termId) {
+    selectedTermId = termId;
+    const term = data.terms.find((row) => row.term_id === termId);
+    if (!term || typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    params.set("term", term.term.toLowerCase());
+    window.history.replaceState({}, "", `${window.location.pathname}?${params}`);
   }
 
   function handleQuery(value) {
-    const params = new URLSearchParams(window.location.search);
-    params.set("term", value.trim().toLowerCase() || "yyds");
-    window.history.replaceState({}, "", `${window.location.pathname}?${params}`);
+    const term = data.terms.find((row) => row.term.toLowerCase() === value.trim().toLowerCase());
+    if (term) selectedTermId = term.term_id;
   }
 </script>
 
 <svelte:head>
-  <title>从“给力”到“情绪价值”：一个中文流行语能活多久？</title>
+  <title>从一句话到一种说话方式｜中文网络流行语档案</title>
   <meta
     name="description"
-    content="沿着 2012—2025 年的 140 条年度网络用语，观察词语如何被记录、套写、迁移与留下。"
+    content="沿着 2012—2025 年 140 条年度网络用语，观察完整句式、短标签、模板和混写怎样进入年度语言档案。"
   />
 </svelte:head>
 
 {#if testState === "loading"}
   <main class="system-state" data-scene-id="loading-state">
     <p class="eyebrow">流行语档案</p>
-    <h1>从“给力”到“情绪价值”</h1>
+    <h1>从一句话到一种说话方式</h1>
     <p role="status">正在载入词语档案…</p>
-    <div class="loading-years" aria-hidden="true">
-      {#each [2012, 2015, 2018, 2021, 2025] as year}<span>{year}</span>{/each}
-    </div>
   </main>
 {:else if testState === "data-error"}
   <main class="system-state" data-scene-id="data-error">
     <p class="eyebrow">流行语档案</p>
-    <h1>从“给力”到“情绪价值”</h1>
-    <p role="alert">互动数据暂时无法载入。你仍可继续阅读正文和按年份整理的静态词表。</p>
-    <div class="system-actions">
-      <a href="./">重试</a>
-      <a data-action="open-static-archive" href="#static-archive">查看按年份词表</a>
-    </div>
+    <h1>从一句话到一种说话方式</h1>
+    <p role="alert">互动数据暂时无法载入。你仍可阅读按年份整理的静态词表。</p>
     <StaticArchive terms={data.terms} compact />
   </main>
 {:else}
   <main>
     <article>
-      <header class="opening" data-scene-id="opening-yyds" aria-label="开场：你现在还会说 YYDS 吗？">
-        <div class="opening__word" data-term-id="yyds">YYDS</div>
-        <p data-copy-id="opening-question">你现在还会说它吗？</p>
-        <div class="opening__prompt" aria-hidden="true">向下读</div>
-      </header>
-
-      <section class="title-panel" data-scene-id="opening-title">
-        <div class="title-panel__term" data-term-id="yyds" aria-hidden="true">YYDS</div>
-        <p class="eyebrow">一份中文网络流行语档案</p>
-        <h1>从“给力”到“情绪价值”：一个中文流行语能活多久？</h1>
-        <p class="dek">
-          14 年，140 个年度网络用语。我们没有找到一条能宣判词语死亡的曲线，却看见它们怎样被记住、搬用、拆开和套写。
-        </p>
-        <p class="byline">数据与叙事 · 2026 年 7 月</p>
-      </section>
-
       <Scrolly
         {steps}
         activeId={story.activeId}
-        onactive={handleScene}
-        label="从 YYDS 到年度档案的滚动叙事"
+        onactive={(id) => story.setActive(id)}
+        label="中文网络流行语的连续滚动叙事"
       >
         <div slot="graphic">
           <StoryGraphic
             state={story.visual}
             terms={data.terms}
-            yearSummary={data.year_summary}
+            annotations={data.annotations}
+            {selectedTermId}
+            onselect={selectTerm}
           />
         </div>
       </Scrolly>
 
-      <section class="prose-section">
-        <p class="eyebrow">词也会搬家</p>
-        <h2>同一个词，换了一套生活</h2>
-        <p>
-          “情绪价值”并不是 2025 年才被发明。发布方的解读追溯到营销学：它原本讨论顾客在消费中的情绪体验，后来进入婚恋、情感内容，又扩展到人际关系和职场。
-        </p>
-        <p>
-          “来财”走的是另一条路。2025 年解读记录了“来分”“来 offer”等仿造：一个看似完整的词，被网民当成了可以替换尾部的接口。
-        </p>
-        <p>
-          前者是语域扩展，后者是词形繁殖。它们都比“今年热不热”更难用一条曲线表达。
-        </p>
-      </section>
+      <WordRail
+        terms={data.terms}
+        annotations={data.annotations}
+        {selectedTermId}
+        visible={railVisible}
+        onselect={selectTerm}
+      />
 
-      <section class="prose-section dark-band">
-        <p class="eyebrow">仍然未知</p>
-        <h2>我们仍不知道一个词能活多久</h2>
+      <section class="afterword">
+        <p class="eyebrow">这篇故事没有回答</p>
+        <h2>一个流行语究竟能活多久？</h2>
         <p>
-          如果“寿命”指从第一次使用到最后一次使用，我们几乎永远等不到最后一次。如果定义为高频使用持续多久，就需要同一平台、同一采样方式、跨越多年的连续语料，还要区分复述、解释、引用和自然使用。
+          年度名单只记录词语在某一年被选中。若要测量寿命，需要同一平台、同一采样方法、跨越多年的连续语料，还要区分自然使用、解释、复述和怀旧引用。
         </p>
         <p>
-          即使拿到词频，也还有定义问题。一个月出现一万次、下个月出现一百次，是“死了”，还是进入低频常用？多年以后因怀旧或新闻事件再次被提起，算复活还是新一轮流行？
+          因此这里不提供平均寿命排行榜。我们能可靠展示的是名单里的词形、年份、构词方式，以及少量有来源的后续说明。
         </p>
-        <p class="pullquote">所以，这个故事不提供“平均寿命排行榜”，也不把没有数据画成一条下坠的线。</p>
       </section>
 
       {#key initialQuery}
@@ -246,35 +287,21 @@
         />
       {/key}
 
-      <section class="ending" data-scene-id="ending-return">
-        <div class="ending__term" data-term-id="yyds">YYDS</div>
-        <p class="ending__year">2021 · 年度十大网络用语</p>
-        <p data-copy-id="ending-return">
-          它没有被宣判活着或死去。它只是回到了自己的年份、结构与证据里。
-        </p>
-        <p class="ending__coda" data-copy-id="ending-coda">
-          语言保存的不只是一个时代谈过什么，也保存人们学会怎样说这些事。
-        </p>
-        <p class="ending__question">它把什么留在了中文里？</p>
-        <nav class="ending__resources" aria-label="项目资源">
-          <a data-ending-resource href={`${base}/methodology/`}>方法</a>
-          <a data-ending-resource href={`${base}/data/annual-network-terms.csv`} download>数据</a>
-          <a data-ending-resource href="#static-archive">完整词表</a>
-          <a data-ending-resource href="mailto:corrections@example.com">纠错</a>
-        </nav>
-      </section>
-
       <section class="archive-section" id="static-archive">
         <div class="archive-section__header">
           <p class="eyebrow">完整档案</p>
           <h2>2012—2025 年，140 条年度网络用语</h2>
-          <p>页面顺序不解释为热度排名。每一条都可以在下载数据中回到官方来源。</p>
+          <p>页面顺序不解释为热度排名。每一条都可以回到官方来源。</p>
         </div>
         <StaticArchive terms={data.terms} />
       </section>
 
-      <footer>
-        <p>数据更新至 2025 年度发布。形式分类为编辑编码；语义比例未发布。</p>
+      <footer class="story-footer">
+        <nav aria-label="项目资源">
+          <a href={`${base}/methodology/`}>方法</a>
+          <a href={`${base}/data/annual-network-terms.csv`} download>数据</a>
+          <a href="#static-archive">完整词表</a>
+        </nav>
         <p>
           来源：
           <a href="https://nlp.ccnu.edu.cn/conference/15" target="_blank" rel="noreferrer">2012—2024 汇总表</a>
@@ -284,7 +311,7 @@
       </footer>
 
       <noscript data-scene-id="no-script-fallback">
-        互动功能需要 JavaScript；完整正文、关键结论和按年份词表仍可阅读。
+        互动功能需要 JavaScript；完整正文、方法与按年份词表仍可阅读。
       </noscript>
     </article>
   </main>

@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="1840" viewBox="0 0 1040 1840">
+  <defs>
+    <style>
+      .bg{fill:#e9e3d7}.phone{fill:#fffaf0;stroke:#1d1d1b;stroke-width:3}.ink{fill:#1d1d1b}.muted{fill:#8f887e}
+      .early{fill:#df4d2d}.mid{fill:#1769e0}.recent{fill:#6d3de6}.evidence{fill:#a66b13}
+      .t{font-family:"Noto Sans SC Thin","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+      .serif{font-family:"Noto Sans SC Thin","Noto Sans SC","Songti SC",serif}
+      .label{font-size:18px;font-weight:800;letter-spacing:1px}.tiny{font-size:12px}.small{font-size:15px}.word{font-size:18px;font-weight:650}
+      .h1{font-size:34px;font-weight:850}.h2{font-size:24px;font-weight:800}.hair{stroke:#b7afa3;stroke-width:1;fill:none}
+      .note{fill:#fffaf0;stroke:#1d1d1b;stroke-width:1.4}.faded{opacity:.18}.soft{opacity:.42}
+      .arrow{stroke:#1d1d1b;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 z" fill="#1d1d1b"/>
+    </marker>
+    <path id="mflow1" d="M30 260 C130 210 255 218 355 255"/>
+    <path id="mflow2" d="M30 330 C130 290 255 300 355 338"/>
+    <path id="mflow3" d="M30 400 C130 382 255 410 355 415"/>
+    <path id="mring1" d="M92 310 A110 110 0 0 1 312 310"/>
+    <path id="mring2" d="M52 310 A150 150 0 0 1 352 310"/>
+    <path id="mring3" d="M14 310 A188 188 0 0 1 390 310"/>
+  </defs>
+  <rect class="bg" width="1040" height="1840"/>
+  <text x="55" y="62" class="t h1 ink">手机端不是缩小桌面</text>
+  <text x="56" y="94" class="t small muted">每章只载入相关词集 · 完整 140 词始终可从底部抽屉打开</text>
+
+  <!-- 1 -->
+  <g transform="translate(55 130)">
+    <rect class="phone" width="430" height="760" rx="34"/>
+    <rect x="140" y="15" width="150" height="20" rx="10" fill="#1d1d1b"/>
+    <text x="25" y="72" class="t label early">01 · 词海开场</text>
+    <g class="t word">
+      <text x="25" y="118" class="early">元芳，你怎么看</text><text x="272" y="104" class="mid">打call</text>
+      <text x="46" y="164" class="mid">锦鲤</text><text x="280" y="157" class="recent">情绪价值</text>
+      <text x="18" y="214" class="mid soft">佛系</text><text x="324" y="218" class="recent">班味儿</text>
+      <text x="48" y="274" class="early soft">萌萌哒</text><text x="295" y="280" class="mid">硬核</text>
+      <text x="28" y="343" class="recent">主理人</text><text x="298" y="346" class="recent">松弛感</text>
+      <text x="40" y="407" class="mid">996</text><text x="308" y="403" class="recent">村咖</text>
+    </g>
+    <g transform="translate(50 230)">
+      <text x="165" y="0" text-anchor="middle" class="serif h2 ink">先看看一些被记住的说法。</text>
+      <text x="165" y="42" text-anchor="middle" class="serif small ink">它们怎样从一句话，变成一种说话方式？</text>
+      <text x="165" y="98" text-anchor="middle" class="t h1 mid">YYDS</text>
+      <line x1="110" y1="110" x2="220" y2="110" stroke="#1769e0" stroke-width="5"/>
+    </g>
+    <line x1="0" y1="505" x2="430" y2="505" class="hair"/>
+    <text x="28" y="545" class="t small ink">滚动：约 36 个策展词逐批显影 → 时间层着色</text>
+    <text x="28" y="576" class="t small ink">继续：整片词场压暗 → 标题才出现</text>
+    <rect x="0" y="670" width="430" height="90" rx="0 0 34 34" fill="#1d1d1b"/>
+    <text x="24" y="714" class="t word" fill="#fffaf0">140 词</text>
+    <text x="342" y="714" class="t small" fill="#fffaf0">打开 ↑</text>
+    <text x="24" y="739" class="t tiny" fill="#cfc6b7">当前：YYDS · 2021</text>
+  </g>
+
+  <!-- 2 -->
+  <g transform="translate(555 130)">
+    <rect class="phone" width="430" height="760" rx="34"/>
+    <rect x="140" y="15" width="150" height="20" rx="10" fill="#1d1d1b"/>
+    <text x="25" y="72" class="t label mid">02 · 年份纵河</text>
+    <text x="25" y="102" class="t small muted">当前年完整可读，相邻年保留上下文</text>
+    <line x1="70" y1="138" x2="70" y2="575" stroke="#1d1d1b" stroke-width="2"/>
+    <g class="t small">
+      <circle cx="70" cy="165" r="7" fill="#1769e0"/><text x="22" y="170" class="muted">2020</text>
+      <text x="96" y="154" class="mid soft">逆行者　带货　云监工</text>
+      <text x="96" y="179" class="mid soft">奥利给　集美</text>
+      <circle cx="70" cy="270" r="10" fill="#1769e0"/>
+      <text x="22" y="276" class="mid" font-weight="800">2021</text>
+      <rect x="91" y="215" width="286" height="155" fill="#1769e0" opacity=".07" stroke="#1769e0"/>
+      <text x="108" y="242" class="mid">觉醒年代　<tspan font-weight="900">YYDS</tspan>　双减</text>
+      <text x="108" y="270" class="mid">破防　元宇宙　绝绝子</text>
+      <text x="108" y="298" class="mid">躺平　伤害性不高，侮辱性极强</text>
+      <text x="108" y="326" class="mid">我看不懂，但我大受震撼</text>
+      <text x="108" y="354" class="mid">强国有我</text>
+      <circle cx="70" cy="430" r="7" fill="#6d3de6"/>
+      <text x="22" y="436" class="muted">2022</text>
+      <text x="96" y="421" class="recent soft">数字经济　太空会师</text>
+      <text x="96" y="446" class="recent soft">电子榨菜　俄乌冲突</text>
+      <circle cx="70" cy="525" r="7" fill="#6d3de6"/>
+      <text x="22" y="531" class="muted">2023</text>
+      <text x="96" y="517" class="recent soft">烟火气　显眼包　主打一个××</text>
+      <text x="96" y="542" class="recent soft">多巴胺穿搭　新职人</text>
+    </g>
+    <text x="25" y="610" class="t small ink">上/下滚动时，词对象沿轴移动，不分页换表。</text>
+    <rect x="0" y="670" width="430" height="90" rx="0 0 34 34" fill="#1d1d1b"/>
+    <text x="24" y="714" class="t word" fill="#fffaf0">140 词</text>
+    <text x="342" y="714" class="t small" fill="#fffaf0">打开 ↑</text>
+    <text x="24" y="739" class="t tiny" fill="#cfc6b7">2021 · 10 / 10 全部可见</text>
+  </g>
+
+  <!-- 3 -->
+  <g transform="translate(55 950)">
+    <rect class="phone" width="430" height="760" rx="34"/>
+    <rect x="140" y="15" width="150" height="20" rx="10" fill="#1d1d1b"/>
+    <text x="25" y="72" class="t label recent">03 · 140 词构词带 → 抽出 4 个模板</text>
+    <g transform="translate(10 52)">
+      <path d="M30 208 C130 158 255 166 355 203" stroke="#df4d2d" stroke-width="52" opacity=".12" fill="none"/>
+      <path d="M30 278 C130 238 255 248 355 286" stroke="#1769e0" stroke-width="58" opacity=".12" fill="none"/>
+      <path d="M30 348 C130 330 255 358 355 363" stroke="#6d3de6" stroke-width="66" opacity=".22" fill="none"/>
+      <g class="t tiny">
+        <text class="early soft"><textPath href="#mflow1">锦鲤　佛系　硬核　破防　躺平　显眼包　班味儿　松弛感</textPath></text>
+        <text class="mid soft"><textPath href="#mflow2">小伙伴们都惊呆了　有钱就是任性　我看不懂但我大受震撼</textPath></text>
+        <text class="recent"><textPath href="#mflow3">道路千万条安全第一条　主打一个××　××基础××不基础</textPath></text>
+      </g>
+      <text x="24" y="430" class="t small recent">当前：模板带</text>
+      <text x="24" y="458" class="t small ink">整条曲线由真实词填满；其它带降噪但不消失。</text>
+    </g>
+    <g transform="translate(28 570)" class="t">
+      <text x="0" y="0" class="h2 ink">主打一个</text><text x="128" y="0" class="h2 recent">××</text>
+      <path d="M155 8 C215 10 242 14 274 28" class="arrow"/>
+      <rect x="190" y="30" width="182" height="38" rx="19" fill="#6d3de6"/>
+      <text x="281" y="55" text-anchor="middle" class="small" fill="#fffaf0">完整词 → 槽位骨架</text>
+    </g>
+    <rect x="0" y="670" width="430" height="90" rx="0 0 34 34" fill="#1d1d1b"/>
+    <text x="24" y="714" class="t word" fill="#fffaf0">140 词</text>
+    <text x="342" y="714" class="t small" fill="#fffaf0">打开 ↑</text>
+    <text x="24" y="739" class="t tiny" fill="#cfc6b7">筛选：构词方式 · 模板</text>
+  </g>
+
+  <!-- 4 -->
+  <g transform="translate(555 950)">
+    <rect class="phone" width="430" height="760" rx="34"/>
+    <rect x="140" y="15" width="150" height="20" rx="10" fill="#1d1d1b"/>
+    <text x="25" y="72" class="t label evidence">04 · 5 条证据路径 → 5 / 135 矩阵</text>
+    <text x="25" y="102" class="t small muted">不硬做圆环；有多少证据，就让多少词移动</text>
+    <g transform="translate(25 135)" class="t">
+      <g class="small">
+        <text x="0" y="0" class="recent">道路千万条…</text><path d="M115 -6 C175 -6 205 -6 250 -6" class="arrow"/><text x="265" y="0" class="recent">××千万条…</text>
+        <text x="0" y="58" class="recent">主打一个××</text><path d="M105 52 C170 52 205 52 250 52" class="arrow"/><text x="265" y="58" class="recent">槽位</text>
+        <text x="0" y="116" class="recent">来财</text><path d="M42 110 C150 110 205 110 250 110" class="arrow"/><text x="265" y="116" class="recent">来分 / 来offer</text>
+        <text x="0" y="174" class="evidence">情绪价值</text><path d="M76 168 C155 168 205 168 250 168" class="arrow"/><text x="265" y="174" class="evidence">人际 / 职场</text>
+      </g>
+      <text x="0" y="224" class="tiny muted">另 1 条模板路径在滚动中接续；只有来源明确的 5 个词进入本章。</text>
+      <line x1="0" y1="248" x2="380" y2="248" class="hair"/>
+      <text x="0" y="282" class="small evidence">有后续说明 · 5</text>
+      <g transform="translate(0 298)" fill="#6d3de6" opacity=".78">
+        <rect x="0" y="0" width="55" height="28"/><rect x="60" y="0" width="55" height="28"/><rect x="120" y="0" width="55" height="28"/>
+        <rect x="180" y="0" width="55" height="28"/><rect x="240" y="0" width="55" height="28"/>
+      </g>
+      <text x="0" y="362" class="small muted">目前只有年度记录 · 135</text>
+      <g transform="translate(0 380)" fill="#b8b0a4" opacity=".42">
+        <rect x="0" y="0" width="28" height="20"/><rect x="34" y="0" width="28" height="20"/><rect x="68" y="0" width="28" height="20"/><rect x="102" y="0" width="28" height="20"/><rect x="136" y="0" width="28" height="20"/><rect x="170" y="0" width="28" height="20"/><rect x="204" y="0" width="28" height="20"/><rect x="238" y="0" width="28" height="20"/><rect x="272" y="0" width="28" height="20"/><rect x="306" y="0" width="28" height="20"/><rect x="340" y="0" width="28" height="20"/>
+        <rect x="0" y="26" width="28" height="20"/><rect x="34" y="26" width="28" height="20"/><rect x="68" y="26" width="28" height="20"/><rect x="102" y="26" width="28" height="20"/><rect x="136" y="26" width="28" height="20"/><rect x="170" y="26" width="28" height="20"/><rect x="204" y="26" width="28" height="20"/><rect x="238" y="26" width="28" height="20"/><rect x="272" y="26" width="28" height="20"/><rect x="306" y="26" width="28" height="20"/><rect x="340" y="26" width="28" height="20"/>
+      </g>
+      <text x="0" y="456" class="tiny muted">成品渲染完整 140 单元；灰格表示未知，不表示死亡。</text>
+    </g>
+    <rect x="0" y="670" width="430" height="90" rx="0 0 34 34" fill="#1d1d1b"/>
+    <text x="24" y="714" class="t word" fill="#fffaf0">140 词</text>
+    <text x="342" y="714" class="t small" fill="#fffaf0">打开 ↑</text>
+    <text x="24" y="739" class="t tiny" fill="#cfc6b7">方法 · 数据 · 来源</text>
+  </g>
+
+  <path d="M486 505 L553 505" class="arrow"/>
+  <path d="M770 891 L770 947" class="arrow"/>
+  <path d="M553 1330 L487 1330" class="arrow"/>
+  <text x="520" y="1792" text-anchor="middle" class="t small muted">手机端也按问题切换 36 / 140 / 4 / 5 / 13 个词；不强迫全量词贯穿每章</text>
+</svg>

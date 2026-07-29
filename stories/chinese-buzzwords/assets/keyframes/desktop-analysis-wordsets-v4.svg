@@ -1,0 +1,288 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2460" viewBox="0 0 1800 2460">
+  <defs>
+    <style>
+      .bg{fill:#e9e3d7}.panel{fill:#fffaf0;stroke:#cfc6b7;stroke-width:2}
+      .ink{fill:#1d1d1b}.muted{fill:#8f887e}.early{fill:#df4d2d}.mid{fill:#1769e0}.recent{fill:#6d3de6}.evidence{fill:#a66b13}
+      .t{font-family:"Noto Sans SC Thin","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+      .serif{font-family:"Noto Sans SC Thin","Noto Sans SC","Songti SC",serif}
+      .label{font-size:18px;font-weight:700;letter-spacing:2px}.caption{font-size:16px}.word{font-size:18px;font-weight:600}
+      .tiny{font-size:12px}.small{font-size:14px}.h1{font-size:44px;font-weight:800}.h2{font-size:27px;font-weight:800}
+      .note{fill:#fffaf0;stroke:#1d1d1b;stroke-width:1.5}.hair{stroke:#b7afa3;stroke-width:1;fill:none}
+      .arrow{stroke:#1d1d1b;stroke-width:2;fill:none;marker-end:url(#arrow)}
+      .dash{stroke-dasharray:7 6}.faded{opacity:.17}.soft{opacity:.42}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 z" fill="#1d1d1b"/>
+    </marker>
+    <path id="flowA" d="M80 260 C250 180 435 180 610 245"/>
+    <path id="flowB" d="M80 305 C250 250 435 260 610 315"/>
+    <path id="flowC" d="M80 350 C250 330 435 360 610 375"/>
+    <path id="flowD" d="M80 395 C250 420 435 450 610 430"/>
+    <path id="ring1" d="M155 335 A135 135 0 0 1 425 335"/>
+    <path id="ring2" d="M110 335 A180 180 0 0 1 470 335"/>
+    <path id="ring3" d="M65 335 A225 225 0 0 1 515 335"/>
+    <path id="ring4" d="M25 335 A265 265 0 0 1 555 335"/>
+  </defs>
+
+  <rect class="bg" width="1800" height="2460"/>
+  <text x="70" y="72" class="t h1 ink">每章选择准确词集——词仍然是证据，也是图形材料</text>
+  <text x="72" y="106" class="t caption muted">DESKTOP KEYFRAMES v4 · 1440×900 构图比例 · 36 / 140 / 4 / 5 / 13 按问题切换</text>
+
+  <!-- A -->
+  <g transform="translate(70 145)">
+    <rect class="panel" width="805" height="515" rx="6"/>
+    <text x="28" y="38" class="t label early">A · 散开 / 显影 / 着色</text>
+    <text x="28" y="67" class="t caption muted">约 36 个跨年份策展词建立语感；不冒充完整档案</text>
+    <g class="t word">
+      <text x="40" y="115" class="early">中国好声音体</text><text x="230" y="102" class="mid">打call</text>
+      <text x="337" y="128" class="recent">情绪价值</text><text x="512" y="100" class="ink soft">洪荒之力</text>
+      <text x="660" y="126" class="mid">锦鲤</text><text x="72" y="170" class="ink soft">小伙伴们都惊呆了</text>
+      <text x="604" y="178" class="recent">City不City</text><text x="36" y="232" class="mid">佛系</text>
+      <text x="676" y="238" class="early">给跪了</text><text x="105" y="292" class="ink soft">蓝瘦香菇</text>
+      <text x="620" y="310" class="recent">显眼包</text><text x="40" y="365" class="early">女汉子</text>
+      <text x="250" y="397" class="recent">新质生产力</text><text x="485" y="380" class="mid">硬核</text>
+      <text x="652" y="410" class="recent">松弛感</text><text x="64" y="455" class="mid">996</text>
+      <text x="555" y="470" class="recent">浪浪山小妖怪</text>
+    </g>
+    <g transform="translate(188 185)">
+      <text x="0" y="0" class="serif h2 ink">先别急着问一个词“死没死”。</text>
+      <text x="0" y="38" class="serif caption ink">先看看十四年里，被记录下来的 140 种说法。</text>
+      <text x="128" y="92" class="t h1 mid">YYDS</text>
+      <line x1="126" y1="104" x2="256" y2="104" stroke="#1769e0" stroke-width="5"/>
+    </g>
+    <g transform="translate(660 18)">
+      <rect width="120" height="34" rx="17" fill="#1d1d1b"/>
+      <text x="60" y="23" text-anchor="middle" class="t small" fill="#fffaf0">140 词 ›</text>
+    </g>
+  </g>
+
+  <!-- B -->
+  <g transform="translate(925 145)">
+    <rect class="panel" width="805" height="515" rx="6"/>
+    <text x="28" y="38" class="t label mid">B · 列队 / 年份河流</text>
+    <text x="28" y="67" class="t caption muted">散开的词移动到 14 个年份列；没有 “+7”</text>
+    <g transform="translate(28 100)" class="t">
+      <g class="tiny muted">
+        <text x="0" y="0">2012</text><text x="106" y="0">2014</text><text x="212" y="0">2016</text>
+        <text x="318" y="0">2018</text><text x="424" y="0">2020</text><text x="530" y="0">2022</text><text x="636" y="0">2024</text>
+      </g>
+      <g class="tiny">
+        <text x="0" y="34" class="early">元芳，你怎么看</text><text x="0" y="57" class="early">江南Style</text>
+        <text x="0" y="80" class="early">躺着也中枪</text><text x="0" y="103" class="early">给跪了</text>
+        <text x="106" y="34" class="early">我也是醉了</text><text x="106" y="57" class="early">萌萌哒</text>
+        <text x="106" y="80" class="early">且行且珍惜</text><text x="106" y="103" class="early">蛮拼的</text>
+        <text x="212" y="34" class="mid">洪荒之力</text><text x="212" y="57" class="mid">吃瓜群众</text>
+        <text x="212" y="80" class="mid">全是套路</text><text x="212" y="103" class="mid">蓝瘦香菇</text>
+        <text x="318" y="34" class="mid">锦鲤</text><text x="318" y="57" class="mid">杠精</text>
+        <text x="318" y="80" class="mid">佛系</text><text x="318" y="103" class="mid">C位</text>
+        <text x="424" y="34" class="mid">逆行者</text><text x="424" y="57" class="mid">带货</text>
+        <text x="424" y="80" class="mid">奥利给</text><text x="424" y="103" class="mid">集美</text>
+        <text x="477" y="145" class="mid" font-weight="800">YYDS</text>
+        <text x="477" y="168" class="mid">破防</text><text x="477" y="191" class="mid">躺平</text><text x="477" y="214" class="mid">绝绝子</text>
+        <text x="530" y="34" class="recent">数字经济</text><text x="530" y="57" class="recent">电子榨菜</text>
+        <text x="530" y="80" class="recent">太空会师</text>
+        <text x="583" y="126" class="recent">主打一个××</text><text x="583" y="149" class="recent">显眼包</text>
+        <text x="583" y="172" class="recent">烟火气</text><text x="583" y="195" class="recent">村BA</text>
+        <text x="636" y="34" class="recent">新质生产力</text><text x="636" y="57" class="recent">班味儿</text>
+        <text x="636" y="80" class="recent">松弛感</text><text x="636" y="103" class="recent">主理人</text>
+        <text x="689" y="145" class="recent">情绪价值</text><text x="689" y="168" class="recent">村咖</text>
+        <text x="689" y="191" class="recent">来财</text>
+      </g>
+      <g class="hair">
+        <line x1="0" y1="12" x2="0" y2="390"/><line x1="106" y1="12" x2="106" y2="390"/>
+        <line x1="212" y1="12" x2="212" y2="390"/><line x1="318" y1="12" x2="318" y2="390"/>
+        <line x1="424" y1="12" x2="424" y2="390"/><line x1="530" y1="12" x2="530" y2="390"/>
+        <line x1="636" y1="12" x2="636" y2="390"/><line x1="742" y1="12" x2="742" y2="390"/>
+      </g>
+      <rect x="463" y="121" width="86" height="104" fill="none" stroke="#1769e0" stroke-width="2"/>
+      <text x="465" y="248" class="small mid">2021 被追踪词仍可定位</text>
+    </g>
+    <g transform="translate(653 0)">
+      <rect x="0" y="86" width="152" height="429" fill="#f2ede3" stroke="#cfc6b7"/>
+      <text x="16" y="118" class="t label ink">140 词</text>
+      <text x="16" y="145" class="t small muted">搜索 / 年份 / 来源</text>
+      <line x1="16" y1="162" x2="136" y2="162" class="hair"/>
+      <text x="16" y="194" class="t small mid">● YYDS · 2021</text>
+      <text x="16" y="223" class="t small ink">○ 破防 · 2021</text>
+      <text x="16" y="252" class="t small ink">○ 躺平 · 2021</text>
+    </g>
+  </g>
+
+  <!-- C -->
+  <g transform="translate(70 700)">
+    <rect class="panel" width="805" height="515" rx="6"/>
+    <text x="28" y="38" class="t label recent">C · 弯曲 / 构词流带</text>
+    <text x="28" y="67" class="t caption muted">年份列弯成四条路径；词串沿路径填满色带</text>
+    <g transform="translate(28 72)">
+      <path d="M55 202 C225 122 430 128 622 190" stroke="#df4d2d" stroke-width="60" opacity=".16" fill="none"/>
+      <path d="M55 247 C225 195 430 202 622 260" stroke="#1769e0" stroke-width="68" opacity=".16" fill="none"/>
+      <path d="M55 300 C225 280 430 310 622 325" stroke="#6d3de6" stroke-width="72" opacity=".18" fill="none"/>
+      <path d="M55 353 C225 377 430 405 622 382" stroke="#a66b13" stroke-width="52" opacity=".16" fill="none"/>
+      <g class="t tiny">
+        <text class="early"><textPath href="#flowA">怼　油腻　锦鲤　佛系　杠精　硬核　破防　躺平　显眼包　班味儿　松弛感　主理人</textPath></text>
+        <text class="mid"><textPath href="#flowB">小伙伴们都惊呆了　有钱就是任性　世界那么大我想去看看　伤害性不高侮辱性极强</textPath></text>
+        <text class="recent"><textPath href="#flowC">道路千万条安全第一条　主打一个××　××基础××不基础　含金量还在上升</textPath></text>
+        <text class="evidence"><textPath href="#flowD">江南Style　打call　skr　C位　996　YYDS　村BA　City不City　DeepSeek</textPath></text>
+      </g>
+      <g class="t small ink">
+        <text x="636" y="196">短标签</text><text x="636" y="266">固定短语</text>
+        <text x="636" y="331">生产模板</text><text x="636" y="386">混合书写</text>
+      </g>
+      <rect x="318" y="287" width="175" height="58" fill="none" stroke="#6d3de6" stroke-width="2.5"/>
+      <text x="322" y="278" class="t small recent">当前步骤：只聚焦模板带</text>
+    </g>
+  </g>
+
+  <!-- D -->
+  <g transform="translate(925 700)">
+    <rect class="panel" width="805" height="515" rx="6"/>
+    <text x="28" y="38" class="t label mid">D · 聚合 / 句式长度分布</text>
+    <text x="28" y="67" class="t caption muted">140 词先沿字符数落位，再聚合成年度轮廓；聚合后仍可回到词</text>
+    <g transform="translate(62 115)" class="t">
+      <line x1="0" y1="310" x2="665" y2="310" stroke="#1d1d1b" stroke-width="1.5"/>
+      <g class="tiny muted">
+        <text x="0" y="334">1 字</text><text x="178" y="334">4 字</text><text x="365" y="334">8 字</text><text x="610" y="334">14 字</text>
+      </g>
+      <path d="M0 300 C85 282 126 196 205 180 C280 164 310 234 390 252 C485 274 555 290 665 298" fill="none" stroke="#df4d2d" stroke-width="5" opacity=".75"/>
+      <path d="M0 300 C72 265 110 125 182 100 C250 74 314 202 402 242 C500 286 575 298 665 302" fill="none" stroke="#1769e0" stroke-width="5" opacity=".82"/>
+      <path d="M0 300 C78 275 144 170 218 150 C300 128 370 220 445 250 C532 285 600 298 665 301" fill="none" stroke="#6d3de6" stroke-width="5" opacity=".82"/>
+      <text x="508" y="150" class="small early">2012–2015</text>
+      <text x="508" y="177" class="small mid">2018–2021</text>
+      <text x="508" y="204" class="small recent">2022–2025</text>
+      <g class="tiny">
+        <text x="38" y="270" class="mid">怼</text><text x="95" y="232" class="mid">锦鲤</text>
+        <text x="150" y="176" class="mid">YYDS</text><text x="224" y="202" class="recent">情绪价值</text>
+        <text x="318" y="260" class="early">小伙伴们都惊呆了</text><text x="468" y="284" class="early">明明可以靠脸吃饭却偏偏靠才华</text>
+      </g>
+      <rect x="25" y="18" width="330" height="62" class="note"/>
+      <text x="42" y="44" class="small ink">这里只能说“这些年度名单的形状变了”</text>
+      <text x="42" y="68" class="tiny muted">不能外推为整个中文越来越短或越来越长</text>
+    </g>
+  </g>
+
+  <!-- E -->
+  <g transform="translate(70 1255)">
+    <rect class="panel" width="805" height="515" rx="6"/>
+    <text x="28" y="38" class="t label recent">E · 抽出 4 个词 / 模板发动机</text>
+    <text x="28" y="67" class="t caption muted">模板章只保留有明确槽位或官方仿写说明的 4 个词</text>
+    <g class="t" transform="translate(48 112)">
+      <text x="0" y="0" class="small muted">2012</text><text x="72" y="0" class="h2 ink">中国好声音体</text>
+      <text x="0" y="72" class="small muted">2019</text><text x="72" y="72" class="h2 ink">道路千万条，安全第一条</text>
+      <rect x="68" y="89" width="90" height="36" fill="#6d3de6" opacity=".13"/>
+      <rect x="270" y="89" width="90" height="36" fill="#6d3de6" opacity=".13"/>
+      <text x="72" y="116" class="h2 recent">××</text><text x="116" y="116" class="h2 ink">千万条，</text>
+      <text x="274" y="116" class="h2 recent">××</text><text x="318" y="116" class="h2 ink">第一条</text>
+      <text x="0" y="190" class="small muted">2023</text><text x="72" y="190" class="h2 ink">主打一个</text><text x="200" y="190" class="h2 recent">××</text>
+      <text x="0" y="260" class="small muted">2025</text><text x="72" y="260" class="h2 recent">××</text><text x="116" y="260" class="h2 ink">基础，</text>
+      <text x="210" y="260" class="h2 recent">××</text><text x="254" y="260" class="h2 ink">不基础</text>
+      <path d="M390 100 C455 100 470 150 520 150" class="arrow"/>
+      <rect x="515" y="120" width="205" height="72" rx="4" fill="#6d3de6" opacity=".1" stroke="#6d3de6"/>
+      <text x="532" y="148" class="small recent">有来源的仿写例</text>
+      <text x="532" y="176" class="tiny ink">数据千万条，奋斗第一条</text>
+      <rect x="515" y="220" width="205" height="72" class="note"/>
+      <text x="532" y="248" class="small ink">其余 136 个词不必陪跑</text>
+      <text x="532" y="274" class="tiny muted">切换词集是分析选择，不是丢失数据</text>
+    </g>
+  </g>
+
+  <!-- F -->
+  <g transform="translate(925 1255)">
+    <rect class="panel" width="805" height="515" rx="6"/>
+    <text x="28" y="38" class="t label evidence">F · 只让 5 个词移动 / 后续证据路径</text>
+    <text x="28" y="67" class="t caption muted">圆环被取消：当前资料只足以画 4 条变体路径和 1 条语域路径</text>
+    <g transform="translate(55 112)" class="t">
+      <g class="tiny muted">
+        <text x="0" y="0">年度词条</text><text x="330" y="0">官方后续说明</text><text x="655" y="0">可观察结果</text>
+      </g>
+      <g class="small">
+        <text x="0" y="55" class="recent">道路千万条，安全第一条</text>
+        <path d="M220 49 C315 49 338 49 425 49" class="arrow"/>
+        <text x="442" y="55" class="recent">××千万条，××第一条</text>
+        <text x="0" y="118" class="recent">主打一个××</text>
+        <path d="M128 112 C260 112 340 112 425 112" class="arrow"/>
+        <text x="442" y="118" class="recent">主打一个 + 槽位</text>
+        <text x="0" y="181" class="recent">××基础××不基础</text>
+        <path d="M172 175 C286 175 345 175 425 175" class="arrow"/>
+        <text x="442" y="181" class="recent">过程基础，结果不基础</text>
+        <text x="0" y="244" class="recent">来财</text>
+        <path d="M48 238 C230 238 340 238 425 238" class="arrow"/>
+        <text x="442" y="244" class="recent">来分；来 offer</text>
+        <text x="0" y="307" class="evidence">情绪价值</text>
+        <path d="M82 301 C245 301 338 301 425 301" class="arrow"/>
+        <text x="442" y="307" class="evidence">营销学 → 人际关系、职场</text>
+      </g>
+      <line x1="0" y1="24" x2="700" y2="24" class="hair"/>
+      <line x1="0" y1="332" x2="700" y2="332" class="hair"/>
+      <text x="0" y="365" class="tiny muted">路径只表示来源中记录了后续用法，不表示传播因果、寿命或成功。</text>
+    </g>
+  </g>
+
+  <!-- G -->
+  <g transform="translate(70 1810)">
+    <rect class="panel" width="805" height="515" rx="6"/>
+    <text x="28" y="38" class="t label evidence">G · 140 词证据矩阵 / 5 对 135</text>
+    <text x="28" y="67" class="t caption muted">全量词表在这里重新出现：5 个有后续说明，135 个目前只有年度记录</text>
+    <g transform="translate(48 112)" class="t">
+      <text x="0" y="0" class="small evidence">有后续说明 · 5</text>
+      <g transform="translate(0 28)">
+        <rect x="0" y="0" width="112" height="38" fill="#a66b13" opacity=".86"/><rect x="118" y="0" width="112" height="38" fill="#6d3de6" opacity=".82"/>
+        <rect x="236" y="0" width="112" height="38" fill="#6d3de6" opacity=".82"/><rect x="354" y="0" width="112" height="38" fill="#6d3de6" opacity=".82"/>
+        <rect x="472" y="0" width="112" height="38" fill="#6d3de6" opacity=".82"/>
+        <g fill="#fffaf0" class="tiny">
+          <text x="10" y="24">情绪价值</text><text x="128" y="24">道路千万条…</text><text x="246" y="24">主打一个××</text>
+          <text x="364" y="24">××基础…</text><text x="482" y="24">来财</text>
+        </g>
+      </g>
+      <text x="0" y="112" class="small muted">只有年度记录 · 135</text>
+      <g transform="translate(0 138)" fill="#b8b0a4" opacity=".46">
+        <rect x="0" y="0" width="32" height="24"/><rect x="37" y="0" width="32" height="24"/><rect x="74" y="0" width="32" height="24"/><rect x="111" y="0" width="32" height="24"/><rect x="148" y="0" width="32" height="24"/><rect x="185" y="0" width="32" height="24"/><rect x="222" y="0" width="32" height="24"/><rect x="259" y="0" width="32" height="24"/><rect x="296" y="0" width="32" height="24"/><rect x="333" y="0" width="32" height="24"/><rect x="370" y="0" width="32" height="24"/><rect x="407" y="0" width="32" height="24"/><rect x="444" y="0" width="32" height="24"/><rect x="481" y="0" width="32" height="24"/><rect x="518" y="0" width="32" height="24"/><rect x="555" y="0" width="32" height="24"/>
+        <rect x="0" y="29" width="32" height="24"/><rect x="37" y="29" width="32" height="24"/><rect x="74" y="29" width="32" height="24"/><rect x="111" y="29" width="32" height="24"/><rect x="148" y="29" width="32" height="24"/><rect x="185" y="29" width="32" height="24"/><rect x="222" y="29" width="32" height="24"/><rect x="259" y="29" width="32" height="24"/><rect x="296" y="29" width="32" height="24"/><rect x="333" y="29" width="32" height="24"/><rect x="370" y="29" width="32" height="24"/><rect x="407" y="29" width="32" height="24"/><rect x="444" y="29" width="32" height="24"/><rect x="481" y="29" width="32" height="24"/><rect x="518" y="29" width="32" height="24"/><rect x="555" y="29" width="32" height="24"/>
+        <rect x="0" y="58" width="32" height="24"/><rect x="37" y="58" width="32" height="24"/><rect x="74" y="58" width="32" height="24"/><rect x="111" y="58" width="32" height="24"/><rect x="148" y="58" width="32" height="24"/><rect x="185" y="58" width="32" height="24"/><rect x="222" y="58" width="32" height="24"/><rect x="259" y="58" width="32" height="24"/><rect x="296" y="58" width="32" height="24"/><rect x="333" y="58" width="32" height="24"/><rect x="370" y="58" width="32" height="24"/><rect x="407" y="58" width="32" height="24"/><rect x="444" y="58" width="32" height="24"/><rect x="481" y="58" width="32" height="24"/><rect x="518" y="58" width="32" height="24"/><rect x="555" y="58" width="32" height="24"/>
+        <rect x="0" y="87" width="32" height="24"/><rect x="37" y="87" width="32" height="24"/><rect x="74" y="87" width="32" height="24"/><rect x="111" y="87" width="32" height="24"/><rect x="148" y="87" width="32" height="24"/><rect x="185" y="87" width="32" height="24"/><rect x="222" y="87" width="32" height="24"/><rect x="259" y="87" width="32" height="24"/><rect x="296" y="87" width="32" height="24"/><rect x="333" y="87" width="32" height="24"/><rect x="370" y="87" width="32" height="24"/><rect x="407" y="87" width="32" height="24"/><rect x="444" y="87" width="32" height="24"/><rect x="481" y="87" width="32" height="24"/><rect x="518" y="87" width="32" height="24"/><rect x="555" y="87" width="32" height="24"/>
+      </g>
+      <rect x="610" y="28" width="96" height="285" class="note"/>
+      <text x="626" y="58" class="small ink">矩阵不是墓地</text>
+      <text x="626" y="88" class="tiny muted">灰格 = 尚无</text><text x="626" y="108" class="tiny muted">后续资料</text>
+      <text x="626" y="146" class="tiny muted">点击格子</text><text x="626" y="166" class="tiny muted">恢复完整词</text>
+      <text x="0" y="345" class="tiny muted">图中只画部分灰格作线框示意；成品严格渲染 135 个、总计 140 个可聚焦单元。</text>
+    </g>
+  </g>
+
+  <!-- H -->
+  <g transform="translate(925 1810)">
+    <rect class="panel" width="805" height="515" rx="6"/>
+    <text x="28" y="38" class="t label early">H · 抽出 13 个混写词 / 回到策展词场</text>
+    <text x="28" y="67" class="t caption muted">像参考作品抽出“新增副词”：子集恢复成可读词流，然后回到开场样本</text>
+    <g transform="translate(40 98)" class="t">
+      <g class="small">
+        <text x="0" y="20" class="early">江南Style</text><text x="105" y="20" class="early">喜大普奔</text>
+        <text x="205" y="20" class="mid">打call</text><text x="275" y="20" class="mid">你有freestyle吗？</text>
+        <text x="430" y="20" class="mid">skr</text><text x="475" y="20" class="mid">C位</text>
+        <text x="525" y="20" class="mid">996</text><text x="570" y="20" class="mid">14亿护旗手</text>
+        <text x="0" y="58" class="mid">YYDS</text><text x="72" y="58" class="recent">村BA</text>
+        <text x="135" y="58" class="recent">人工智能+</text><text x="235" y="58" class="recent">City不City</text>
+        <text x="350" y="58" class="recent">DeepSeek（深度求索）</text>
+        <g class="tiny muted"><text x="0" y="87">2012　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　2025</text></g>
+      </g>
+      <line x1="0" y1="105" x2="710" y2="105" class="hair"/>
+      <g class="tiny soft">
+        <text x="8" y="150" class="early">元芳你怎么看　躺着也中枪　女汉子　我也是醉了　萌萌哒　且行且珍惜</text>
+        <text x="42" y="180" class="mid">洪荒之力　吃瓜群众　尬聊　怼　锦鲤　杠精　佛系　带货　破防　躺平</text>
+        <text x="2" y="210" class="recent">电子榨菜　烟火气　显眼包　多巴胺穿搭　新质生产力　班味儿　松弛感　主理人</text>
+        <text x="40" y="240" class="recent">××基础××不基础　情绪价值　村咖　来财　浪浪山小妖怪</text>
+      </g>
+      <text x="350" y="310" text-anchor="middle" class="serif h2 ink">退潮后，留下的是词、结构，还是我们说话的方式？</text>
+      <text x="350" y="347" text-anchor="middle" class="t small muted">结尾只回到策展词场；完整 140 词保留在常驻词表</text>
+    </g>
+  </g>
+
+  <!-- transitions -->
+  <path d="M875 402 L923 402" class="arrow"/>
+  <path d="M1328 660 L1328 698" class="arrow"/>
+  <path d="M925 958 L877 958" class="arrow"/>
+  <path d="M472 1215 L472 1253" class="arrow"/>
+  <path d="M875 1513 L923 1513" class="arrow"/>
+  <path d="M1328 1770 L1328 1808" class="arrow"/>
+  <path d="M925 2068 L877 2068" class="arrow"/>
+  <text x="900" y="2422" text-anchor="middle" class="t caption muted">关键审查点：每章人口与问题匹配；不是让全部 140 词在每个场景机械打卡</text>
+</svg>
