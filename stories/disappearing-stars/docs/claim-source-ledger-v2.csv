@@ -1,0 +1,12 @@
+claim_id,claim_summary,evidence_class,source_ids,data_file,reader_location,caveat,status
+C01,"批准天区含250条Vmag不大于6.5的BSC记录",derived,S01,stars-orion-field.json,"开场、阈值、方法","矩形猎户座中心天区，不是猎户座成员表或整个天空",ready
+C02,"全球天空辉光年增长率为9.6%±0.4%",observed,S02,generation-scenario.json,"一代人的夜空","2011—2022全球公众观测拟合",ready
+C03,"论文示例为250颗到18年后约100颗",scenario,S02,generation-scenario.json,"一代人的夜空","不是纽约或任一具体城市的预测",ready
+C04,"9.6%复利18年为5.207倍",derived,S02,generation-scenario.json,"18岁状态、方法","延长同一中心年率的数学复算",ready
+C05,"时代广场与中央公园均为Atlas >41档",modeled,"S03;S04",nyc-places.json,"纽约路线","不能解析直接眩光和街区差异",ready
+C06,"牙买加湾20.5—41、佩勒姆湾10.2—20.5、蒙托克0.16—0.32",modeled,"S03;S04",nyc-places.json,"纽约路线","约2014年晴空天顶模型分档",ready
+C07,"路线NELM区间由Atlas档和Kyba北美方程推导",derived,"S02;S03;S04",nyc-places.json,"地点详情、方法","拟合残差1.009星等；不转精确星数",ready
+C08,"负责的照明有用途、准确投向、不过亮、受控制、偏暖色",observed,"S05;S06",lighting-presets.json,"照明A/B","类别原则不是灯具级模拟",ready
+C09,"Tribute in Light七夜累计影响超过110万只迁徙鸟",observed,S07,,"生态插页","高强度临时装置，不能代表普通路灯",ready
+C10,"超过80%人口受人造天空辉光影响；银河对超过三分之一人类不可见",modeled,S03,,"结尾","World Atlas模型估计",ready
+C11,"6岁和12岁阈值与计数是端点校准的视觉插值",editorial-encoding,"S01;S02",generation-scenario.json,"代际中间状态、方法","不得作为测量值或预测值展示",ready
