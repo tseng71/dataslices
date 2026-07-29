@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "scenario_id": "kyba-global-average-18y-editorial-translation",
+  "source": {
+    "title": "Citizen scientists report global rapid reductions in the visibility of stars from 2011 to 2022",
+    "authors": "Kyba et al.",
+    "doi": "10.1126/science.abq7781",
+    "source_url": "https://www.science.org/doi/10.1126/science.abq7781"
+  },
+  "published_claims": {
+    "global_annual_skyglow_growth_pct": 9.6,
+    "global_annual_skyglow_growth_uncertainty_pct": 0.4,
+    "example_start_visible_stars": 250,
+    "example_end_visible_stars_after_18_years": 100
+  },
+  "visual_mapping": {
+    "method": "Linear interpolation of the display limiting magnitude from 6.50 to 5.48 across the four approved age nodes.",
+    "calibration": "The field contains 250 catalogue entries at Vmag <= 6.50 and 100 at Vmag <= 5.48.",
+    "caveat": "Only the 0- and 18-year counts are published example endpoints. Intermediate thresholds and counts are editorial visual interpolation and must not be presented as measured values."
+  },
+  "states": [
+    {
+      "age_years": 0,
+      "skyglow_factor": 1.0,
+      "skyglow_factor_low": 1.0,
+      "skyglow_factor_high": 1.0,
+      "display_threshold_vmag": 6.5,
+      "illustrative_visible_count": 250,
+      "reader_facing_count_claim": 250,
+      "evidence_type": "published example endpoint"
+    },
+    {
+      "age_years": 6,
+      "skyglow_factor": 1.7333,
+      "skyglow_factor_low": 1.6956,
+      "skyglow_factor_high": 1.7716,
+      "display_threshold_vmag": 6.16,
+      "illustrative_visible_count": 194,
+      "reader_facing_count_claim": null,
+      "evidence_type": "editorial visual interpolation"
+    },
+    {
+      "age_years": 12,
+      "skyglow_factor": 3.0042,
+      "skyglow_factor_low": 2.8752,
+      "skyglow_factor_high": 3.1384,
+      "display_threshold_vmag": 5.82,
+      "illustrative_visible_count": 133,
+      "reader_facing_count_claim": null,
+      "evidence_type": "editorial visual interpolation"
+    },
+    {
+      "age_years": 18,
+      "skyglow_factor": 5.207,
+      "skyglow_factor_low": 4.8754,
+      "skyglow_factor_high": 5.5599,
+      "display_threshold_vmag": 5.48,
+      "illustrative_visible_count": 100,
+      "reader_facing_count_claim": 100,
+      "evidence_type": "published example endpoint"
+    }
+  ]
+}
