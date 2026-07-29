@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2360" viewBox="0 0 1800 2360" role="img" aria-labelledby="title desc">
+  <title id="title">《从“给力”到“情绪价值”》桌面端关键帧</title>
+  <desc id="desc">六个桌面端关键场景：开场、首个编码、二十年全景、跨语域迁移、模板结构中央揭示和探索结尾。</desc>
+  <defs>
+    <style>
+      @import url("../fonts/noto-sans-sc/wght.css");
+      .sans{font-family:"Noto Sans SC Thin","Microsoft YaHei","PingFang SC",sans-serif}
+      .serif{font-family:"Noto Sans SC Thin","Songti SC",serif}
+      .mono{font-family:"Noto Sans SC Thin","SFMono-Regular",Consolas,monospace}
+      .label{font-size:18px;letter-spacing:2px;font-weight:700}
+      .eyebrow{font-size:14px;letter-spacing:2.5px;font-weight:700}
+      .body{font-size:20px;line-height:1.5}
+      .small{font-size:14px}
+      .micro{font-size:11px}
+      .headline{font-size:52px;font-weight:800;letter-spacing:-1px}
+      .frame{fill:#fffaf0;stroke:#1d1c19;stroke-width:2}
+      .rule{stroke:#c9c2b6;stroke-width:1}
+      .hair{stroke:#ddd5c8;stroke-width:1}
+      .ink{fill:#1d1c19}
+      .muted{fill:#777168}
+      .paper{fill:#fffaf0}
+      .red{fill:#d94835}
+      .blue{fill:#1769e0}
+      .green{fill:#0a8f75}
+      .purple{fill:#7b4fd2}
+      .unknown{fill:#b8b0a4}
+    </style>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#9d968b" stroke-width="2"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect width="1800" height="2360" fill="#e9e4db"/>
+  <text x="80" y="80" class="sans ink" font-size="32" font-weight="800">详细设计 · 桌面关键帧</text>
+  <text x="80" y="114" class="sans muted" font-size="17">1440 × 900 设计基准 · 词语保持身份，位置与标注承担证据</text>
+  <line x1="80" y1="142" x2="1720" y2="142" stroke="#1d1c19" stroke-width="2"/>
+
+  <!-- 01 opening -->
+  <g transform="translate(80,190)">
+    <rect width="790" height="620" rx="4" fill="#10131a" filter="url(#shadow)"/>
+    <text x="28" y="40" class="mono" fill="#8f98a8" font-size="14">KF-01 · OPENING / 0%—8%</text>
+    <line x1="28" y1="58" x2="762" y2="58" stroke="#343a47"/>
+    <text x="395" y="260" text-anchor="middle" class="sans" fill="#ffffff" font-size="128" font-weight="900">YYDS</text>
+    <line x1="255" y1="286" x2="535" y2="286" stroke="#d94835" stroke-width="8"/>
+    <line x1="255" y1="300" x2="535" y2="300" stroke="#d94835" stroke-width="3"/>
+    <text x="395" y="370" text-anchor="middle" class="serif" fill="#ffffff" font-size="30">你现在还会说它吗？</text>
+    <text x="395" y="420" text-anchor="middle" class="sans" fill="#aeb6c4" font-size="17">先别回答。跟着一个词，看它进入记录、迁移、褪色，或留下结构。</text>
+    <text x="28" y="584" class="mono" fill="#8f98a8" font-size="13">↓ SCROLL TO HOLD THE WORD</text>
+    <line x1="738" y1="566" x2="738" y2="592" stroke="#1769e0" stroke-width="3"/>
+    <path d="M730 585 L738 594 L746 585" fill="none" stroke="#1769e0" stroke-width="3"/>
+  </g>
+
+  <!-- 02 first encoding -->
+  <g transform="translate(930,190)">
+    <rect width="790" height="620" rx="4" class="frame" filter="url(#shadow)"/>
+    <text x="28" y="40" class="mono muted" font-size="14">KF-02 · FIRST ENCODING / 8%—18%</text>
+    <line x1="28" y1="58" x2="762" y2="58" class="rule"/>
+    <text x="30" y="110" class="sans red" font-size="44" font-weight="900">YYDS</text>
+    <text x="30" y="140" class="sans muted" font-size="14">“永远的神”的拼音缩写</text>
+    <text x="30" y="190" class="serif ink" font-size="23" font-weight="700">我们先只确认一件事：</text>
+    <text x="30" y="224" class="serif ink" font-size="23">它何时进入本项目采用的官方记录？</text>
+
+    <line x1="328" y1="132" x2="736" y2="132" stroke="#1d1c19" stroke-width="2"/>
+    <g class="mono" font-size="12" fill="#777168">
+      <text x="328" y="116">2019</text><text x="453" y="116">2020</text><text x="578" y="116">2021</text><text x="703" y="116">2022</text>
+    </g>
+    <circle cx="598" cy="132" r="11" fill="#d94835"/>
+    <text x="598" y="171" text-anchor="middle" class="sans red" font-size="15" font-weight="800">2021 年度网络用语</text>
+
+    <text x="328" y="240" class="eyebrow sans ink">证据轨道</text>
+    <g class="sans" font-size="15">
+      <text x="328" y="286" fill="#1d1c19">年度入选</text>
+      <text x="328" y="342" fill="#1769e0">网络语境</text>
+      <text x="328" y="398" fill="#777168">搜索关注</text>
+      <text x="328" y="454" fill="#0a8f75">新闻 / 公共表达</text>
+    </g>
+    <g>
+      <line x1="455" y1="280" x2="736" y2="280" class="hair"/>
+      <line x1="455" y1="336" x2="736" y2="336" class="hair"/>
+      <line x1="455" y1="392" x2="736" y2="392" class="hair"/>
+      <line x1="455" y1="448" x2="736" y2="448" class="hair"/>
+      <rect x="580" y="270" width="36" height="20" rx="10" fill="#d94835"/>
+      <rect x="550" y="326" width="96" height="20" rx="3" fill="#1769e0"/>
+      <rect x="455" y="382" width="281" height="20" fill="url(#hatch)" opacity=".5"/>
+      <path d="M584 448 H642" stroke="#0a8f75" stroke-width="5" stroke-dasharray="8 7"/>
+    </g>
+    <text x="455" y="488" class="sans muted" font-size="13">斜纹 = 尚未取得可比趋势；虚线 = 有语境，强度待验证</text>
+    <rect x="28" y="526" width="734" height="64" fill="#f4eee3"/>
+    <text x="45" y="551" class="sans ink" font-size="14" font-weight="700">读图规则</text>
+    <text x="45" y="576" class="sans muted" font-size="14">放大只是“正在讲它”，不是说它更热；缺数据也不等于没人使用。</text>
+  </g>
+
+  <!-- 03 archive -->
+  <g transform="translate(80,860)">
+    <rect width="790" height="620" rx="4" class="frame" filter="url(#shadow)"/>
+    <text x="28" y="40" class="mono muted" font-size="14">KF-03 · ARCHIVE / 18%—36%</text>
+    <line x1="28" y1="58" x2="762" y2="58" class="rule"/>
+    <text x="28" y="110" class="serif ink" font-size="34" font-weight="800">二十年，词语排成了年轮。</text>
+    <text x="28" y="142" class="sans muted" font-size="15">每个词仍能读；每列是年份，不是词频排行榜。</text>
+    <g class="mono muted" font-size="12">
+      <text x="30" y="188">2005</text><text x="150" y="188">2010</text><text x="280" y="188">2015</text><text x="410" y="188">2020</text><text x="540" y="188">2021</text><text x="680" y="188">2025</text>
+    </g>
+    <line x1="30" y1="202" x2="740" y2="202" stroke="#1d1c19" stroke-width="2"/>
+    <g class="sans" font-size="16" fill="#5f5a53">
+      <text x="30" y="244">博客</text><text x="30" y="279">山寨</text><text x="30" y="314">打酱油</text>
+      <text x="150" y="244" fill="#1d1c19" font-weight="800">给力</text><text x="150" y="279">微博</text><text x="150" y="314">围观</text><text x="150" y="349">低碳</text>
+      <text x="280" y="244">任性</text><text x="280" y="279">剁手党</text><text x="280" y="314">脑洞大开</text><text x="280" y="349">网红</text>
+      <text x="410" y="244">奥利给</text><text x="410" y="279">带货</text><text x="410" y="314">集美</text><text x="410" y="349">云监工</text>
+      <text x="540" y="244" fill="#d94835" font-weight="900">YYDS</text><text x="540" y="279">破防</text><text x="540" y="314">绝绝子</text><text x="540" y="349">躺平</text>
+      <text x="680" y="244">情绪价值</text><text x="680" y="279">村咖</text><text x="680" y="314">来财</text><text x="680" y="349">敬自己一杯</text>
+    </g>
+    <g stroke="#c9c2b6">
+      <line x1="130" y1="207" x2="130" y2="386"/><line x1="260" y1="207" x2="260" y2="386"/><line x1="390" y1="207" x2="390" y2="386"/><line x1="520" y1="207" x2="520" y2="386"/><line x1="660" y1="207" x2="660" y2="386"/>
+    </g>
+    <path d="M563 228 V367" stroke="#d94835" stroke-width="2" stroke-dasharray="4 5"/>
+    <circle cx="563" cy="372" r="5" fill="#d94835"/>
+
+    <rect x="28" y="418" width="734" height="148" fill="#f4eee3"/>
+    <text x="44" y="446" class="eyebrow sans ink">这一屏先阻止一个误读</text>
+    <g class="sans" font-size="14">
+      <rect x="44" y="466" width="14" height="14" fill="none" stroke="#1769e0" stroke-width="2"/>
+      <text x="68" y="478" fill="#1d1c19">年度网络用语</text>
+      <line x1="210" y1="473" x2="240" y2="473" stroke="#0a8f75" stroke-width="4"/>
+      <text x="250" y="478" fill="#1d1c19">媒体流行语</text>
+      <line x1="390" y1="467" x2="420" y2="479" stroke="#7b4fd2" stroke-width="3"/>
+      <text x="430" y="478" fill="#1d1c19">年度新词语</text>
+    </g>
+    <text x="44" y="520" class="sans muted" font-size="15">三个系列观察的语域、语料和方法不同。</text>
+    <text x="44" y="546" class="sans ink" font-size="15" font-weight="700">同列展示 ≠ 同一榜单，也不把名次混成“谁更重要”。</text>
+  </g>
+
+  <!-- 04 migration -->
+  <g transform="translate(930,860)">
+    <rect width="790" height="620" rx="4" class="frame" filter="url(#shadow)"/>
+    <text x="28" y="40" class="mono muted" font-size="14">KF-04 · REGISTER MIGRATION / 46%—58%</text>
+    <line x1="28" y1="58" x2="762" y2="58" class="rule"/>
+    <text x="28" y="110" class="serif ink" font-size="34" font-weight="800">一个词离开原梗以后，去了哪里？</text>
+    <text x="28" y="142" class="sans muted" font-size="15">轨道之间的出现是“可观察迁移”，不是传播因果。</text>
+
+    <g class="sans" font-size="14" font-weight="700">
+      <text x="32" y="214" fill="#1769e0">网络表达</text>
+      <text x="32" y="326" fill="#777168">搜索关注</text>
+      <text x="32" y="438" fill="#0a8f75">新闻 / 公共表达</text>
+    </g>
+    <g>
+      <line x1="145" y1="208" x2="746" y2="208" stroke="#1769e0" stroke-width="2"/>
+      <line x1="145" y1="320" x2="746" y2="320" stroke="#b8b0a4" stroke-width="2"/>
+      <line x1="145" y1="432" x2="746" y2="432" stroke="#0a8f75" stroke-width="2"/>
+      <g class="mono muted" font-size="11">
+        <text x="145" y="188">2010</text><text x="285" y="188">2015</text><text x="425" y="188">2020</text><text x="565" y="188">2025</text>
+      </g>
+    </g>
+    <g class="sans" font-size="20" font-weight="800">
+      <text x="156" y="246" fill="#1d1c19">给力</text>
+      <text x="408" y="246" fill="#d94835">YYDS</text>
+      <text x="538" y="246" fill="#7b4fd2">情绪价值</text>
+    </g>
+    <path d="M178 255 C210 294,220 360,245 420" fill="none" stroke="#0a8f75" stroke-width="4"/>
+    <path d="M439 255 C470 287,478 350,498 420" fill="none" stroke="#0a8f75" stroke-width="4" stroke-dasharray="8 7"/>
+    <path d="M583 255 C604 280,610 356,624 420" fill="none" stroke="#0a8f75" stroke-width="4" stroke-dasharray="2 7"/>
+    <g class="sans" font-size="16" font-weight="700">
+      <text x="214" y="462" fill="#0a8f75">给力</text>
+      <text x="470" y="462" fill="#0a8f75">YYDS?</text>
+      <text x="590" y="462" fill="#0a8f75">情绪价值?</text>
+    </g>
+    <rect x="28" y="500" width="734" height="82" fill="#f4eee3"/>
+    <text x="44" y="528" class="sans ink" font-size="14" font-weight="700">线型是证据，不是审美：</text>
+    <text x="44" y="555" class="sans muted" font-size="14">实线 = 已复核跨语域例；虚线 = 待验证；点线 = 只有初步线索。第 4 阶段不通过就不画。</text>
+  </g>
+
+  <!-- 05 template reveal -->
+  <g transform="translate(80,1530)">
+    <rect width="790" height="620" rx="4" class="frame" filter="url(#shadow)"/>
+    <text x="28" y="40" class="mono muted" font-size="14">KF-05 · CENTRAL REVEAL / 58%—72%</text>
+    <line x1="28" y1="58" x2="762" y2="58" class="rule"/>
+    <text x="28" y="108" class="serif ink" font-size="31" font-weight="800">留下来的，也许不是原句。</text>
+    <text x="28" y="144" class="serif purple" font-size="31" font-weight="800">而是一个还能继续造句的结构。</text>
+
+    <g transform="translate(44,198)">
+      <text x="0" y="0" class="sans ink" font-size="28" font-weight="800">道路千万条，安全第一条</text>
+      <rect x="-6" y="22" width="278" height="60" rx="4" fill="#ede5fb" stroke="#7b4fd2" stroke-width="2"/>
+      <text x="14" y="62" class="mono purple" font-size="24" font-weight="800">××千万条，××第一条</text>
+      <path d="M272 52 C332 52,330 10,382 10" fill="none" stroke="#7b4fd2" stroke-width="3"/>
+      <path d="M272 52 C332 52,330 75,382 75" fill="none" stroke="#7b4fd2" stroke-width="3"/>
+      <path d="M272 52 C332 52,330 140,382 140" fill="none" stroke="#7b4fd2" stroke-width="3" stroke-dasharray="6 6"/>
+      <g class="sans" font-size="19" font-weight="700">
+        <text x="398" y="18" fill="#1d1c19">学习千万条，休息第一条</text>
+        <text x="398" y="83" fill="#1d1c19">方法千万条，适合第一条</text>
+        <text x="398" y="148" fill="#777168">更多变体：待语料核验</text>
+      </g>
+    </g>
+
+    <line x1="44" y1="414" x2="744" y2="414" class="rule"/>
+    <g transform="translate(44,454)">
+      <text x="0" y="0" class="sans ink" font-size="24" font-weight="800">练习基础，毅力不基础</text>
+      <text x="0" y="45" class="mono purple" font-size="21" font-weight="800">××基础，××不基础</text>
+      <line x1="0" y1="58" x2="241" y2="58" stroke="#7b4fd2" stroke-width="4" stroke-dasharray="5 5"/>
+      <text x="306" y="13" class="sans muted" font-size="15">2025 官方释义已明确保留“××”槽位</text>
+      <text x="306" y="42" class="sans ink" font-size="15" font-weight="700">但“模板更耐活”仍是待验证命题。</text>
+    </g>
+    <rect x="586" y="546" width="158" height="34" rx="17" fill="#7b4fd2"/>
+    <text x="665" y="569" text-anchor="middle" class="sans" fill="#fff" font-size="13" font-weight="800">CENTRAL REVEAL</text>
+  </g>
+
+  <!-- 06 explorer ending -->
+  <g transform="translate(930,1530)">
+    <rect width="790" height="620" rx="4" class="frame" filter="url(#shadow)"/>
+    <text x="28" y="40" class="mono muted" font-size="14">KF-06 · EXPLORE → RETURN / 82%—100%</text>
+    <line x1="28" y1="58" x2="762" y2="58" class="rule"/>
+    <text x="28" y="106" class="serif ink" font-size="32" font-weight="800">找一个你记得的词</text>
+    <rect x="28" y="134" width="492" height="48" rx="3" fill="#fff" stroke="#1d1c19" stroke-width="2"/>
+    <text x="48" y="165" class="sans ink" font-size="17">YYDS</text>
+    <rect x="532" y="134" width="102" height="48" rx="3" fill="#1d1c19"/>
+    <text x="583" y="164" text-anchor="middle" class="sans" fill="#fff" font-size="15" font-weight="800">查找</text>
+    <text x="650" y="164" class="sans blue" font-size="14" font-weight="700">清除</text>
+
+    <g transform="translate(28,212)">
+      <rect width="714" height="222" rx="4" fill="#f4eee3"/>
+      <text x="20" y="42" class="sans red" font-size="36" font-weight="900">YYDS</text>
+      <text x="20" y="70" class="sans muted" font-size="13">规范词形 · 永远的神 · yyds</text>
+      <g class="sans" font-size="13" font-weight="700">
+        <rect x="20" y="91" width="84" height="28" rx="14" fill="#fff" stroke="#d94835"/>
+        <text x="62" y="110" text-anchor="middle" fill="#d94835">年度入选</text>
+        <rect x="112" y="91" width="84" height="28" rx="14" fill="#fff" stroke="#1769e0"/>
+        <text x="154" y="110" text-anchor="middle" fill="#1769e0">网络语境</text>
+        <rect x="204" y="91" width="104" height="28" rx="14" fill="#fff" stroke="#b8b0a4"/>
+        <text x="256" y="110" text-anchor="middle" fill="#777168">趋势待取得</text>
+      </g>
+      <line x1="20" y1="146" x2="688" y2="146" class="rule"/>
+      <text x="20" y="174" class="sans ink" font-size="14" font-weight="700">2021 · 年度十大网络用语</text>
+      <text x="20" y="201" class="sans muted" font-size="13">来源、方法、语境与限制均可展开；URL 保存当前词。</text>
+    </g>
+
+    <text x="28" y="478" class="serif ink" font-size="23" font-weight="700">“YYDS”没有被宣判活着或死去。</text>
+    <text x="28" y="512" class="serif ink" font-size="22">它只是回到了自己的年份、结构与证据里。</text>
+    <text x="28" y="555" class="serif muted" font-size="17">语言保存的不只是一个时代谈过什么，</text>
+    <text x="28" y="580" class="serif muted" font-size="17">也保存人们学会怎样说这些事。</text>
+    <circle cx="720" cy="558" r="22" fill="#d94835"/>
+    <text x="720" y="564" text-anchor="middle" class="sans" fill="#fff" font-size="16" font-weight="900">字</text>
+  </g>
+
+  <text x="80" y="2290" class="sans muted" font-size="15">注：关键帧中的词目来自已定位的官方年度榜单；迁移线、存活时长与派生规模均为待 Stage 4 验证的设计占位，不作为事实发布。</text>
+  <text x="80" y="2320" class="mono muted" font-size="13">DESIGN VERSION 02-storyboard-wireframes-v2 · 2026-07-29</text>
+</svg>
