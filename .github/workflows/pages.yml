@@ -51,6 +51,14 @@ jobs:
         run: |
           npm run check
           npm run build
+      - name: Install Chromium for conformance
+        working-directory: stories/chinese-buzzwords
+        run: npx playwright install --with-deps chromium
+      - name: Run Chinese buzzwords browser conformance
+        working-directory: stories/chinese-buzzwords
+        env:
+          BASE_PATH: /dataslices/stories/chinese-buzzwords
+        run: npm run test:conformance
       - name: Validate stories
         run: |
           test -s index.html
@@ -60,6 +68,10 @@ jobs:
           test -s stories/chinese-buzzwords/build/index.html
           test -s stories/chinese-buzzwords/build/methodology/index.html
           test -s stories/chinese-buzzwords/build/data/annual-network-terms.csv
+          test -s stories/chinese-buzzwords/build/qa/browser-conformance.json
+          test -s stories/chinese-buzzwords/build/qa/screenshots/desktop/opening-yyds.png
+          test -s stories/chinese-buzzwords/build/qa/screenshots/mobile/opening-yyds.png
+          test -s stories/chinese-buzzwords/build/qa/screenshots/mobile-reduced/opening-yyds.png
           test -s stories/chinese-buzzwords/docs/design-contract.json
           test -s stories/chinese-buzzwords/docs/implementation-traceability.md
           for story in battery-world-map disappearing-stars ai-cost nyc-heat; do
