@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "design_version": "05-storyboard-wireframes-v3-stage4-approved",
-  "implementation_version": "stage5-local-preview-2026-07-29",
-  "target_url": "http://127.0.0.1:4173/",
+  "implementation_version": "stage6-published-2026-07-29",
+  "target_url": "https://tseng71.github.io/dataslices/stories/disappearing-stars/",
   "iterations": [
     {
       "number": 1,
@@ -36,6 +36,13 @@
       "failures": [],
       "fixes": [
         "All deterministic assertions and manual visual reviews passed."
+      ]
+    },
+    {
+      "number": 5,
+      "failures": [],
+      "fixes": [
+        "Public GitHub Pages URL passed all 28 scene/viewport deterministic assertions after deployment."
       ]
     }
   ],
@@ -603,5 +610,6 @@
     "status": "pass",
     "unresolved": 0,
     "blocked": 0
-  }
+  },
+  "published_at": "2026-07-29"
 }

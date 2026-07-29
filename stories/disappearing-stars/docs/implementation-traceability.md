@@ -1,52 +1,41 @@
 # 《消失的星空》设计—实现追溯表
 
-> v1.0 状态更新：2026-07-28。网页实现以 `02-storyboard-wireframes-v2.md` 为主要规格。
+> v2.0 状态更新：2026-07-29。实现以第四阶段冻结设计 `05-storyboard-wireframes-v3-stage4-approved` 为准，已发布并通过公开网址验收。
 
 ## 实现依据
 
-1. `../../../docs/dataslices-overall-design.md`
-2. `01-concept-design-v1.md`
-3. `02-storyboard-wireframes-v2.md`
-4. `manuscript.md`
-5. `methodology.md`
-6. `sources.md`
+1. `01-concept-design-v2.md`
+2. `03-research-claims-v2.md`
+3. `04-manuscript-v2.md`
+4. `05-storyboard-wireframes-v3.md`
+5. `design-contract.json`
+6. `methodology-v2.md`
+7. `sources-v2.md`
 
 ## v2 模块对照
 
-| 设计模块 | 实现位置 | v1.0 状态 | 数据/视觉性质 |
+| 设计模块 | 实现位置 | 数据与视觉约束 | 状态 |
 |---|---|---|---|
-| Hero 星星消失 | `index.html #top`；`story.js updateHero()` | 完成 | 固定星表、固定投影，按视星等阈值淡出；光穹为机制模拟 |
-| 全球尺度引言 | `.intro`、`.big-fact` | 完成 | 研究结论与大数字叙事 |
-| 250→100 代际情景 | `#ageStory`；`ageState()` | 完成 | 年龄、可见极限和显示星数由统一函数驱动；明确为全球平均情景 |
-| 可见极限滑杆 | `#limitSection`；`updateLimit()` | 完成 | 2.0—6.5等、步长0.1、键盘可操作 |
-| 光穹机制 | `.mechanism-diagram` | 完成 | 区分直接向上光、地面反射与大气散射 |
-| 地点—星空联动 | `.locations`；`setLocation()` | 完成 | 真实地点名称与相对位置图；数值使用环境类型区间，不声称实时实测 |
-| 两把尺子 | `.two-rulers` | 完成 | 明确区分地面辐亮度与肉眼可见极限 |
-| 五种环境比较 | `#skyMultiples` | 完成 | 同一星表、投影和时间假设，只改变背景与阈值 |
-| 鸟类灯光实验 | `#birdSky`；`updateBirds()` | 完成 | 固定轨迹规则解释机制，限制写入正文 |
-| 照明治理实验室 | `.lighting-lab`；`updateLab()` | 完成 | 用途、方向、亮度、时间、色温；输出明确为示意指数 |
-| 观察式结尾 | `.ending` | 完成 | 恢复相对较暗星空，不制造“完全恢复”的虚假圆满 |
-| 方法与来源 | `.methods` + Markdown 文档 | 完成 | 方法、来源、v2设计稿和版本记录均可访问 |
+| 首屏城市星空与暗夜回返 | `src/components/Story.svelte`、`StarField.svelte` | 同一组 250 颗恒星保持稳定 ID；只改变阈值与背景 | 完成 |
+| 视星等编码 | `MagnitudeGraphic.svelte` | 点大小与亮度编码视星等，不解释为物理尺寸 | 完成 |
+| 2.48 → 5.48 阈值揭示 | `ThresholdScrolly.svelte` | 7 与 100 均由同一星表按阈值计算 | 完成 |
+| 0 / 6 / 12 / 18 岁代际情景 | `GenerationScrolly.svelte`、`src/lib/state/story.svelte.js` | 四个离散节点；不把中间节点宣称为精确观测 | 完成 |
+| 城市—郊外地点剖面 | `CityTransect.svelte` | 地点值为区域模型分档，不是某晚实测 | 完成 |
+| 光进入天空的路径 | `LightPathExplainer.svelte` | 解释直射、反射与散射机制 | 完成 |
+| 遮光前后比较 | `LightingComparison.svelte` | 只做方向性比较，不输出恢复星数或百分比 | 完成 |
+| 鸟类证据与边界 | `BirdEvidence.svelte` | 文案与主张表、来源表保持一一对应 | 完成 |
+| 方法、来源与结尾 | `Methods.svelte`、`static/docs/` | 方法、证据边界和可下载资料可访问 | 完成 |
+| 阅读进度与滚动状态 | `ReadingProgress.svelte`、`src/components/helpers/Scrolly.svelte` | 支持键盘、触控和减少动态模式 | 完成 |
 
-## 响应式、无障碍与性能
+## 验证与发布
 
-- 桌面端分栏、sticky场景和五列小倍数已实现；
-- 手机端采用68vh sticky星空、地图与星空上下排列、两列小倍数；
-- 所有按钮触控高度不低于约44px；
-- Canvas均提供 `aria-label`；
-- 滑杆与地点按钮可键盘操作；
-- 提供清晰焦点状态；
-- 支持 `prefers-reduced-motion`；
-- Canvas设备像素比上限为1.75；
-- 滚动重绘通过 `requestAnimationFrame` 调度。
-
-## 发布
-
-- 版本：`v1.0`
-- 正式网址：`https://tseng71.github.io/dataslices/stories/disappearing-stars/`
-- 部署：`.github/workflows/pages.yml`
-- 工作流在部署前检查首页、故事页、CSS文件和JavaScript语法。
+- 类型与组件检查：0 errors / 0 warnings；
+- 第四阶段数据审计：250 条恒星、4 个情景节点、5 个地点、11 条主张全部通过；
+- 设计合同：14 个场景、28 个场景/视口组合全部通过；
+- 生产构建：SvelteKit adapter-static 输出至 `build/`；
+- 正式网址：https://tseng71.github.io/dataslices/stories/disappearing-stars/
+- 部署工作流：`.github/workflows/pages.yml`。
 
 ## 变更规则
 
-后续任何改变叙事节奏、数据口径或交互逻辑的修改，必须先更新 v2 设计稿或建立新版本设计稿，再同步更新本表。
+后续任何改变叙事节奏、数据口径、视觉编码或交互逻辑的修改，必须先更新设计稿或建立新版本设计稿，再同步更新设计合同、QA 记录与本表。
