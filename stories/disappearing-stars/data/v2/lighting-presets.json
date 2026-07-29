@@ -1,0 +1,71 @@
+{
+  "schema_version": "2.0.0",
+  "source": {
+    "title": "Five Principles for Responsible Outdoor Lighting",
+    "authors": "DarkSky International and Illuminating Engineering Society",
+    "source_url": "https://darksky.org/resources/guides-and-how-tos/lighting-principles/",
+    "accessed_on": "2026-07-28"
+  },
+  "encoding_note": "These are categorical editorial states, not photometric simulations. They do not output sky-brightness reduction or recovered-star counts.",
+  "task_area": {
+    "id": "pedestrian-path",
+    "requirement": "Keep the same ground task visible while comparing where, how much, when, and what spectrum of light is used."
+  },
+  "presets": [
+    {
+      "preset_id": "unshielded",
+      "display_name": "未遮罩",
+      "useful": true,
+      "targeting": "some direct uplight and spill beyond task area",
+      "level": "reference level",
+      "control": "on all night",
+      "spectrum": "reference white",
+      "changed_dimension": "baseline",
+      "quantitative_output_allowed": false
+    },
+    {
+      "preset_id": "shielded",
+      "display_name": "完全遮罩",
+      "useful": true,
+      "targeting": "aimed downward at the task area",
+      "level": "same reference level",
+      "control": "on all night",
+      "spectrum": "reference white",
+      "changed_dimension": "direction",
+      "quantitative_output_allowed": false
+    },
+    {
+      "preset_id": "right-sized",
+      "display_name": "适量",
+      "useful": true,
+      "targeting": "aimed downward at the task area",
+      "level": "no brighter than the task requires",
+      "control": "on all night",
+      "spectrum": "reference white",
+      "changed_dimension": "level",
+      "quantitative_output_allowed": false
+    },
+    {
+      "preset_id": "timed",
+      "display_name": "按需控制",
+      "useful": true,
+      "targeting": "aimed downward at the task area",
+      "level": "task level while occupied; dimmed or off otherwise",
+      "control": "timer or occupancy sensor",
+      "spectrum": "reference white",
+      "changed_dimension": "time",
+      "quantitative_output_allowed": false
+    },
+    {
+      "preset_id": "warmer",
+      "display_name": "减少短波",
+      "useful": true,
+      "targeting": "aimed downward at the task area",
+      "level": "no brighter than the task requires",
+      "control": "timer or occupancy sensor",
+      "spectrum": "warmer; least blue-violet content needed",
+      "changed_dimension": "spectrum",
+      "quantitative_output_allowed": false
+    }
+  ]
+}
