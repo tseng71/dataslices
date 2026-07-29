@@ -34,7 +34,7 @@
 
   <div class="scrolly__steps">
     {#each steps as step, index (step.id)}
-      <article
+      <div
         class:active={step.id === activeId}
         class="scrolly__step"
         data-step={step.id}
@@ -49,7 +49,7 @@
         {#if step.note}
           <p class="step-note">{step.note}</p>
         {/if}
-      </article>
+      </div>
     {/each}
   </div>
 </section>
