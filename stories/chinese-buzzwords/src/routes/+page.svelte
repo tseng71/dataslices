@@ -202,7 +202,10 @@
     forcedSceneId = params.get("scene") ?? "";
     if (forcedSceneId) story.setActive(forcedSceneId);
     if (params.get("qa") === "contract") {
-      window.__BUZZWORDS_QA_SET_SCENE__ = (id) => story.setActive(id);
+      window.__BUZZWORDS_QA_SET_SCENE__ = (id) => {
+        forcedSceneId = id;
+        story.setActive(id);
+      };
     }
     story.setReducedMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
 
@@ -261,6 +264,7 @@
         <div slot="graphic">
           <StoryGraphic
             state={story.visual}
+            sceneOverride={forcedSceneId}
             terms={data.terms}
             annotations={data.annotations}
             {selectedTermId}
