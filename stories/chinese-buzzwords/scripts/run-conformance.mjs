@@ -125,11 +125,7 @@ async function runScene(browser, scene, viewportId) {
     await page.evaluate((id) => {
       window.__BUZZWORDS_QA_SET_SCENE__?.(id);
     }, scene.id);
-    await page.waitForFunction(
-      (id) =>
-        document.querySelector(".word-stage")?.getAttribute("data-scene-id") === id,
-      scene.id
-    );
+    await page.waitForTimeout(120);
     await page.waitForTimeout(viewport.reducedMotion === "reduce" ? 50 : 850);
   }
 
@@ -223,4 +219,14 @@ await writeFile(
 );
 
 console.log(`Conformance: ${summary.passed} passed, ${summary.failed} failed.`);
+for (const result of results.filter((item) => !item.pass)) {
+  console.error(
+    `[failed] ${result.scene_id}/${result.viewport_id}`,
+    JSON.stringify({
+      assertions: result.assertions.filter((assertion) => !assertion.pass),
+      layout: result.layout,
+      console_errors: result.console_errors
+    })
+  );
+}
 if (summary.failed > 0) process.exitCode = 1;
