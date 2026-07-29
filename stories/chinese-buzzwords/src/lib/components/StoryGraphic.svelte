@@ -46,8 +46,8 @@
     "return-field": "结尾回到跨年份策展词场，完整词表仍可打开。"
   }[scene] ?? "词语按当前分析问题重新排列。";
 
-  function markStyle(record) {
-    const layout = layoutFor(record, scene, context);
+  function markStyle(record, currentScene) {
+    const layout = layoutFor(record, currentScene, context);
     return {
       layout,
       css: [
@@ -179,7 +179,7 @@
 
   <div class="word-layer">
     {#each records as record (record.term_id)}
-      {@const styled = markStyle(record)}
+      {@const styled = markStyle(record, scene)}
       <button
         type="button"
         class:visible={styled.layout.visible}

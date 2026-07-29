@@ -140,6 +140,18 @@ async function runScene(browser, scene, viewportId) {
   for (const assertion of scene.assertions) {
     assertionResults.push(await runAssertion(page, assertion));
   }
+  const declaredPopulation = Number(
+    await page.locator(".word-stage").getAttribute("data-population-count")
+  );
+  const visiblePopulation = await page.locator(".word-stage .word-mark.visible").count();
+  assertionResults.push({
+    id: "rendered-population",
+    kind: "count",
+    selector: ".word-stage .word-mark.visible",
+    expected: declaredPopulation,
+    actual: visiblePopulation,
+    pass: visiblePopulation === declaredPopulation
+  });
 
   const layout = await page.evaluate(() => ({
     viewport_width: document.documentElement.clientWidth,
