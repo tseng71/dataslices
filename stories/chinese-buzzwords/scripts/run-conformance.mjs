@@ -78,8 +78,7 @@ function attributeExpectation(expected) {
   return null;
 }
 
-async function checkDataAssertion(page, assertion) {
-  const locator = page.locator(assertion.selector);
+async function checkDataAssertion(page, assertion, locator) {
   const expected = assertion.expected;
 
   switch (assertion.id) {
@@ -154,8 +153,15 @@ function sameValue(actual, expected) {
   return JSON.stringify(actual) === JSON.stringify(expected);
 }
 
-async function runAssertion(page, assertion) {
-  const locator = page.locator(assertion.selector);
+async function runAssertion(page, scene, assertion) {
+  const termSelector = assertion.selector === "[data-term-id='yyds']";
+  const locator =
+    termSelector &&
+    new Set(["opening-yyds", "opening-title", "encoding-year", "cohort-2021", "ending-return"]).has(
+      scene.id
+    )
+      ? page.locator(sceneTarget(scene)).locator(assertion.selector)
+      : page.locator(assertion.selector);
   const count = await locator.count();
   let actual;
   let pass = false;
@@ -207,7 +213,7 @@ async function runAssertion(page, assertion) {
       actual.value === assertion.expected.value &&
       ("enabled" in assertion.expected ? actual.enabled === assertion.expected.enabled : true);
   } else if (assertion.kind === "data") {
-    actual = await checkDataAssertion(page, assertion);
+    actual = await checkDataAssertion(page, assertion, locator);
     pass = sameValue(actual, assertion.expected);
   }
 
@@ -273,7 +279,7 @@ async function runScene(browser, scene, viewportId) {
 
   const assertionResults = [];
   for (const assertion of scene.assertions) {
-    assertionResults.push(await runAssertion(page, assertion));
+    assertionResults.push(await runAssertion(page, scene, assertion));
   }
 
   const layout = await page.evaluate(() => ({
