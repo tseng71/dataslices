@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1740" viewBox="0 0 1800 1740" role="img" aria-labelledby="title desc">
+  <title id="title">《从“给力”到“情绪价值”》移动端关键帧</title>
+  <desc id="desc">四个390乘844移动端关键场景：开场、纵向证据轨道、模板结构和探索器。</desc>
+  <defs>
+    <style>
+      @import url("../fonts/noto-sans-sc/wght.css");
+      .sans{font-family:"Noto Sans SC Thin","Microsoft YaHei","PingFang SC",sans-serif}
+      .serif{font-family:"Noto Sans SC Thin","Songti SC",serif}
+      .mono{font-family:"Noto Sans SC Thin","SFMono-Regular",Consolas,monospace}
+      .ink{fill:#1d1c19}.muted{fill:#777168}.red{fill:#d94835}.blue{fill:#1769e0}.green{fill:#0a8f75}.purple{fill:#7b4fd2}
+      .rule{stroke:#c9c2b6;stroke-width:1}.hair{stroke:#ddd5c8;stroke-width:1}
+    </style>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#9d968b" stroke-width="2"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="1740" fill="#e9e4db"/>
+  <text x="70" y="76" class="sans ink" font-size="32" font-weight="800">详细设计 · 移动端关键帧</text>
+  <text x="70" y="110" class="sans muted" font-size="17">390 × 844 设计基准 · 纵向时间、44–52svh sticky、底部自然滚动</text>
+  <line x1="70" y1="138" x2="1730" y2="138" stroke="#1d1c19" stroke-width="2"/>
+
+  <!-- phone 1 -->
+  <g transform="translate(70,190) scale(.96)">
+    <rect width="390" height="844" rx="36" fill="#10131a" stroke="#1d1c19" stroke-width="4" filter="url(#shadow)"/>
+    <rect x="135" y="14" width="120" height="20" rx="10" fill="#242936"/>
+    <text x="20" y="72" class="mono" fill="#8f98a8" font-size="11">M-KF-01 · OPENING</text>
+    <text x="195" y="332" text-anchor="middle" class="sans" fill="#fff" font-size="74" font-weight="900">YYDS</text>
+    <line x1="112" y1="352" x2="278" y2="352" stroke="#d94835" stroke-width="7"/>
+    <line x1="112" y1="363" x2="278" y2="363" stroke="#d94835" stroke-width="3"/>
+    <text x="195" y="432" text-anchor="middle" class="serif" fill="#fff" font-size="24">你现在还会说它吗？</text>
+    <text x="195" y="476" text-anchor="middle" class="sans" fill="#aeb6c4" font-size="13">先别回答。</text>
+    <text x="195" y="498" text-anchor="middle" class="sans" fill="#aeb6c4" font-size="13">跟着一个词，看它进入记录。</text>
+    <text x="20" y="800" class="mono" fill="#8f98a8" font-size="11">SWIPE / SCROLL</text>
+  </g>
+
+  <!-- phone 2 -->
+  <g transform="translate(495,190) scale(.96)">
+    <rect width="390" height="844" rx="36" fill="#fffaf0" stroke="#1d1c19" stroke-width="4" filter="url(#shadow)"/>
+    <rect x="135" y="14" width="120" height="20" rx="10" fill="#e2dbcf"/>
+    <text x="20" y="72" class="mono muted" font-size="11">M-KF-02 · FIRST ENCODING</text>
+    <text x="20" y="126" class="sans red" font-size="40" font-weight="900">YYDS</text>
+    <text x="20" y="152" class="sans muted" font-size="12">2021 · 年度十大网络用语</text>
+    <line x1="20" y1="180" x2="370" y2="180" class="rule"/>
+    <text x="20" y="216" class="serif ink" font-size="18" font-weight="800">不同来源，回答不同问题。</text>
+    <line x1="78" y1="252" x2="78" y2="535" stroke="#1d1c19" stroke-width="2"/>
+    <g class="sans" font-size="13" font-weight="700">
+      <text x="20" y="270" fill="#1d1c19">入选</text>
+      <text x="20" y="352" fill="#1769e0">网络</text>
+      <text x="20" y="434" fill="#777168">搜索</text>
+      <text x="20" y="516" fill="#0a8f75">公共</text>
+    </g>
+    <circle cx="78" cy="266" r="9" fill="#d94835"/>
+    <rect x="68" y="331" width="20" height="56" rx="3" fill="#1769e0"/>
+    <rect x="68" y="409" width="20" height="56" fill="url(#hatch)" opacity=".55"/>
+    <line x1="78" y1="489" x2="78" y2="539" stroke="#0a8f75" stroke-width="5" stroke-dasharray="7 6"/>
+    <g class="sans" font-size="13">
+      <text x="108" y="270" fill="#1d1c19">已核实：官方年度名单</text>
+      <text x="108" y="352" fill="#1769e0">已核实：官方语料说明</text>
+      <text x="108" y="434" fill="#777168">尚未取得可比趋势</text>
+      <text x="108" y="516" fill="#0a8f75">迁移证据待验证</text>
+    </g>
+    <rect x="20" y="582" width="350" height="114" rx="4" fill="#f4eee3"/>
+    <text x="36" y="614" class="sans ink" font-size="13" font-weight="800">读图规则</text>
+    <text x="36" y="642" class="sans muted" font-size="12">放大不是更热；</text>
+    <text x="36" y="666" class="sans muted" font-size="12">缺数据也不等于没人使用。</text>
+    <text x="20" y="784" class="sans muted" font-size="11">sticky 图形约 48svh；本段文字在下方自然滚动</text>
+  </g>
+
+  <!-- phone 3 -->
+  <g transform="translate(920,190) scale(.96)">
+    <rect width="390" height="844" rx="36" fill="#fffaf0" stroke="#1d1c19" stroke-width="4" filter="url(#shadow)"/>
+    <rect x="135" y="14" width="120" height="20" rx="10" fill="#e2dbcf"/>
+    <text x="20" y="72" class="mono muted" font-size="11">M-KF-03 · CENTRAL REVEAL</text>
+    <text x="20" y="128" class="serif ink" font-size="22" font-weight="800">留下来的，也许不是原句。</text>
+    <text x="20" y="160" class="serif purple" font-size="22" font-weight="800">而是还能继续造句的结构。</text>
+    <line x1="20" y1="190" x2="370" y2="190" class="rule"/>
+    <text x="20" y="234" class="sans ink" font-size="19" font-weight="800">道路千万条，安全第一条</text>
+    <path d="M36 264 L36 302 L52 318" fill="none" stroke="#7b4fd2" stroke-width="3"/>
+    <rect x="52" y="282" width="286" height="58" rx="4" fill="#ede5fb" stroke="#7b4fd2" stroke-width="2"/>
+    <text x="195" y="318" text-anchor="middle" class="mono purple" font-size="19" font-weight="800">××千万条，××第一条</text>
+    <path d="M195 340 V378" stroke="#7b4fd2" stroke-width="3"/>
+    <path d="M195 378 C135 378 110 404 88 430" fill="none" stroke="#7b4fd2" stroke-width="2"/>
+    <path d="M195 378 C255 378 280 404 302 430" fill="none" stroke="#7b4fd2" stroke-width="2"/>
+    <g class="sans" font-size="13" font-weight="700">
+      <text x="24" y="458" fill="#1d1c19">学习千万条，</text><text x="24" y="478" fill="#1d1c19">休息第一条</text>
+      <text x="234" y="458" fill="#1d1c19">方法千万条，</text><text x="234" y="478" fill="#1d1c19">适合第一条</text>
+    </g>
+    <line x1="20" y1="526" x2="370" y2="526" class="rule"/>
+    <text x="20" y="568" class="sans ink" font-size="17" font-weight="800">××基础，××不基础</text>
+    <text x="20" y="602" class="sans muted" font-size="12">2025 官方条目保留槽位；</text>
+    <text x="20" y="624" class="sans muted" font-size="12">是否形成长寿模板，待下一阶段验证。</text>
+    <rect x="20" y="682" width="350" height="70" fill="#f4eee3"/>
+    <text x="36" y="711" class="sans ink" font-size="12" font-weight="800">减少动态</text>
+    <text x="36" y="735" class="sans muted" font-size="11">直接显示“原句 → 槽位 → 变体”，不播放拆分。</text>
+  </g>
+
+  <!-- phone 4 -->
+  <g transform="translate(1345,190) scale(.96)">
+    <rect width="390" height="844" rx="36" fill="#fffaf0" stroke="#1d1c19" stroke-width="4" filter="url(#shadow)"/>
+    <rect x="135" y="14" width="120" height="20" rx="10" fill="#e2dbcf"/>
+    <text x="20" y="72" class="mono muted" font-size="11">M-KF-04 · EXPLORE → RETURN</text>
+    <text x="20" y="120" class="serif ink" font-size="23" font-weight="800">找一个你记得的词</text>
+    <rect x="20" y="146" width="276" height="46" rx="3" fill="#fff" stroke="#1d1c19" stroke-width="2"/>
+    <text x="38" y="175" class="sans ink" font-size="15">YYDS</text>
+    <rect x="304" y="146" width="66" height="46" rx="3" fill="#1d1c19"/>
+    <text x="337" y="175" text-anchor="middle" class="sans" fill="#fff" font-size="13" font-weight="800">查找</text>
+    <rect x="20" y="220" width="350" height="314" rx="4" fill="#f4eee3"/>
+    <text x="36" y="270" class="sans red" font-size="34" font-weight="900">YYDS</text>
+    <text x="36" y="296" class="sans muted" font-size="11">永远的神 · yyds</text>
+    <rect x="36" y="320" width="82" height="26" rx="13" fill="#fff" stroke="#d94835"/>
+    <text x="77" y="338" text-anchor="middle" class="sans red" font-size="11" font-weight="800">年度入选</text>
+    <rect x="126" y="320" width="82" height="26" rx="13" fill="#fff" stroke="#1769e0"/>
+    <text x="167" y="338" text-anchor="middle" class="sans blue" font-size="11" font-weight="800">网络语境</text>
+    <line x1="36" y1="374" x2="354" y2="374" class="rule"/>
+    <text x="36" y="408" class="sans ink" font-size="13" font-weight="800">2021 · 年度十大网络用语</text>
+    <text x="36" y="438" class="sans muted" font-size="11">来源、方法、语境、限制</text>
+    <text x="36" y="464" class="sans blue" font-size="11" font-weight="700">展开完整证据 ↗</text>
+    <text x="36" y="504" class="sans muted" font-size="11">无结果时显示收录范围与建议入口，</text>
+    <text x="36" y="524" class="sans muted" font-size="11">不留下空白页面。</text>
+    <text x="20" y="594" class="serif ink" font-size="19" font-weight="800">它没有被宣判活着或死去。</text>
+    <text x="20" y="626" class="serif ink" font-size="18">它只是回到自己的年份、</text>
+    <text x="20" y="652" class="serif ink" font-size="18">结构与证据里。</text>
+    <text x="20" y="708" class="serif muted" font-size="13">语言保存的不只是谈过什么，</text>
+    <text x="20" y="730" class="serif muted" font-size="13">也保存人们学会怎样说这些事。</text>
+  </g>
+
+  <g transform="translate(70,1070)">
+    <rect width="1660" height="542" rx="4" fill="#fffaf0" stroke="#1d1c19" stroke-width="2"/>
+    <text x="32" y="48" class="sans ink" font-size="24" font-weight="800">移动端不是缩小桌面：四条实现约束</text>
+    <line x1="32" y1="70" x2="1628" y2="70" class="rule"/>
+    <g class="sans" font-size="18">
+      <circle cx="50" cy="126" r="15" fill="#d94835"/><text x="50" y="132" text-anchor="middle" fill="#fff" font-size="12" font-weight="900">1</text>
+      <text x="80" y="132" class="ink" font-weight="800">时间改为纵向</text><text x="80" y="166" class="muted">当前词固定在图形顶部；年份和证据向下展开。</text>
+      <circle cx="50" cy="230" r="15" fill="#1769e0"/><text x="50" y="236" text-anchor="middle" fill="#fff" font-size="12" font-weight="900">2</text>
+      <text x="80" y="236" class="ink" font-weight="800">sticky 只占约半屏</text><text x="80" y="270" class="muted">正文卡片留在下方自然滚动，不遮住词，不劫持手势。</text>
+      <circle cx="50" cy="334" r="15" fill="#7b4fd2"/><text x="50" y="340" text-anchor="middle" fill="#fff" font-size="12" font-weight="900">3</text>
+      <text x="80" y="340" class="ink" font-weight="800">模板族用单列链路</text><text x="80" y="374" class="muted">原词 → 槽位 → 变体，避免在窄屏画拥挤网络。</text>
+      <circle cx="50" cy="438" r="15" fill="#0a8f75"/><text x="50" y="444" text-anchor="middle" fill="#fff" font-size="12" font-weight="900">4</text>
+      <text x="80" y="444" class="ink" font-weight="800">所有图形都有文本等价物</text><text x="80" y="478" class="muted">无脚本、观察器失败或减少动态时，仍能读完同一论证。</text>
+    </g>
+    <text x="1020" y="128" class="mono muted" font-size="13">TARGETS</text>
+    <text x="1020" y="166" class="sans ink" font-size="17">390 × 844 · primary</text>
+    <text x="1020" y="198" class="sans ink" font-size="17">768 × 1024 · tablet</text>
+    <text x="1020" y="230" class="sans ink" font-size="17">200% zoom · reflow</text>
+    <text x="1020" y="262" class="sans ink" font-size="17">44px · minimum tap target</text>
+    <text x="1020" y="330" class="mono muted" font-size="13">FALLBACK</text>
+    <text x="1020" y="368" class="sans ink" font-size="17">预渲染章节正文 + 年份词表</text>
+    <text x="1020" y="400" class="sans ink" font-size="17">图形状态摘要 + 可展开完整列表</text>
+    <text x="1020" y="432" class="sans ink" font-size="17">URL 保留所选词和筛选条件</text>
+  </g>
+  <text x="70" y="1685" class="mono muted" font-size="13">DESIGN VERSION 02-storyboard-wireframes-v2 · 2026-07-29</text>
+</svg>

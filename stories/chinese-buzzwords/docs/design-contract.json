@@ -1,0 +1,1109 @@
+{
+  "schema_version": 1,
+  "design_version": "02-storyboard-wireframes-v2",
+  "contract_status": "frozen_after_stage3_confirmation",
+  "frozen_on": "2026-07-29",
+  "approval_basis": "用户确认 Stage 3 详细设计；Stage 4 证据降级路径已包含在已确认设计中",
+  "design_sources": [
+    "docs/01-concept-design-v1.md",
+    "docs/02-storyboard-wireframes-v2.md",
+    "docs/visual-system.md"
+  ],
+  "reference_frames": {
+    "desktop": "assets/keyframes/desktop-keyframes-v2.png",
+    "mobile": "assets/keyframes/mobile-keyframes-v2.png"
+  },
+  "viewports": [
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 900,
+      "reduced_motion": false
+    },
+    {
+      "id": "mobile",
+      "width": 390,
+      "height": 844,
+      "reduced_motion": false
+    },
+    {
+      "id": "mobile-reduced",
+      "width": 390,
+      "height": 844,
+      "reduced_motion": true
+    }
+  ],
+  "global_requirements": {
+    "route": "/",
+    "visual_noun": "真实、可读、可选择的中文词语或短语",
+    "object_constancy": "同一 term_id 在场景重排中保持身份，不替换成无名粒子",
+    "palette_roles": {
+      "current_term": "#d94835",
+      "network_evidence": "#1769e0",
+      "cross_register": "#0a8f75",
+      "template_structure": "#7b4fd2",
+      "missing_or_unknown": "#b8b0a4",
+      "paper": "#fffaf0",
+      "ink": "#1d1c19"
+    },
+    "accessibility": [
+      "每个主图形有可访问名称和一句当前状态摘要",
+      "颜色以外同时使用位置、线型、边框或文字标签",
+      "触控目标至少 44 CSS px",
+      "200% 放大时正文和控件不截断",
+      "键盘焦点不因词语重排而丢失"
+    ],
+    "data_discipline": [
+      "年度入选、实际使用、搜索关注、新闻或公共表达分别编码",
+      "缺失不插值，也不解释为零或死亡",
+      "未经 Stage 4 验证的迁移、寿命和派生数量不得进入发布数据",
+      "榜单系列和方法变化直接标注"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "opening-yyds",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#1-开场opening-yyds--opening-title",
+      "route": "/",
+      "trigger": {
+        "kind": "load",
+        "value": null
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "YYDS",
+          "你现在还会说它吗？"
+        ],
+        "visual_entities": [
+          "单一大号 YYDS 词标",
+          "朱红双下划线"
+        ],
+        "encodings": [
+          "字号只表示当前叙事焦点，不表示热度"
+        ],
+        "annotations": [],
+        "controls": [],
+        "motion": "YYDS 横向进入后停住，随后出现双下划线与问题",
+        "reduced_motion": "直接显示最终静态词标、下划线和问题"
+      },
+      "assertions": [
+        {
+          "id": "opening-scene-id",
+          "kind": "attribute",
+          "selector": "[data-scene-id='opening-yyds']",
+          "expected": "present"
+        },
+        {
+          "id": "opening-word",
+          "kind": "text",
+          "selector": "[data-term-id='yyds']",
+          "expected": "YYDS"
+        },
+        {
+          "id": "opening-question",
+          "kind": "text",
+          "selector": "[data-copy-id='opening-question']",
+          "expected": "你现在还会说它吗？"
+        },
+        {
+          "id": "opening-graphic-name",
+          "kind": "accessible_name",
+          "selector": "[data-scene-id='opening-yyds']",
+          "expected": "开场：你现在还会说 YYDS 吗？"
+        }
+      ]
+    },
+    {
+      "id": "opening-title",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#1-开场opening-yyds--opening-title",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "opening-title"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "从“给力”到“情绪价值”：一个中文流行语能活多久？"
+        ],
+        "visual_entities": [
+          "仍然可见的 YYDS 词标",
+          "标题与导语"
+        ],
+        "encodings": [
+          "标题出现不改变 YYDS 的视觉身份"
+        ],
+        "annotations": [],
+        "controls": [],
+        "motion": "标题在词停住后淡入",
+        "reduced_motion": "标题与词标同时静态出现"
+      },
+      "assertions": [
+        {
+          "id": "story-title",
+          "kind": "text",
+          "selector": "h1",
+          "expected": "从“给力”到“情绪价值”：一个中文流行语能活多久？"
+        },
+        {
+          "id": "opening-title-keeps-term",
+          "kind": "count",
+          "selector": "[data-term-id='yyds']",
+          "expected": 1
+        }
+      ]
+    },
+    {
+      "id": "encoding-year",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#2-编码教学encoding-year--encoding-lanes",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "encoding-year"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "我们先只确认一件事：它何时进入本项目采用的官方记录？",
+          "2021 年度十大网络用语"
+        ],
+        "visual_entities": [
+          "YYDS 词标",
+          "含 2021 的时间轴",
+          "2021 年定位标记"
+        ],
+        "encodings": [
+          "时间位置编码官方年度入选年份",
+          "朱红编码当前词"
+        ],
+        "annotations": [
+          "入选记录不等于真实使用频率"
+        ],
+        "controls": [],
+        "motion": "同一 YYDS 词标落到 2021 位置",
+        "reduced_motion": "YYDS 与 2021 位置同时显示"
+      },
+      "assertions": [
+        {
+          "id": "encoding-year-selected-term",
+          "kind": "attribute",
+          "selector": "[data-scene-id='encoding-year']",
+          "expected": "data-selected-term=yyds"
+        },
+        {
+          "id": "encoding-year-value",
+          "kind": "data",
+          "selector": "[data-term-id='yyds']",
+          "expected": {
+            "entry_year": 2021,
+            "list_series": "年度十大网络用语"
+          }
+        },
+        {
+          "id": "encoding-year-takeaway",
+          "kind": "text",
+          "selector": "[data-scene-summary]",
+          "expected": "YYDS 在 2021 年进入本项目采用的年度十大网络用语记录。"
+        }
+      ]
+    },
+    {
+      "id": "encoding-lanes",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#2-编码教学encoding-year--encoding-lanes",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "encoding-lanes"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "不同来源，回答不同问题。",
+          "年度入选",
+          "网络语境",
+          "搜索关注",
+          "新闻 / 公共表达",
+          "放大只是“正在讲它”，不是说它更热；缺数据也不等于没人使用。"
+        ],
+        "visual_entities": [
+          "四条命名证据轨道",
+          "已核实标记",
+          "缺失斜纹",
+          "待验证虚线"
+        ],
+        "encodings": [
+          "轨道位置编码证据类型",
+          "斜纹编码没有可比趋势",
+          "虚线编码有线索但尚未验证"
+        ],
+        "annotations": [
+          "不同证据不能互相替代"
+        ],
+        "controls": [],
+        "motion": "四轨依次出现，不移动到未经验证的终点",
+        "reduced_motion": "四轨与线型说明直接完整显示"
+      },
+      "assertions": [
+        {
+          "id": "lane-count",
+          "kind": "count",
+          "selector": "[data-evidence-lane]",
+          "expected": 4
+        },
+        {
+          "id": "lane-names",
+          "kind": "data",
+          "selector": "[data-scene-id='encoding-lanes']",
+          "expected": [
+            "annual-entry",
+            "network-context",
+            "search-interest",
+            "public-register"
+          ]
+        },
+        {
+          "id": "lane-caveat",
+          "kind": "text",
+          "selector": "[data-copy-id='encoding-caveat']",
+          "expected": "放大只是“正在讲它”，不是说它更热；缺数据也不等于没人使用。"
+        }
+      ]
+    },
+    {
+      "id": "cohort-2021",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#3-档案cohort-2021--archive-overview--archive-method-breaks",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "cohort-2021"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "它不是孤零零的一句缩写。它和“破防”“躺平”“绝绝子”共同记录了 2021。"
+        ],
+        "visual_entities": [
+          "2021 年官方十个网络用语",
+          "保持朱红高亮的 YYDS"
+        ],
+        "encodings": [
+          "同年并列表示共同入选，不表示同义或相同热度"
+        ],
+        "annotations": [
+          "来源：国家语言资源监测与研究中心 2021 年度十大网络用语"
+        ],
+        "controls": [],
+        "motion": "九个同年词加入 YYDS 周围",
+        "reduced_motion": "直接显示十词列表并保持 YYDS 高亮"
+      },
+      "assertions": [
+        {
+          "id": "cohort-2021-count",
+          "kind": "count",
+          "selector": "[data-entry-year='2021'][data-list-series='network-top-ten']",
+          "expected": 10
+        },
+        {
+          "id": "cohort-keeps-yyds",
+          "kind": "attribute",
+          "selector": "[data-term-id='yyds']",
+          "expected": "data-selected=true"
+        }
+      ]
+    },
+    {
+      "id": "archive-overview",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#3-档案cohort-2021--archive-overview--archive-method-breaks",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "archive-overview"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "二十年，词语排成了年轮。",
+          "每个词仍能读；每列是年份，不是词频排行榜。"
+        ],
+        "visual_entities": [
+          "2005–2025 年份框架",
+          "可读词语标记",
+          "YYDS 定位线"
+        ],
+        "encodings": [
+          "横向或移动端纵向位置编码年份",
+          "词语文字保持真实可读"
+        ],
+        "annotations": [
+          "同列展示不代表同一榜单或名次可比"
+        ],
+        "controls": [
+          "移动端完整按年列表入口"
+        ],
+        "motion": "2021 年向两侧展开为完整年份框架",
+        "reduced_motion": "直接显示完整年份框架与当前词定位"
+      },
+      "assertions": [
+        {
+          "id": "archive-domain",
+          "kind": "data",
+          "selector": "[data-scene-id='archive-overview']",
+          "expected": {
+            "min_year": 2005,
+            "max_year": 2025
+          }
+        },
+        {
+          "id": "archive-not-word-cloud",
+          "kind": "attribute",
+          "selector": "[data-scene-id='archive-overview']",
+          "expected": "data-layout=year-aligned"
+        },
+        {
+          "id": "archive-summary",
+          "kind": "text",
+          "selector": "[data-scene-summary]",
+          "expected": "词语按进入记录的年份排列；不同榜单系列需分开理解。"
+        }
+      ]
+    },
+    {
+      "id": "archive-method-breaks",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#3-档案cohort-2021--archive-overview--archive-method-breaks",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "archive-method-breaks"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "同列展示，不代表同一榜单；更不代表谁“更重要”。"
+        ],
+        "visual_entities": [
+          "网络用语、媒体流行语、年度新词语三种系列标记",
+          "方法变化分隔"
+        ],
+        "encodings": [
+          "边框与线型编码榜单系列",
+          "分隔编码方法不连续"
+        ],
+        "annotations": [
+          "系列观察的语域、语料和方法不同"
+        ],
+        "controls": [
+          "方法说明展开"
+        ],
+        "motion": "系列边框和方法分隔在年份排列上叠加",
+        "reduced_motion": "系列与方法说明直接显示"
+      },
+      "assertions": [
+        {
+          "id": "archive-series-count",
+          "kind": "count",
+          "selector": "[data-list-series-key]",
+          "expected": {
+            "minimum_distinct": 3
+          }
+        },
+        {
+          "id": "archive-method-note",
+          "kind": "text",
+          "selector": "[data-copy-id='archive-method-note']",
+          "expected": "同列展示，不代表同一榜单；更不代表谁“更重要”。"
+        }
+      ]
+    },
+    {
+      "id": "life-paths",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#4-生命史life-paths--life-paths-counterexample",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "life-paths"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "热词并不都活成同一种样子。",
+          "有些词，我们只知道它被记录过。没有后续证据，就不替它写结局。"
+        ],
+        "visual_entities": [
+          "经 Stage 4 验证的生命史分组",
+          "同等可见的尚不能判断组",
+          "每组定义、样本量与反例"
+        ],
+        "encodings": [
+          "离散分组位置编码生命史类型",
+          "灰色与文字标签共同编码尚不能判断"
+        ],
+        "annotations": [
+          "缺失后续证据不等于词语死亡"
+        ],
+        "controls": [],
+        "motion": "同一词条从年份位置重排到有证据的生命史分组",
+        "reduced_motion": "直接显示分组最终状态与定位线"
+      },
+      "assertions": [
+        {
+          "id": "life-paths-unknown-visible",
+          "kind": "count",
+          "selector": "[data-life-path='unknown']",
+          "expected": {
+            "minimum": 1
+          }
+        },
+        {
+          "id": "life-paths-no-empty-group",
+          "kind": "data",
+          "selector": "[data-life-path-group]",
+          "expected": {
+            "all_groups_have_verified_terms": true
+          }
+        },
+        {
+          "id": "life-paths-caveat",
+          "kind": "text",
+          "selector": "[data-copy-id='life-paths-caveat']",
+          "expected": "有些词，我们只知道它被记录过。没有后续证据，就不替它写结局。"
+        }
+      ]
+    },
+    {
+      "id": "register-migration",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#5-跨语域register-migration--register-warning",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "register-migration"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "一个词离开原梗以后，去了哪里？",
+          "出现于另一条轨道，是可观察迁移，不是传播因果，也不是语言“成功”。"
+        ],
+        "visual_entities": [
+          "网络表达、搜索关注、新闻或公共表达轨道",
+          "只连接已核查关系的迁移线"
+        ],
+        "encodings": [
+          "实线编码两端已复核",
+          "虚线编码一端待核",
+          "点线编码只有检索线索"
+        ],
+        "annotations": [
+          "轨道变化不表示传播因果、价值或成功"
+        ],
+        "controls": [],
+        "motion": "已核查词沿轨道移动；未经验证终点不播放",
+        "reduced_motion": "用前后并排、箭头和同样线型显示"
+      },
+      "assertions": [
+        {
+          "id": "register-lanes",
+          "kind": "data",
+          "selector": "[data-scene-id='register-migration']",
+          "expected": [
+            "network",
+            "search",
+            "public"
+          ]
+        },
+        {
+          "id": "register-links-verified",
+          "kind": "data",
+          "selector": "[data-migration-link]",
+          "expected": {
+            "no_unverified_link_published_as_solid": true
+          }
+        },
+        {
+          "id": "register-warning-copy",
+          "kind": "text",
+          "selector": "[data-copy-id='register-warning']",
+          "expected": "出现于另一条轨道，是可观察迁移，不是传播因果，也不是语言“成功”。"
+        }
+      ]
+    },
+    {
+      "id": "template-reveal",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#6-中央揭示template-reveal--template-comparison",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "template-reveal"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "留下来的，也许不是原句，而是一个还能继续造句的结构。"
+        ],
+        "visual_entities": [
+          "完整原句",
+          "可替换槽位",
+          "至少两个有来源的派生实例",
+          "待核变体不得伪装成已核实例"
+        ],
+        "encodings": [
+          "紫色与虚线分支编码模板结构",
+          "箭头编码原句到槽位再到派生的方向"
+        ],
+        "annotations": [
+          "模板更耐活仍需统计与证据审计"
+        ],
+        "controls": [
+          "派生实例来源展开"
+        ],
+        "motion": "完整原句先保留，再显出槽位并展开有证据派生",
+        "reduced_motion": "直接显示原句、槽位、派生三段静态链路"
+      },
+      "assertions": [
+        {
+          "id": "template-source-phrase",
+          "kind": "text",
+          "selector": "[data-template-family='qian-wan-tiao'] [data-role='source-phrase']",
+          "expected": "道路千万条，安全第一条"
+        },
+        {
+          "id": "template-slot",
+          "kind": "text",
+          "selector": "[data-template-family='qian-wan-tiao'] [data-role='slot-pattern']",
+          "expected": "××千万条，××第一条"
+        },
+        {
+          "id": "template-verified-examples",
+          "kind": "count",
+          "selector": "[data-template-family='qian-wan-tiao'] [data-variant-evidence='verified']",
+          "expected": {
+            "minimum": 2
+          }
+        },
+        {
+          "id": "template-reveal-copy",
+          "kind": "text",
+          "selector": "[data-copy-id='central-reveal']",
+          "expected": "留下来的，也许不是原句，而是一个还能继续造句的结构。"
+        }
+      ]
+    },
+    {
+      "id": "template-comparison",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#6-中央揭示template-reveal--template-comparison",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "template-comparison"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "当完整短语退潮，槽位可能继续工作。"
+        ],
+        "visual_entities": [
+          "3–5 个通过验证的模板族或降级后的构词方式比较",
+          "首次与末次可观察时间",
+          "派生实例与证据等级"
+        ],
+        "encodings": [
+          "同一比较口径呈现模板族",
+          "没有后续证据的模板不画延长线"
+        ],
+        "annotations": [
+          "若中心命题不通过，明确改为构词方式比较"
+        ],
+        "controls": [],
+        "motion": "模板族按同一比较框架对齐",
+        "reduced_motion": "直接显示对齐后的静态比较"
+      },
+      "assertions": [
+        {
+          "id": "template-comparison-mode",
+          "kind": "attribute",
+          "selector": "[data-scene-id='template-comparison']",
+          "expected": {
+            "one_of": [
+              "data-mode=validated-template-longevity",
+              "data-mode=word-formation-comparison"
+            ]
+          }
+        },
+        {
+          "id": "template-no-fake-duration",
+          "kind": "data",
+          "selector": "[data-template-family]",
+          "expected": {
+            "all_duration_marks_have_sources": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "semantic-fields",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#7-语义场semantic-fields--semantic-caveat",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "semantic-fields"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "我们越来越需要为哪些事命名？",
+          "主题变化可以被看见，但分类仍是一次有记录的编辑判断。"
+        ],
+        "visual_entities": [
+          "经复核的语义领域",
+          "可恢复到词形的词语标记",
+          "低置信与多义标签",
+          "比较分母与方法一致时期"
+        ],
+        "encodings": [
+          "离散区域编码语义领域",
+          "同口径占比编码年度构成",
+          "不使用伪精确二维距离"
+        ],
+        "annotations": [
+          "编码者、置信度、分母、不可比年份"
+        ],
+        "controls": [
+          "展开语义定义与编码理由"
+        ],
+        "motion": "同一词条从模板或生命史状态重排到离散语义区域",
+        "reduced_motion": "直接显示语义区域最终状态和文本摘要"
+      },
+      "assertions": [
+        {
+          "id": "semantic-layout",
+          "kind": "attribute",
+          "selector": "[data-scene-id='semantic-fields']",
+          "expected": "data-layout=discrete-domains"
+        },
+        {
+          "id": "semantic-denominator",
+          "kind": "data",
+          "selector": "[data-semantic-comparison]",
+          "expected": {
+            "denominator_displayed": true,
+            "method_consistent_period_displayed": true
+          }
+        },
+        {
+          "id": "semantic-caveat",
+          "kind": "text",
+          "selector": "[data-copy-id='semantic-caveat']",
+          "expected": "主题变化可以被看见，但分类仍是一次有记录的编辑判断。"
+        }
+      ]
+    },
+    {
+      "id": "explorer-default",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#8-探索与结尾explorer-default--explorer-empty--ending-return",
+      "route": "/",
+      "trigger": {
+        "kind": "query",
+        "value": "?term=yyds"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "找一个你记得的词。",
+          "YYDS",
+          "2021 · 年度十大网络用语"
+        ],
+        "visual_entities": [
+          "搜索框",
+          "YYDS 默认详情卡",
+          "年度入选、网络语境、趋势状态证据标签",
+          "来源、方法、语境与限制入口"
+        ],
+        "encodings": [
+          "朱红编码当前选择",
+          "证据标签同时使用颜色、边框和文字"
+        ],
+        "annotations": [
+          "没有趋势数据时显示没有可比趋势，不画 0 线"
+        ],
+        "controls": [
+          "规范词形或变体搜索",
+          "年份筛选",
+          "榜单系列筛选",
+          "语义筛选",
+          "构词方式筛选",
+          "证据层筛选",
+          "重置"
+        ],
+        "motion": "搜索结果重排后保持输入焦点与选中词身份",
+        "reduced_motion": "结果直接切换，不播放位置补间"
+      },
+      "assertions": [
+        {
+          "id": "explorer-combobox",
+          "kind": "control",
+          "selector": "[role='combobox'][aria-label='搜索流行语']",
+          "expected": {
+            "value": "YYDS",
+            "enabled": true
+          }
+        },
+        {
+          "id": "explorer-default-term",
+          "kind": "attribute",
+          "selector": "[data-scene-id='explorer-default']",
+          "expected": "data-selected-term=yyds"
+        },
+        {
+          "id": "explorer-url-state",
+          "kind": "data",
+          "selector": "[data-scene-id='explorer-default']",
+          "expected": {
+            "url_contains": "term=yyds"
+          }
+        },
+        {
+          "id": "explorer-detail-source",
+          "kind": "count",
+          "selector": "[data-term-detail='yyds'] [data-source-link]",
+          "expected": {
+            "minimum": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "explorer-empty",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#8-探索与结尾explorer-default--explorer-empty--ending-return",
+      "route": "/",
+      "trigger": {
+        "kind": "query",
+        "value": "?term=not-in-corpus"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "没有找到，不等于这个词从未流行。它可能不在本项目采用的名单与语料范围内。"
+        ],
+        "visual_entities": [
+          "保留查询值的搜索框",
+          "收录范围说明",
+          "近似词建议",
+          "纠错或建议入口"
+        ],
+        "encodings": [
+          "空结果以文字状态呈现，不显示空白图形"
+        ],
+        "annotations": [
+          "未收录不等于未流行"
+        ],
+        "controls": [
+          "清除搜索",
+          "选择近似词",
+          "提交建议"
+        ],
+        "motion": "结果区域直接切换为空结果说明",
+        "reduced_motion": "与普通模式相同"
+      },
+      "assertions": [
+        {
+          "id": "explorer-empty-copy",
+          "kind": "text",
+          "selector": "[data-copy-id='explorer-empty']",
+          "expected": "没有找到，不等于这个词从未流行。它可能不在本项目采用的名单与语料范围内。"
+        },
+        {
+          "id": "explorer-empty-retains-query",
+          "kind": "control",
+          "selector": "[role='combobox'][aria-label='搜索流行语']",
+          "expected": {
+            "value": "not-in-corpus"
+          }
+        },
+        {
+          "id": "explorer-empty-actions",
+          "kind": "count",
+          "selector": "[data-empty-action]",
+          "expected": {
+            "minimum": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "ending-return",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#8-探索与结尾explorer-default--explorer-empty--ending-return",
+      "route": "/",
+      "trigger": {
+        "kind": "step",
+        "value": "ending-return"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "它没有被宣判活着或死去。它只是回到了自己的年份、结构与证据里。",
+          "语言保存的不只是一个时代谈过什么，也保存人们学会怎样说这些事。"
+        ],
+        "visual_entities": [
+          "YYDS",
+          "2021 年定位",
+          "证据标签",
+          "方法、数据、完整词表和纠错入口"
+        ],
+        "encodings": [
+          "朱红仍编码同一当前词",
+          "年份、结构与证据恢复到完整上下文"
+        ],
+        "annotations": [
+          "榜单、语料和数据范围边界"
+        ],
+        "controls": [
+          "方法",
+          "数据",
+          "完整词表",
+          "纠错"
+        ],
+        "motion": "探索控件收起，同一 YYDS 返回年份与证据上下文",
+        "reduced_motion": "直接显示返回后的最终状态"
+      },
+      "assertions": [
+        {
+          "id": "ending-main-copy",
+          "kind": "text",
+          "selector": "[data-copy-id='ending-return']",
+          "expected": "它没有被宣判活着或死去。它只是回到了自己的年份、结构与证据里。"
+        },
+        {
+          "id": "ending-coda-copy",
+          "kind": "text",
+          "selector": "[data-copy-id='ending-coda']",
+          "expected": "语言保存的不只是一个时代谈过什么，也保存人们学会怎样说这些事。"
+        },
+        {
+          "id": "ending-keeps-yyds",
+          "kind": "count",
+          "selector": "[data-term-id='yyds']",
+          "expected": 1
+        },
+        {
+          "id": "ending-resource-links",
+          "kind": "count",
+          "selector": "[data-ending-resource]",
+          "expected": {
+            "minimum": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "loading-state",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#加载空值错误与降级",
+      "route": "/",
+      "trigger": {
+        "kind": "test-state",
+        "value": "loading"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "正在载入词语档案…"
+        ],
+        "visual_entities": [
+          "章节标题",
+          "当前状态摘要",
+          "静态年份骨架"
+        ],
+        "encodings": [
+          "加载状态不使用随机漂浮词或伪数据"
+        ],
+        "annotations": [],
+        "controls": [],
+        "motion": "允许低频非必要加载指示，不移动词语对象",
+        "reduced_motion": "静态加载文字"
+      },
+      "assertions": [
+        {
+          "id": "loading-copy",
+          "kind": "text",
+          "selector": "[role='status']",
+          "expected": "正在载入词语档案…"
+        },
+        {
+          "id": "loading-no-fake-marks",
+          "kind": "count",
+          "selector": "[data-term-id]",
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "id": "data-error",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#加载空值错误与降级",
+      "route": "/",
+      "trigger": {
+        "kind": "test-state",
+        "value": "data-error"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile",
+        "mobile-reduced"
+      ],
+      "requirements": {
+        "copy": [
+          "互动数据暂时无法载入。你仍可继续阅读正文和按年份整理的静态词表。"
+        ],
+        "visual_entities": [
+          "错误说明",
+          "预渲染正文",
+          "静态关键图",
+          "按年份词表入口"
+        ],
+        "encodings": [
+          "不显示残留加载骨架或空白 sticky"
+        ],
+        "annotations": [],
+        "controls": [
+          "重试",
+          "查看按年份词表"
+        ],
+        "motion": "无",
+        "reduced_motion": "与普通模式相同"
+      },
+      "assertions": [
+        {
+          "id": "error-copy",
+          "kind": "text",
+          "selector": "[role='alert']",
+          "expected": "互动数据暂时无法载入。你仍可继续阅读正文和按年份整理的静态词表。"
+        },
+        {
+          "id": "error-static-list-link",
+          "kind": "count",
+          "selector": "[data-action='open-static-archive']",
+          "expected": 1
+        }
+      ]
+    },
+    {
+      "id": "no-script-fallback",
+      "design_source": "docs/02-storyboard-wireframes-v2.md#加载空值错误与降级",
+      "route": "/",
+      "trigger": {
+        "kind": "javascript",
+        "value": "disabled"
+      },
+      "required_viewports": [
+        "desktop",
+        "mobile"
+      ],
+      "requirements": {
+        "copy": [
+          "互动功能需要 JavaScript；完整正文、关键结论和按年份词表仍可阅读。"
+        ],
+        "visual_entities": [
+          "完整连续正文",
+          "预渲染关键图",
+          "按年份词表",
+          "方法与来源链接"
+        ],
+        "encodings": [
+          "所有主要论证有文本或静态图等价物"
+        ],
+        "annotations": [
+          "互动不可用不影响证据边界和结论"
+        ],
+        "controls": [
+          "章节锚点",
+          "按年份词表",
+          "方法与数据"
+        ],
+        "motion": "无",
+        "reduced_motion": "不适用"
+      },
+      "assertions": [
+        {
+          "id": "fallback-copy",
+          "kind": "text",
+          "selector": "noscript",
+          "expected": "互动功能需要 JavaScript；完整正文、关键结论和按年份词表仍可阅读。"
+        },
+        {
+          "id": "fallback-article",
+          "kind": "count",
+          "selector": "article",
+          "expected": 1
+        },
+        {
+          "id": "fallback-static-archive",
+          "kind": "count",
+          "selector": "[data-static-archive]",
+          "expected": 1
+        }
+      ]
+    }
+  ]
+}

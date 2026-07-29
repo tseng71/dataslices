@@ -1,0 +1,1600 @@
+{
+  "schema_version": 1,
+  "design_version": "02-storyboard-wireframes-v2",
+  "implementation_version": "stage5-local-rc1",
+  "target_url": "http://127.0.0.1:4173/",
+  "generated_at": "2026-07-29",
+  "iterations": [
+    {
+      "number": 1,
+      "failures": [
+        "Svelte 5.1.3 与当前 SvelteKit 的依赖漂移"
+      ],
+      "fixes": [
+        "升级并锁定 Svelte 5.56.8、SvelteKit 2.70.1、Vite 8.1.5"
+      ]
+    },
+    {
+      "number": 2,
+      "failures": [
+        "云浏览器无法访问本机预览地址"
+      ],
+      "fixes": [
+        "完成静态构建、SSR、严格栈与源文件合同检查；浏览器项保持 blocked"
+      ]
+    }
+  ],
+  "static_checks": {
+    "svelte_check": "pass",
+    "static_build": "pass",
+    "strict_stack_audit": "pass",
+    "data_rows": 140,
+    "unique_term_ids": 140,
+    "prerendered_routes": [
+      "/",
+      "/methodology/"
+    ],
+    "screenshot_review": "blocked"
+  },
+  "results": [
+    {
+      "scene_id": "opening-yyds",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "opening-scene-id",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-word",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-question",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-graphic-name",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "opening-yyds",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "opening-scene-id",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-word",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-question",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-graphic-name",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "opening-yyds",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "opening-scene-id",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-word",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-question",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-graphic-name",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "opening-title",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "story-title",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-title-keeps-term",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "opening-title",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "story-title",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-title-keeps-term",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "opening-title",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "story-title",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-title-keeps-term",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "encoding-year",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "encoding-year-selected-term",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "encoding-year-value",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "encoding-year-takeaway",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "encoding-year",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "encoding-year-selected-term",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "encoding-year-value",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "encoding-year-takeaway",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "encoding-year",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "encoding-year-selected-term",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "encoding-year-value",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "encoding-year-takeaway",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "encoding-lanes",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "lane-count",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "lane-names",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "lane-caveat",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "encoding-lanes",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "lane-count",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "lane-names",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "lane-caveat",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "encoding-lanes",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "lane-count",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "lane-names",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "lane-caveat",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "cohort-2021",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "cohort-2021-count",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "cohort-keeps-yyds",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "cohort-2021",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "cohort-2021-count",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "cohort-keeps-yyds",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "cohort-2021",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "cohort-2021-count",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "cohort-keeps-yyds",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "archive-overview",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "archive-domain",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "archive-not-word-cloud",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "archive-summary",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "archive-overview",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "archive-domain",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "archive-not-word-cloud",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "archive-summary",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "archive-overview",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "archive-domain",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "archive-not-word-cloud",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "archive-summary",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "archive-method-breaks",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "archive-series-count",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "archive-method-note",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "archive-method-breaks",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "archive-series-count",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "archive-method-note",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "archive-method-breaks",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "archive-series-count",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "archive-method-note",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "life-paths",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "life-paths-unknown-visible",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "life-paths-no-empty-group",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "life-paths-caveat",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "life-paths",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "life-paths-unknown-visible",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "life-paths-no-empty-group",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "life-paths-caveat",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "life-paths",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "life-paths-unknown-visible",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "life-paths-no-empty-group",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "life-paths-caveat",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "register-migration",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "register-lanes",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "register-links-verified",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "register-warning-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "register-migration",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "register-lanes",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "register-links-verified",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "register-warning-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "register-migration",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "register-lanes",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "register-links-verified",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "register-warning-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "template-reveal",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "template-source-phrase",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-slot",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-verified-examples",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-reveal-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "template-reveal",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "template-source-phrase",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-slot",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-verified-examples",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-reveal-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "template-reveal",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "template-source-phrase",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-slot",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-verified-examples",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-reveal-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "template-comparison",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "template-comparison-mode",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-no-fake-duration",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "template-comparison",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "template-comparison-mode",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-no-fake-duration",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "template-comparison",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "template-comparison-mode",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "template-no-fake-duration",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "semantic-fields",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "semantic-layout",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "semantic-denominator",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "semantic-caveat",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "semantic-fields",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "semantic-layout",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "semantic-denominator",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "semantic-caveat",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "semantic-fields",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "semantic-layout",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "semantic-denominator",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "semantic-caveat",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "explorer-default",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "explorer-combobox",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-default-term",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-url-state",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-detail-source",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "explorer-default",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "explorer-combobox",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-default-term",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-url-state",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-detail-source",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "explorer-default",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "explorer-combobox",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-default-term",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-url-state",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-detail-source",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "explorer-empty",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "explorer-empty-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-empty-retains-query",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-empty-actions",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "explorer-empty",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "explorer-empty-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-empty-retains-query",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-empty-actions",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "explorer-empty",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "explorer-empty-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-empty-retains-query",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "explorer-empty-actions",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "ending-return",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "ending-main-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "ending-coda-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "ending-keeps-yyds",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "ending-resource-links",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "ending-return",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "ending-main-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "ending-coda-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "ending-keeps-yyds",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "ending-resource-links",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "ending-return",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "ending-main-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "ending-coda-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "ending-keeps-yyds",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "ending-resource-links",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "loading-state",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "loading-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "loading-no-fake-marks",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "loading-state",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "loading-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "loading-no-fake-marks",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "loading-state",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "loading-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "loading-no-fake-marks",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "data-error",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "error-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "error-static-list-link",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "data-error",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "error-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "error-static-list-link",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "data-error",
+      "viewport_id": "mobile-reduced",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "error-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "error-static-list-link",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "no-script-fallback",
+      "viewport_id": "desktop",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "fallback-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "fallback-article",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "fallback-static-archive",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "no-script-fallback",
+      "viewport_id": "mobile",
+      "screenshot": null,
+      "assertions": [
+        {
+          "id": "fallback-copy",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "fallback-article",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        },
+        {
+          "id": "fallback-static-archive",
+          "status": "blocked",
+          "evidence": "云浏览器安全策略拒绝访问本机 127.0.0.1 预览；未伪造浏览器结果。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "blocked",
+        "evidence": "无法取得真实实现截图；批准的关键帧没有被冒充为实现截图。",
+        "approval_ref": null
+      }
+    }
+  ],
+  "summary": {
+    "status": "blocked",
+    "unresolved": 0,
+    "blocked": 53
+  }
+}

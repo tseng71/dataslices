@@ -28,7 +28,9 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: stories/lights-out/package-lock.json
+          cache-dependency-path: |
+            stories/lights-out/package-lock.json
+            stories/chinese-buzzwords/package-lock.json
       - name: Install lights-out dependencies
         working-directory: stories/lights-out
         run: npm ci
@@ -39,12 +41,27 @@ jobs:
         run: |
           npm run check
           npm run build
+      - name: Install Chinese buzzwords dependencies
+        working-directory: stories/chinese-buzzwords
+        run: npm ci
+      - name: Build Chinese buzzwords story
+        working-directory: stories/chinese-buzzwords
+        env:
+          BASE_PATH: /dataslices/stories/chinese-buzzwords
+        run: |
+          npm run check
+          npm run build
       - name: Validate stories
         run: |
           test -s index.html
           test -s stories/lights-out/build/index.html
           test -s stories/lights-out/build/assets/ian-before.jpg
           test -s stories/lights-out/build/docs/story-brief.md
+          test -s stories/chinese-buzzwords/build/index.html
+          test -s stories/chinese-buzzwords/build/methodology/index.html
+          test -s stories/chinese-buzzwords/build/data/annual-network-terms.csv
+          test -s stories/chinese-buzzwords/docs/design-contract.json
+          test -s stories/chinese-buzzwords/docs/implementation-traceability.md
           for story in battery-world-map disappearing-stars ai-cost nyc-heat; do
             test -s "stories/$story/index.html"
             test -s "stories/$story/story.css"
@@ -68,9 +85,12 @@ jobs:
             --exclude='.git' \
             --exclude='_site' \
             --exclude='stories/lights-out' \
+            --exclude='stories/chinese-buzzwords' \
             . _site/
           mkdir -p _site/stories/lights-out
           cp -R stories/lights-out/build/. _site/stories/lights-out/
+          mkdir -p _site/stories/chinese-buzzwords
+          cp -R stories/chinese-buzzwords/build/. _site/stories/chinese-buzzwords/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site
