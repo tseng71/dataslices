@@ -201,7 +201,14 @@
     if (selected) selectedTermId = selected.term_id;
     forcedSceneId = params.get("scene") ?? "";
     if (forcedSceneId) story.setActive(forcedSceneId);
+    if (params.get("qa") === "contract") {
+      window.__BUZZWORDS_QA_SET_SCENE__ = (id) => story.setActive(id);
+    }
     story.setReducedMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+
+    return () => {
+      delete window.__BUZZWORDS_QA_SET_SCENE__;
+    };
   });
 
   function selectTerm(termId) {

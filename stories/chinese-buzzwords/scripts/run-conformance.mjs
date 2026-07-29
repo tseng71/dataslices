@@ -117,11 +117,14 @@ async function runScene(browser, scene, viewportId) {
   page.on("pageerror", (error) => consoleErrors.push(error.message));
 
   await page.goto(
-    `${storyUrl}?scene=${encodeURIComponent(scene.id)}`,
+    `${storyUrl}?qa=contract&scene=${encodeURIComponent(scene.id)}`,
     { waitUntil: "networkidle" }
   );
 
   if (graphicSceneIds.has(scene.id)) {
+    await page.evaluate((id) => {
+      window.__BUZZWORDS_QA_SET_SCENE__?.(id);
+    }, scene.id);
     await page.waitForFunction(
       (id) =>
         document.querySelector(".word-stage")?.getAttribute("data-scene-id") === id,
