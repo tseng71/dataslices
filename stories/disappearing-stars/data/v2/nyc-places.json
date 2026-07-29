@@ -1,0 +1,241 @@
+{
+  "schema_version": "2.0.0",
+  "source": {
+    "title": "The New World Atlas of Artificial Night Sky Brightness",
+    "authors": "Falchi et al.",
+    "doi": "10.5880/GFZ.1.4.2016.001",
+    "paper_doi": "10.1126/sciadv.1600377",
+    "source_url": "https://datapub.gfz.de/download/10.5880/GFZ.1.4.2016.001/NewWorldAtlas_ArtificialSkyBrightness.kmz",
+    "retrieved_on": "2026-07-28",
+    "license": "CC BY-NC 4.0",
+    "natural_sky_reference_mcd_m2": 0.174
+  },
+  "route_note": "Landmark coordinates are editorial WGS84 points. Times Square and Central Park fall in the same >41 atlas band, so the story may discuss reduced direct glare in the park but may not claim a darker atlas band.",
+  "places": [
+    {
+      "place_id": "times-square",
+      "display_name": "时代广场",
+      "display_name_en": "Times Square",
+      "longitude": -73.9855,
+      "latitude": 40.758,
+      "role": "urban-core",
+      "distance_from_times_square_km": 0.0,
+      "model_value": {
+        "metric": "artificial zenith sky brightness / natural sky brightness",
+        "atlas_band": "white",
+        "artificial_to_natural_ratio_lower": 41.0,
+        "artificial_to_natural_ratio_upper": null,
+        "source_pixel_rgb": [
+          255,
+          255,
+          255
+        ],
+        "reference_rgb": [
+          255,
+          255,
+          255
+        ],
+        "palette_distance": 0.0
+      },
+      "model_implied_naked_eye_limit": {
+        "upper_vmag": 2.48,
+        "lower_vmag": null,
+        "open_lower_bound": true,
+        "method": "Kyba et al. 2023 North America Eq. S3; Nn=4.95, s=-1.52",
+        "residual_sigma_vmag": 1.009
+      },
+      "model_year": 2014,
+      "model_resolution": "30 arcseconds (published GeoTIFF); KMZ display tile sampled here",
+      "nearby_observation_count": null,
+      "observation_window": null,
+      "coverage_status": "No local Globe at Night validation used in this package",
+      "evidence_type": "modeled brightness band with derived NELM interval",
+      "caveat": "A clear-sky zenith model band, not an on-site forecast. It does not resolve direct glare, obstructions, weather, moonlight, observer adaptation, or block-scale variation.",
+      "sampling": {
+        "tile": "files/ArtificialSkyBrightness485.JPG",
+        "pixel_x": 661,
+        "pixel_y": 197
+      }
+    },
+    {
+      "place_id": "central-park",
+      "display_name": "中央公园大草坪",
+      "display_name_en": "Central Park Great Lawn",
+      "longitude": -73.9665,
+      "latitude": 40.7812,
+      "role": "lower-direct-glare",
+      "distance_from_times_square_km": 3.0,
+      "model_value": {
+        "metric": "artificial zenith sky brightness / natural sky brightness",
+        "atlas_band": "white",
+        "artificial_to_natural_ratio_lower": 41.0,
+        "artificial_to_natural_ratio_upper": null,
+        "source_pixel_rgb": [
+          255,
+          255,
+          255
+        ],
+        "reference_rgb": [
+          255,
+          255,
+          255
+        ],
+        "palette_distance": 0.0
+      },
+      "model_implied_naked_eye_limit": {
+        "upper_vmag": 2.48,
+        "lower_vmag": null,
+        "open_lower_bound": true,
+        "method": "Kyba et al. 2023 North America Eq. S3; Nn=4.95, s=-1.52",
+        "residual_sigma_vmag": 1.009
+      },
+      "model_year": 2014,
+      "model_resolution": "30 arcseconds (published GeoTIFF); KMZ display tile sampled here",
+      "nearby_observation_count": null,
+      "observation_window": null,
+      "coverage_status": "No local Globe at Night validation used in this package",
+      "evidence_type": "modeled brightness band with derived NELM interval",
+      "caveat": "A clear-sky zenith model band, not an on-site forecast. It does not resolve direct glare, obstructions, weather, moonlight, observer adaptation, or block-scale variation.",
+      "sampling": {
+        "tile": "files/ArtificialSkyBrightness485.JPG",
+        "pixel_x": 663,
+        "pixel_y": 195
+      }
+    },
+    {
+      "place_id": "jamaica-bay",
+      "display_name": "牙买加湾野生动物保护区",
+      "display_name_en": "Jamaica Bay Wildlife Refuge",
+      "longitude": -73.824,
+      "latitude": 40.6162,
+      "role": "city-edge-wetland",
+      "distance_from_times_square_km": 20.8,
+      "model_value": {
+        "metric": "artificial zenith sky brightness / natural sky brightness",
+        "atlas_band": "pink",
+        "artificial_to_natural_ratio_lower": 20.5,
+        "artificial_to_natural_ratio_upper": 41.0,
+        "source_pixel_rgb": [
+          236,
+          167,
+          255
+        ],
+        "reference_rgb": [
+          236,
+          167,
+          255
+        ],
+        "palette_distance": 0.0
+      },
+      "model_implied_naked_eye_limit": {
+        "upper_vmag": 2.92,
+        "lower_vmag": 2.48,
+        "open_lower_bound": false,
+        "method": "Kyba et al. 2023 North America Eq. S3; Nn=4.95, s=-1.52",
+        "residual_sigma_vmag": 1.009
+      },
+      "model_year": 2014,
+      "model_resolution": "30 arcseconds (published GeoTIFF); KMZ display tile sampled here",
+      "nearby_observation_count": null,
+      "observation_window": null,
+      "coverage_status": "No local Globe at Night validation used in this package",
+      "evidence_type": "modeled brightness band with derived NELM interval",
+      "caveat": "A clear-sky zenith model band, not an on-site forecast. It does not resolve direct glare, obstructions, weather, moonlight, observer adaptation, or block-scale variation.",
+      "sampling": {
+        "tile": "files/ArtificialSkyBrightness485.JPG",
+        "pixel_x": 680,
+        "pixel_y": 214
+      }
+    },
+    {
+      "place_id": "pelham-bay",
+      "display_name": "佩勒姆湾／果园海滩",
+      "display_name_en": "Pelham Bay / Orchard Beach",
+      "longitude": -73.7848,
+      "latitude": 40.8671,
+      "role": "city-edge-coast",
+      "distance_from_times_square_km": 20.8,
+      "model_value": {
+        "metric": "artificial zenith sky brightness / natural sky brightness",
+        "atlas_band": "magenta",
+        "artificial_to_natural_ratio_lower": 10.2,
+        "artificial_to_natural_ratio_upper": 20.5,
+        "source_pixel_rgb": [
+          204,
+          116,
+          238
+        ],
+        "reference_rgb": [
+          204,
+          116,
+          238
+        ],
+        "palette_distance": 0.0
+      },
+      "model_implied_naked_eye_limit": {
+        "upper_vmag": 3.36,
+        "lower_vmag": 2.92,
+        "open_lower_bound": false,
+        "method": "Kyba et al. 2023 North America Eq. S3; Nn=4.95, s=-1.52",
+        "residual_sigma_vmag": 1.009
+      },
+      "model_year": 2014,
+      "model_resolution": "30 arcseconds (published GeoTIFF); KMZ display tile sampled here",
+      "nearby_observation_count": null,
+      "observation_window": null,
+      "coverage_status": "No local Globe at Night validation used in this package",
+      "evidence_type": "modeled brightness band with derived NELM interval",
+      "caveat": "A clear-sky zenith model band, not an on-site forecast. It does not resolve direct glare, obstructions, weather, moonlight, observer adaptation, or block-scale variation.",
+      "sampling": {
+        "tile": "files/ArtificialSkyBrightness485.JPG",
+        "pixel_x": 685,
+        "pixel_y": 184
+      }
+    },
+    {
+      "place_id": "montauk-point",
+      "display_name": "蒙托克角",
+      "display_name_en": "Montauk Point",
+      "longitude": -71.857,
+      "latitude": 41.0709,
+      "role": "darker-regional-reference",
+      "distance_from_times_square_km": 182.2,
+      "model_value": {
+        "metric": "artificial zenith sky brightness / natural sky brightness",
+        "atlas_band": "light-blue",
+        "artificial_to_natural_ratio_lower": 0.16,
+        "artificial_to_natural_ratio_upper": 0.32,
+        "source_pixel_rgb": [
+          15,
+          143,
+          180
+        ],
+        "reference_rgb": [
+          0,
+          146,
+          206
+        ],
+        "palette_distance": 30.17
+      },
+      "model_implied_naked_eye_limit": {
+        "upper_vmag": 4.85,
+        "lower_vmag": 4.77,
+        "open_lower_bound": false,
+        "method": "Kyba et al. 2023 North America Eq. S3; Nn=4.95, s=-1.52",
+        "residual_sigma_vmag": 1.009
+      },
+      "model_year": 2014,
+      "model_resolution": "30 arcseconds (published GeoTIFF); KMZ display tile sampled here",
+      "nearby_observation_count": null,
+      "observation_window": null,
+      "coverage_status": "No local Globe at Night validation used in this package",
+      "evidence_type": "modeled brightness band with derived NELM interval",
+      "caveat": "A clear-sky zenith model band, not an on-site forecast. It does not resolve direct glare, obstructions, weather, moonlight, observer adaptation, or block-scale variation.",
+      "sampling": {
+        "tile": "files/ArtificialSkyBrightness485.JPG",
+        "pixel_x": 916,
+        "pixel_y": 160
+      }
+    }
+  ]
+}
