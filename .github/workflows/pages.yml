@@ -31,6 +31,7 @@ jobs:
           cache-dependency-path: |
             stories/lights-out/package-lock.json
             stories/chinese-buzzwords/package-lock.json
+            stories/disappearing-stars/package-lock.json
       - name: Install lights-out dependencies
         working-directory: stories/lights-out
         run: npm ci
@@ -59,6 +60,17 @@ jobs:
         env:
           BASE_PATH: /dataslices/stories/chinese-buzzwords
         run: npm run test:conformance
+      - name: Install disappearing-stars dependencies
+        working-directory: stories/disappearing-stars
+        run: npm ci
+      - name: Build disappearing-stars story
+        working-directory: stories/disappearing-stars
+        env:
+          BASE_PATH: /dataslices/stories/disappearing-stars
+        run: |
+          npm run check
+          npm run audit
+          npm run build
       - name: Validate stories
         run: |
           test -s index.html
@@ -74,7 +86,10 @@ jobs:
           test -s stories/chinese-buzzwords/build/qa/screenshots/mobile-reduced/opening-yyds.png
           test -s stories/chinese-buzzwords/docs/design-contract.json
           test -s stories/chinese-buzzwords/docs/implementation-traceability.md
-          for story in battery-world-map disappearing-stars ai-cost nyc-heat; do
+          test -s stories/disappearing-stars/build/index.html
+          test -s stories/disappearing-stars/build/docs/methodology-v2.md
+          test -s stories/disappearing-stars/build/docs/sources-v2.md
+          for story in battery-world-map ai-cost nyc-heat; do
             test -s "stories/$story/index.html"
             test -s "stories/$story/story.css"
             test -s "stories/$story/story.js"
@@ -90,6 +105,9 @@ jobs:
           test -s stories/battery-world-map/docs/02-storyboard-wireframes-v2.md
           test -s stories/battery-world-map/docs/methodology.md
           test -s stories/battery-world-map/docs/sources.md
+          test -s stories/disappearing-stars/docs/design-contract.json
+          test -s stories/disappearing-stars/docs/design-conformance.json
+          test -s stories/disappearing-stars/docs/qa-notes.md
       - name: Prepare Pages artifact
         run: |
           mkdir -p _site
@@ -98,11 +116,14 @@ jobs:
             --exclude='_site' \
             --exclude='stories/lights-out' \
             --exclude='stories/chinese-buzzwords' \
+            --exclude='stories/disappearing-stars' \
             . _site/
           mkdir -p _site/stories/lights-out
           cp -R stories/lights-out/build/. _site/stories/lights-out/
           mkdir -p _site/stories/chinese-buzzwords
           cp -R stories/chinese-buzzwords/build/. _site/stories/chinese-buzzwords/
+          mkdir -p _site/stories/disappearing-stars
+          cp -R stories/disappearing-stars/build/. _site/stories/disappearing-stars/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site

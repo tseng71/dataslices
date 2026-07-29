@@ -1,0 +1,607 @@
+{
+  "schema_version": 1,
+  "design_version": "05-storyboard-wireframes-v3-stage4-approved",
+  "implementation_version": "stage5-local-preview-2026-07-29",
+  "target_url": "http://127.0.0.1:4173/",
+  "iterations": [
+    {
+      "number": 1,
+      "failures": [
+        "CJK glyph coverage was incomplete in generated screenshots."
+      ],
+      "fixes": [
+        "Added an explicit Chinese webfont loading path."
+      ]
+    },
+    {
+      "number": 2,
+      "failures": [
+        "The repository font subset did not cover all approved manuscript characters."
+      ],
+      "fixes": [
+        "Bundled complete Noto Sans SC and Noto Serif SC Simplified Chinese font assets."
+      ]
+    },
+    {
+      "number": 3,
+      "failures": [
+        "Font loading changed layout after the query-triggered scene scroll on mobile."
+      ],
+      "fixes": [
+        "Waited for document.fonts.ready, then deterministically repositioned the contracted scene."
+      ]
+    },
+    {
+      "number": 4,
+      "failures": [],
+      "fixes": [
+        "All deterministic assertions and manual visual reviews passed."
+      ]
+    }
+  ],
+  "results": [
+    {
+      "scene_id": "opening-city",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/opening-city--desktop.png",
+      "assertions": [
+        {
+          "id": "opening-title",
+          "status": "pass",
+          "evidence": "text matched: 消失的星空",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-count",
+          "status": "pass",
+          "evidence": "attribute matched: 7",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "opening-city",
+      "viewport_id": "mobile",
+      "screenshot": "docs/conformance-screenshots/opening-city--mobile.png",
+      "assertions": [
+        {
+          "id": "opening-title",
+          "status": "pass",
+          "evidence": "text matched: 消失的星空",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-count",
+          "status": "pass",
+          "evidence": "attribute matched: 7",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "opening-city",
+      "viewport_id": "mobile-reduced",
+      "screenshot": "docs/conformance-screenshots/opening-city--mobile-reduced.png",
+      "assertions": [
+        {
+          "id": "opening-title",
+          "status": "pass",
+          "evidence": "text matched: 消失的星空",
+          "approval_ref": null
+        },
+        {
+          "id": "opening-count",
+          "status": "pass",
+          "evidence": "attribute matched: 7",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "opening-dark-return",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/opening-dark-return--desktop.png",
+      "assertions": [
+        {
+          "id": "return-count",
+          "status": "pass",
+          "evidence": "attribute matched: 250",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "opening-dark-return",
+      "viewport_id": "mobile",
+      "screenshot": "docs/conformance-screenshots/opening-dark-return--mobile.png",
+      "assertions": [
+        {
+          "id": "return-count",
+          "status": "pass",
+          "evidence": "attribute matched: 250",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "magnitude-encoding",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/magnitude-encoding--desktop.png",
+      "assertions": [
+        {
+          "id": "magnitude-layout",
+          "status": "pass",
+          "evidence": "attribute matched: magnitude",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "magnitude-encoding",
+      "viewport_id": "mobile",
+      "screenshot": "docs/conformance-screenshots/magnitude-encoding--mobile.png",
+      "assertions": [
+        {
+          "id": "magnitude-layout",
+          "status": "pass",
+          "evidence": "attribute matched: magnitude",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "threshold-reveal",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/threshold-reveal--desktop.png",
+      "assertions": [
+        {
+          "id": "threshold-value",
+          "status": "pass",
+          "evidence": "attribute matched: 5.48",
+          "approval_ref": null
+        },
+        {
+          "id": "threshold-count",
+          "status": "pass",
+          "evidence": "attribute matched: 100",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "threshold-reveal",
+      "viewport_id": "mobile",
+      "screenshot": "docs/conformance-screenshots/threshold-reveal--mobile.png",
+      "assertions": [
+        {
+          "id": "threshold-value",
+          "status": "pass",
+          "evidence": "attribute matched: 5.48",
+          "approval_ref": null
+        },
+        {
+          "id": "threshold-count",
+          "status": "pass",
+          "evidence": "attribute matched: 100",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "threshold-reveal",
+      "viewport_id": "mobile-compact",
+      "screenshot": "docs/conformance-screenshots/threshold-reveal--mobile-compact.png",
+      "assertions": [
+        {
+          "id": "threshold-value",
+          "status": "pass",
+          "evidence": "attribute matched: 5.48",
+          "approval_ref": null
+        },
+        {
+          "id": "threshold-count",
+          "status": "pass",
+          "evidence": "attribute matched: 100",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "distribution-reveal",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/distribution-reveal--desktop.png",
+      "assertions": [
+        {
+          "id": "distribution-layout",
+          "status": "pass",
+          "evidence": "attribute matched: distribution",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "generation-zero",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/generation-zero--desktop.png",
+      "assertions": [
+        {
+          "id": "generation-age-zero",
+          "status": "pass",
+          "evidence": "attribute matched: 0",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "generation-zero",
+      "viewport_id": "mobile",
+      "screenshot": "docs/conformance-screenshots/generation-zero--mobile.png",
+      "assertions": [
+        {
+          "id": "generation-age-zero",
+          "status": "pass",
+          "evidence": "attribute matched: 0",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "generation-eighteen",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/generation-eighteen--desktop.png",
+      "assertions": [
+        {
+          "id": "generation-age-eighteen",
+          "status": "pass",
+          "evidence": "attribute matched: 18",
+          "approval_ref": null
+        },
+        {
+          "id": "generation-count-eighteen",
+          "status": "pass",
+          "evidence": "attribute matched: 100",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "generation-eighteen",
+      "viewport_id": "mobile",
+      "screenshot": "docs/conformance-screenshots/generation-eighteen--mobile.png",
+      "assertions": [
+        {
+          "id": "generation-age-eighteen",
+          "status": "pass",
+          "evidence": "attribute matched: 18",
+          "approval_ref": null
+        },
+        {
+          "id": "generation-count-eighteen",
+          "status": "pass",
+          "evidence": "attribute matched: 100",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "generation-eighteen",
+      "viewport_id": "mobile-reduced",
+      "screenshot": "docs/conformance-screenshots/generation-eighteen--mobile-reduced.png",
+      "assertions": [
+        {
+          "id": "generation-age-eighteen",
+          "status": "pass",
+          "evidence": "attribute matched: 18",
+          "approval_ref": null
+        },
+        {
+          "id": "generation-count-eighteen",
+          "status": "pass",
+          "evidence": "attribute matched: 100",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "place-times-square",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/place-times-square--desktop.png",
+      "assertions": [
+        {
+          "id": "place-id-times",
+          "status": "pass",
+          "evidence": "attribute matched: times-square",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "place-times-square",
+      "viewport_id": "mobile",
+      "screenshot": "docs/conformance-screenshots/place-times-square--mobile.png",
+      "assertions": [
+        {
+          "id": "place-id-times",
+          "status": "pass",
+          "evidence": "attribute matched: times-square",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "place-montauk-point",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/place-montauk-point--desktop.png",
+      "assertions": [
+        {
+          "id": "place-id-montauk",
+          "status": "pass",
+          "evidence": "attribute matched: montauk-point",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "place-montauk-point",
+      "viewport_id": "mobile",
+      "screenshot": "docs/conformance-screenshots/place-montauk-point--mobile.png",
+      "assertions": [
+        {
+          "id": "place-id-montauk",
+          "status": "pass",
+          "evidence": "attribute matched: montauk-point",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "light-path",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/light-path--desktop.png",
+      "assertions": [
+        {
+          "id": "light-path-scene",
+          "status": "pass",
+          "evidence": "exists matched: exists",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "light-path",
+      "viewport_id": "mobile",
+      "screenshot": "docs/conformance-screenshots/light-path--mobile.png",
+      "assertions": [
+        {
+          "id": "light-path-scene",
+          "status": "pass",
+          "evidence": "exists matched: exists",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "lighting-unshielded",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/lighting-unshielded--desktop.png",
+      "assertions": [
+        {
+          "id": "lighting-preset-unshielded",
+          "status": "pass",
+          "evidence": "attribute matched: unshielded",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "lighting-shielded",
+      "viewport_id": "mobile",
+      "screenshot": "docs/conformance-screenshots/lighting-shielded--mobile.png",
+      "assertions": [
+        {
+          "id": "lighting-preset-shielded",
+          "status": "pass",
+          "evidence": "attribute matched: shielded",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "bird-evidence",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/bird-evidence--desktop.png",
+      "assertions": [
+        {
+          "id": "bird-scene",
+          "status": "pass",
+          "evidence": "exists matched: exists",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "ending",
+      "viewport_id": "desktop",
+      "screenshot": "docs/conformance-screenshots/ending--desktop.png",
+      "assertions": [
+        {
+          "id": "ending-copy",
+          "status": "pass",
+          "evidence": "text matched: 星星没有消失。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "ending",
+      "viewport_id": "mobile",
+      "screenshot": "docs/conformance-screenshots/ending--mobile.png",
+      "assertions": [
+        {
+          "id": "ending-copy",
+          "status": "pass",
+          "evidence": "text matched: 星星没有消失。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    },
+    {
+      "scene_id": "ending",
+      "viewport_id": "mobile-reduced",
+      "screenshot": "docs/conformance-screenshots/ending--mobile-reduced.png",
+      "assertions": [
+        {
+          "id": "ending-copy",
+          "status": "pass",
+          "evidence": "text matched: 星星没有消失。",
+          "approval_ref": null
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "evidence": "Manual review completed: composition, persistent star identity, encoding, annotation, hierarchy, CJK glyph coverage, and viewport clipping match the frozen design.",
+        "approval_ref": null
+      }
+    }
+  ],
+  "summary": {
+    "status": "pass",
+    "unresolved": 0,
+    "blocked": 0
+  }
+}
