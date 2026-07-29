@@ -186,6 +186,7 @@
   let testState = "";
   let initialQuery = "YYDS";
   let selectedTermId = "2021-02";
+  let forcedSceneId = "";
 
   $: railVisible = !["field-intro", "field-color"].includes(story.activeId);
 
@@ -198,8 +199,8 @@
       (term) => term.term.toLowerCase() === initialQuery.toLowerCase()
     );
     if (selected) selectedTermId = selected.term_id;
-    const forcedScene = params.get("scene");
-    if (forcedScene) story.setActive(forcedScene);
+    forcedSceneId = params.get("scene") ?? "";
+    if (forcedSceneId) story.setActive(forcedSceneId);
     story.setReducedMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   });
 
@@ -245,7 +246,9 @@
       <Scrolly
         {steps}
         activeId={story.activeId}
-        onactive={(id) => story.setActive(id)}
+        onactive={(id) => {
+          if (!forcedSceneId) story.setActive(id);
+        }}
         label="中文网络流行语的连续滚动叙事"
       >
         <div slot="graphic">
