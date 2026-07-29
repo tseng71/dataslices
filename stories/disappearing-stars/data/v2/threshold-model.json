@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "model_id": "catalogue-display-threshold-v1",
+  "input_unit": "V-band apparent magnitude",
+  "rule": "visible when star.vmag <= display_threshold_vmag",
+  "purpose": "Consistent star identity and visibility state across story scenes.",
+  "not_a_claim": "This catalogue rule is a visual encoding. Human naked-eye visibility also depends on adaptation, acuity, atmosphere, weather, moonlight, view direction, direct glare, and local obstructions.",
+  "approved_thresholds_vmag": [
+    6.5,
+    6.16,
+    5.82,
+    5.48
+  ]
+}
