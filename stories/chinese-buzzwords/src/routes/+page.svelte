@@ -186,7 +186,7 @@
       </header>
 
       <section class="title-panel" data-scene-id="opening-title">
-        <div class="title-panel__term" aria-hidden="true">YYDS</div>
+        <div class="title-panel__term" data-term-id="yyds" aria-hidden="true">YYDS</div>
         <p class="eyebrow">一份中文网络流行语档案</p>
         <h1>从“给力”到“情绪价值”：一个中文流行语能活多久？</h1>
         <p class="dek">
