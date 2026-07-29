@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "evidence_classes": [
+    {
+      "id": "observed",
+      "label_zh": "观测",
+      "definition": "直接来自研究记录或星表条目"
+    },
+    {
+      "id": "modeled",
+      "label_zh": "模型",
+      "definition": "来自物理或统计模型，不是点位实测"
+    },
+    {
+      "id": "derived",
+      "label_zh": "推导",
+      "definition": "使用公开参数复算的结果"
+    },
+    {
+      "id": "scenario",
+      "label_zh": "情景",
+      "definition": "帮助理解尺度的编辑转译，不是地点预测"
+    },
+    {
+      "id": "editorial-encoding",
+      "label_zh": "视觉编码",
+      "definition": "为保持视觉身份而设定，不应被读成观测量"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C01",
+      "summary": "批准天区含 250 条 Vmag 不大于 6.5 的 BSC 条目。",
+      "evidence_class": "derived",
+      "source_ids": ["S01"],
+      "data_path": "stars-orion-field.json",
+      "caveat": "矩形天区以猎户座为中心，但并非所有条目都是猎户座物理成员。"
+    },
+    {
+      "claim_id": "C02",
+      "summary": "全球公众观测对应的天空辉光增长率为每年 9.6% ± 0.4%。",
+      "evidence_class": "observed",
+      "source_ids": ["S02"],
+      "data_path": "generation-scenario.json"
+    },
+    {
+      "claim_id": "C03",
+      "summary": "论文示例中，原本可见 250 颗星的地点，18 年后会降至约 100 颗。",
+      "evidence_class": "scenario",
+      "source_ids": ["S02"],
+      "data_path": "generation-scenario.json",
+      "caveat": "全球平均趋势的解释性示例，不是纽约预测。"
+    },
+    {
+      "claim_id": "C04",
+      "summary": "9.6% 年增长延续 18 年对应约 5.207 倍天空辉光。",
+      "evidence_class": "derived",
+      "source_ids": ["S02"],
+      "data_path": "generation-scenario.json"
+    },
+    {
+      "claim_id": "C05",
+      "summary": "时代广场和中央公园大草坪都落入 World Atlas 的白色大于 41 倍档。",
+      "evidence_class": "modeled",
+      "source_ids": ["S03", "S04"],
+      "data_path": "nyc-places.json",
+      "caveat": "模型不能解析街区尺度直接眩光差异。"
+    },
+    {
+      "claim_id": "C06",
+      "summary": "牙买加湾、佩勒姆湾和蒙托克角依次落入 20.5–41、10.2–20.5、0.16–0.32 倍档。",
+      "evidence_class": "modeled",
+      "source_ids": ["S03", "S04"],
+      "data_path": "nyc-places.json",
+      "caveat": "2014 年清空天顶模型分档，不是现场观测。"
+    },
+    {
+      "claim_id": "C07",
+      "summary": "纽约路线的极限星等区间由 World Atlas 亮度档和 Kyba 北美参数推导。",
+      "evidence_class": "derived",
+      "source_ids": ["S02", "S03", "S04"],
+      "data_path": "nyc-places.json",
+      "caveat": "模型残差约 1.009 星等；不得转成精确星数。"
+    },
+    {
+      "claim_id": "C08",
+      "summary": "负责的户外照明应有明确用途、准确投向、不过亮、受控制并减少短波成分。",
+      "evidence_class": "observed",
+      "source_ids": ["S05", "S06"],
+      "data_path": "lighting-presets.json"
+    },
+    {
+      "claim_id": "C09",
+      "summary": "纽约 Tribute in Light 七个夜晚的研究估计累计影响超过 110 万只迁徙鸟。",
+      "evidence_class": "observed",
+      "source_ids": ["S07"],
+      "caveat": "这是高强度临时装置的具体事件，不代表普通路灯每晚的响应。"
+    },
+    {
+      "claim_id": "C10",
+      "summary": "World Atlas 估计超过 80% 的世界人口生活在受人造天空辉光影响的夜空下，银河对超过三分之一人类不可见。",
+      "evidence_class": "modeled",
+      "source_ids": ["S03"]
+    },
+    {
+      "claim_id": "C11",
+      "summary": "6、12 岁的阈值和可见数量仅是端点校准的视觉插值。",
+      "evidence_class": "editorial-encoding",
+      "source_ids": ["S01", "S02"],
+      "data_path": "generation-scenario.json",
+      "caveat": "不得在正文中作为测量值或预测值展示。"
+    }
+  ]
+}
