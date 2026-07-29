@@ -131,7 +131,8 @@
   onMount(() => {
     const params = new URLSearchParams(window.location.search);
     testState = params.get("test-state") ?? "";
-    initialQuery = params.get("term") ?? "YYDS";
+    const queryTerm = params.get("term");
+    initialQuery = queryTerm?.toLowerCase() === "yyds" ? "YYDS" : queryTerm ?? "YYDS";
     const forcedScene = params.get("scene");
     if (forcedScene) story.setActive(forcedScene);
     story.setReducedMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
