@@ -14,6 +14,18 @@ const port = Number(process.env.QA_PORT ?? 4173);
 const basePath = process.env.BASE_PATH ?? "";
 const origin = `http://127.0.0.1:${port}`;
 const storyUrl = `${origin}${basePath}/`;
+const graphicSceneIds = new Set([
+  "encoding-year",
+  "encoding-lanes",
+  "cohort-2021",
+  "archive-overview",
+  "archive-method-breaks",
+  "life-paths",
+  "register-migration",
+  "template-reveal",
+  "template-comparison",
+  "semantic-fields"
+]);
 
 const viewportMap = {
   desktop: { width: 1440, height: 900, reducedMotion: "no-preference" },
@@ -210,7 +222,7 @@ async function runAssertion(page, assertion) {
 }
 
 function sceneTarget(scene) {
-  if (scene.trigger.kind === "step") return ".story-graphic";
+  if (graphicSceneIds.has(scene.id)) return ".story-graphic";
   if (scene.id === "explorer-empty" || scene.id === "explorer-default") return ".explorer";
   if (scene.id === "loading-state" || scene.id === "data-error") return ".system-state";
   if (scene.id === "no-script-fallback") return "article";
@@ -218,7 +230,7 @@ function sceneTarget(scene) {
 }
 
 function sceneUrl(scene) {
-  if (scene.trigger.kind === "step") {
+  if (graphicSceneIds.has(scene.id)) {
     return `${storyUrl}?scene=${encodeURIComponent(scene.id)}`;
   }
   if (scene.trigger.kind === "query") {
@@ -248,7 +260,7 @@ async function runScene(browser, scene, viewportId) {
   const url = sceneUrl(scene);
   await page.goto(url, { waitUntil: "networkidle" });
 
-  if (scene.trigger.kind === "step") {
+  if (graphicSceneIds.has(scene.id)) {
     const step = page.locator(`[data-step='${scene.id}']`);
     await step.scrollIntoViewIfNeeded();
     await page.waitForFunction(
