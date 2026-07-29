@@ -258,6 +258,8 @@ async function runScene(browser, scene, viewportId) {
     javaScriptEnabled
   });
   const page = await context.newPage();
+  page.setDefaultTimeout(20_000);
+  page.setDefaultNavigationTimeout(20_000);
   const consoleErrors = [];
   page.on("console", (message) => {
     if (message.type() === "error") consoleErrors.push(message.text());
@@ -325,11 +327,27 @@ const results = [];
 try {
   await waitForServer();
   browser = await chromium.launch({ headless: true });
-  for (const scene of contract.scenes) {
-    for (const viewportId of scene.required_viewports) {
-      results.push(await runScene(browser, scene, viewportId));
+  const jobs = contract.scenes.flatMap((scene) =>
+    scene.required_viewports.map((viewportId) => ({ scene, viewportId }))
+  );
+  const concurrency = Math.min(3, jobs.length);
+  let nextJobIndex = 0;
+
+  async function worker(workerId) {
+    while (nextJobIndex < jobs.length) {
+      const jobIndex = nextJobIndex;
+      nextJobIndex += 1;
+      const { scene, viewportId } = jobs[jobIndex];
+      console.log(
+        `[${jobIndex + 1}/${jobs.length}] worker ${workerId}: ${scene.id} / ${viewportId}`
+      );
+      results[jobIndex] = await runScene(browser, scene, viewportId);
     }
   }
+
+  await Promise.all(
+    Array.from({ length: concurrency }, (_, index) => worker(index + 1))
+  );
 } finally {
   await browser?.close();
   if (process.platform === "win32" || !server.pid) {
