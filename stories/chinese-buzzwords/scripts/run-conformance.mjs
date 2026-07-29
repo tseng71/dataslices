@@ -122,10 +122,17 @@ async function runScene(browser, scene, viewportId) {
   );
 
   if (graphicSceneIds.has(scene.id)) {
+    await page.waitForFunction(
+      () => typeof window.__BUZZWORDS_QA_SET_SCENE__ === "function"
+    );
     await page.evaluate((id) => {
-      window.__BUZZWORDS_QA_SET_SCENE__?.(id);
+      window.__BUZZWORDS_QA_SET_SCENE__(id);
     }, scene.id);
-    await page.waitForTimeout(120);
+    await page.waitForFunction(
+      (id) =>
+        document.querySelector(".word-stage")?.getAttribute("data-scene-id") === id,
+      scene.id
+    );
     await page.waitForTimeout(viewport.reducedMotion === "reduce" ? 50 : 850);
   }
 
