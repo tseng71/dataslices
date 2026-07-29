@@ -1,6 +1,6 @@
 # 实现追踪矩阵
 
-状态：Stage 5 本地实现候选版完成；浏览器验收被环境策略阻塞  
+状态：Stage 5 生产预览已部署；浏览器合同 53 / 53 通过  
 设计版本：`02-storyboard-wireframes-v2`
 内容版本：`stage4-content-v1`（已确认）
 实现版本：`stage5-local-rc1`
@@ -81,14 +81,14 @@ Stage 3 已预设证据不足时的降级路径。Stage 4 验证后执行该路�
 
 | 场景/能力 | 实现 | 数据 | 当前验收 |
 |---|---|---|---|
-| 开场与标题 | `src/routes/+page.svelte`、`src/app.css` | YYDS / 2021 记录 | 构建通过；浏览器截图 blocked |
-| 编码、档案、路径、迁移、模板、语义限制 | `src/lib/components/StoryGraphic.svelte` | `src/lib/data/story-data.json` | 源合同检查通过；浏览器交互 blocked |
-| sticky scrolly | `src/lib/components/Scrolly.svelte` | 场景定义 | IntersectionObserver + CSS sticky 已实现；运行时 blocked |
-| runes 状态 | `src/lib/state/story.svelte.js` | authored / exploration | `$state`、`$derived` 分层完成；运行时 blocked |
-| 探索器 | `src/lib/components/Explorer.svelte` | 140 条词与逐词注释 | 搜索、年份、形式、证据筛选及 URL 同步完成；键盘/浏览器 blocked |
-| 完整词表与无脚本 | `StaticArchive.svelte`、预渲染 HTML | 140 条词 | SSR 输出存在；视觉检查 blocked |
+| 开场与标题 | `src/routes/+page.svelte`、`src/app.css` | YYDS / 2021 记录 | 桌面、手机、减少动效均通过 |
+| 编码、档案、路径、迁移、模板、语义限制 | `src/lib/components/StoryGraphic.svelte` | `src/lib/data/story-data.json` | 全部离散场景与合同断言通过 |
+| sticky scrolly | `src/lib/components/Scrolly.svelte` | 场景定义 | IntersectionObserver + CSS sticky 已实现；强制场景与回滚状态通过 |
+| runes 状态 | `src/lib/state/story.svelte.js` | authored / exploration | `$state`、`$derived` 分层完成；浏览器矩阵通过 |
+| 探索器 | `src/lib/components/Explorer.svelte` | 140 条词与逐词注释 | 默认值、空值、URL 状态与控件断言通过 |
+| 完整词表与无脚本 | `StaticArchive.svelte`、预渲染 HTML | 140 条词 | 唯一根文章、`noscript` 与静态词表通过 |
 | 方法页与下载 | `src/routes/methodology/+page.svelte`、`static/data/*` | 方法文档与 CSV | 静态输出通过 |
-| 加载/错误 | `+page.svelte?test-state=` | 预渲染静态词表 | 代码完成；浏览器状态 blocked |
+| 加载/错误 | `+page.svelte?test-state=` | 预渲染静态词表 | 加载与错误状态通过 |
 
 ## 技术基线
 
@@ -96,4 +96,6 @@ Stage 3 已预设证据不足时的降级路径。Stage 4 验证后执行该路�
 - 上游列出 Svelte `5.1.3`、SvelteKit `^2.7.3`、adapter-static `^3.0.6`、Vite `^5.4.10`。
 - 当前解析出的 SvelteKit `2.70.1` 与 Svelte `5.1.3` 有兼容警告，已修复并锁定 Svelte `5.56.8`、SvelteKit `2.70.1`、adapter-static `3.0.10`、Vite `8.1.5`。
 - `npm run check`、`npm run build`、严格栈审计均通过。
-- 浏览器策略拒绝云浏览器访问本机 `127.0.0.1`，所以 `design-conformance.json` 保持 `blocked`，没有伪造截图。
+- GitHub Pages 生产预览：<https://tseng71.github.io/dataslices/stories/chinese-buzzwords/>。
+- GitHub Actions 运行 `30430663411` 完成真实 Chromium 验收：18 个场景、53 个场景/视口组合、53 通过、0 失败。
+- `docs/design-conformance.json` 是该次部署公开报告的本地副本；截图随 Pages 发布在 `qa/screenshots/`。
