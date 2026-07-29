@@ -123,10 +123,13 @@ async function runScene(browser, scene, viewportId) {
 
   if (graphicSceneIds.has(scene.id)) {
     const step = page.locator(`[data-step='${scene.id}']`);
-    await step.scrollIntoViewIfNeeded();
+    await step.evaluate((node) => {
+      node.scrollIntoView({ block: "center", inline: "nearest" });
+    });
     await page.waitForFunction(
       (id) =>
-        document.querySelector(".word-stage")?.getAttribute("data-scene-id") === id,
+        document.querySelector(".word-stage")?.getAttribute("data-scene-id") === id &&
+        document.querySelector(`[data-step='${id}']`)?.classList.contains("active"),
       scene.id
     );
     await page.waitForTimeout(viewport.reducedMotion === "reduce" ? 50 : 850);
