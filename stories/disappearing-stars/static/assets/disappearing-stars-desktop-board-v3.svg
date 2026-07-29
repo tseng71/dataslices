@@ -1,0 +1,358 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2440" viewBox="0 0 1600 2440" role="img" aria-labelledby="title desc">
+  <title id="title">《消失的星空》桌面端关键帧设计板 v3</title>
+  <desc id="desc">八个桌面关键帧展示城市猎户座、暗星返回、星等教学、累计分布、十八年情景、纽约地点路线、照明光路和结尾。</desc>
+  <defs>
+    <linearGradient id="boardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#11141d"/>
+      <stop offset="1" stop-color="#090b11"/>
+    </linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#070910"/>
+      <stop offset="0.72" stop-color="#0d111b"/>
+      <stop offset="1" stop-color="#251d1a"/>
+    </linearGradient>
+    <radialGradient id="cityGlow" cx="50%" cy="100%" r="80%">
+      <stop offset="0" stop-color="#d38b4a" stop-opacity=".46"/>
+      <stop offset=".45" stop-color="#9b6137" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#070910" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0ebdd"/>
+      <stop offset="1" stop-color="#ddd4c2"/>
+    </linearGradient>
+    <linearGradient id="atmo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121827"/>
+      <stop offset=".5" stop-color="#283142"/>
+      <stop offset="1" stop-color="#75614d"/>
+    </linearGradient>
+    <filter id="starGlow" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+    <pattern id="modelHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#9b8fc8" stroke-width="2" opacity=".55"/>
+    </pattern>
+    <style>
+      .board-title{font:700 54px "Noto Serif SC","Songti SC",serif;fill:#f5f0e6}
+      .board-sub{font:400 20px Inter,"PingFang SC",sans-serif;fill:#9da6b5}
+      .frame{fill:#0b0e16;stroke:#343a49;stroke-width:1.5;rx:18}
+      .frame-light{fill:url(#paper);stroke:#b9af9e;stroke-width:1.5;rx:18}
+      .tag{font:700 15px Inter,"PingFang SC",sans-serif;fill:#f1c56a;letter-spacing:1.8px}
+      .tag-dark{font:700 15px Inter,"PingFang SC",sans-serif;fill:#7f5735;letter-spacing:1.8px}
+      .h1{font:700 52px "Noto Serif SC","Songti SC",serif;fill:#f5f0e6}
+      .h2{font:700 36px "Noto Serif SC","Songti SC",serif;fill:#f5f0e6}
+      .h2-dark{font:700 36px "Noto Serif SC","Songti SC",serif;fill:#191b21}
+      .copy{font:400 18px Inter,"PingFang SC",sans-serif;fill:#d3d8e1}
+      .copy-dark{font:400 18px Inter,"PingFang SC",sans-serif;fill:#373a42}
+      .small{font:400 14px Inter,"PingFang SC",sans-serif;fill:#9da6b5}
+      .small-dark{font:400 14px Inter,"PingFang SC",sans-serif;fill:#66645f}
+      .data{font:700 28px Inter,"PingFang SC",sans-serif;fill:#f1c56a}
+      .star{fill:#f5f0e6}
+      .star-cool{fill:#dcecff}
+      .star-warm{fill:#ffd9a3}
+      .lost{fill:none;stroke:#9da6b5;stroke-width:1.5;opacity:.62}
+      .tracked{fill:none;stroke:#f1c56a;stroke-width:2.5}
+      .constellation{fill:none;stroke:#9da6b5;stroke-width:1;opacity:.33}
+      .axis{stroke:#676f7d;stroke-width:1}
+      .threshold{stroke:#f1c56a;stroke-width:3}
+      .model{fill:url(#modelHatch);stroke:#9b8fc8}
+      .button{fill:#1b202b;stroke:#505969;rx:18}
+      .button-on{fill:#f1c56a;stroke:#f1c56a;rx:18}
+      .button-text{font:600 14px Inter,"PingFang SC",sans-serif;fill:#f5f0e6}
+      .button-text-dark{font:700 14px Inter,"PingFang SC",sans-serif;fill:#1c1811}
+      .note{fill:#111620;stroke:#404959;rx:8}
+      .frame-label{font:700 16px Inter,"PingFang SC",sans-serif;fill:#83c5d5}
+    </style>
+  </defs>
+
+  <rect width="1600" height="2440" fill="url(#boardBg)"/>
+  <text x="60" y="82" class="board-title">消失的星空｜桌面关键帧 v3</text>
+  <text x="62" y="122" class="board-sub">同一批恒星贯穿天空坐标、星等轴、18年情景、城市空间与地面光路</text>
+  <text x="62" y="154" class="board-sub">布局状态稿 · 星位与数字为设计占位；生产版只使用第四阶段批准的数据</text>
+  <rect x="1330" y="66" width="210" height="44" rx="22" fill="#171c26" stroke="#3c4655"/>
+  <text x="1435" y="94" text-anchor="middle" class="frame-label">DATA SLICES / 003</text>
+
+  <!-- KF01 -->
+  <g transform="translate(60 210)" filter="url(#softShadow)">
+    <rect width="720" height="470" class="frame"/>
+    <rect x="1" y="1" width="718" height="468" rx="18" fill="url(#night)"/>
+    <rect x="1" y="1" width="718" height="468" rx="18" fill="url(#cityGlow)"/>
+    <text x="28" y="34" class="tag">KF01 · RECOGNITION</text>
+    <text x="32" y="112" class="h1">消失的星空</text>
+    <text x="34" y="148" class="copy">这是纽约冬夜里的猎户座。</text>
+    <text x="34" y="176" class="copy">你认得它吗？</text>
+    <text x="34" y="428" class="small">向下滚动，从最亮的骨架开始</text>
+    <g filter="url(#starGlow)">
+      <circle cx="510" cy="92" r="5" class="star-warm"/>
+      <circle cx="626" cy="116" r="3.8" class="star-cool"/>
+      <circle cx="566" cy="207" r="3.2" class="star"/>
+      <circle cx="594" cy="220" r="3" class="star"/>
+      <circle cx="622" cy="231" r="3.1" class="star"/>
+      <circle cx="500" cy="350" r="4" class="star"/>
+      <circle cx="648" cy="365" r="5" class="star-cool"/>
+      <circle cx="448" cy="236" r="1.8" class="star"/>
+      <circle cx="674" cy="172" r="1.5" class="star"/>
+    </g>
+    <text x="510" y="74" text-anchor="middle" class="small">参宿四</text>
+    <text x="648" y="392" text-anchor="middle" class="small">参宿七</text>
+    <path d="M510 92 L566 207 L594 220 L622 231 L648 365 M626 116 L622 231 M566 207 L500 350" class="constellation"/>
+  </g>
+
+  <!-- KF02 -->
+  <g transform="translate(820 210)" filter="url(#softShadow)">
+    <rect width="720" height="470" class="frame"/>
+    <rect x="1" y="1" width="718" height="468" rx="18" fill="url(#night)"/>
+    <text x="28" y="34" class="tag">KF02 · FIRST REVEAL</text>
+    <text x="30" y="82" class="h2">原来空着的位置，重新出现恒星</text>
+    <text x="30" y="114" class="copy">星星没有飞回来；它们一直在原来的坐标。</text>
+    <g opacity=".28" class="constellation">
+      <path d="M354 119 L408 225 L440 236 L472 247 L517 382 M476 135 L472 247 M408 225 L350 366"/>
+    </g>
+    <g filter="url(#starGlow)">
+      <circle cx="354" cy="119" r="5" class="star-warm"/>
+      <circle cx="476" cy="135" r="3.8" class="star-cool"/>
+      <circle cx="408" cy="225" r="3.2" class="star"/>
+      <circle cx="440" cy="236" r="3" class="star"/>
+      <circle cx="472" cy="247" r="3.1" class="star"/>
+      <circle cx="350" cy="366" r="4" class="star"/>
+      <circle cx="517" cy="382" r="5" class="star-cool"/>
+      <circle cx="292" cy="184" r="1.6" class="star"/>
+      <circle cx="327" cy="247" r="1.4" class="star"/>
+      <circle cx="381" cy="167" r="1.8" class="star"/>
+      <circle cx="450" cy="174" r="1.3" class="star"/>
+      <circle cx="514" cy="196" r="1.6" class="star"/>
+      <circle cx="559" cy="254" r="1.2" class="star"/>
+      <circle cx="294" cy="315" r="1.5" class="star"/>
+      <circle cx="399" cy="310" r="1.4" class="star"/>
+      <circle cx="474" cy="320" r="1.7" class="star"/>
+      <circle cx="569" cy="338" r="1.4" class="star"/>
+      <circle cx="610" cy="154" r="1.2" class="star"/>
+      <circle cx="622" cy="288" r="1.1" class="star"/>
+    </g>
+    <circle cx="399" cy="310" r="10" class="tracked"/>
+    <rect x="36" y="338" width="215" height="82" class="note"/>
+    <text x="54" y="366" class="tag">追踪星</text>
+    <text x="54" y="392" class="copy">记住这颗较暗的星。</text>
+    <path d="M251 380 C305 372 335 342 389 315" fill="none" stroke="#f1c56a" stroke-width="1.5"/>
+  </g>
+
+  <!-- KF03 -->
+  <g transform="translate(60 730)" filter="url(#softShadow)">
+    <rect width="720" height="470" class="frame-light"/>
+    <text x="28" y="34" class="tag-dark">KF03 · TEACH THE ENCODING</text>
+    <text x="30" y="84" class="h2-dark">两颗星，都在同一片天空</text>
+    <text x="30" y="116" class="copy-dark">数字越小，星越亮。阈值决定此刻能否看见。</text>
+    <line x1="74" y1="312" x2="650" y2="312" class="axis"/>
+    <g class="small-dark">
+      <text x="74" y="340" text-anchor="middle">0</text>
+      <text x="266" y="340" text-anchor="middle">2</text>
+      <text x="458" y="340" text-anchor="middle">4</text>
+      <text x="650" y="340" text-anchor="middle">6</text>
+      <text x="74" y="370">更亮</text>
+      <text x="612" y="370">更暗</text>
+    </g>
+    <circle cx="218" cy="312" r="10" fill="#3e4b60"/>
+    <circle cx="218" cy="312" r="5" class="star-cool" filter="url(#starGlow)"/>
+    <text x="218" y="286" text-anchor="middle" class="small-dark">亮星 · 1.5等</text>
+    <circle cx="525" cy="312" r="11" class="tracked"/>
+    <circle cx="525" cy="312" r="2.5" fill="#7d756b"/>
+    <text x="525" y="286" text-anchor="middle" class="small-dark">追踪星 · 4.7等</text>
+    <rect x="436" y="180" width="44" height="186" fill="#f1c56a" opacity=".12"/>
+    <line x1="458" y1="170" x2="458" y2="390" class="threshold"/>
+    <rect x="482" y="170" width="182" height="62" rx="9" fill="#fff9e9" stroke="#d0b069"/>
+    <text x="498" y="195" class="tag-dark">当前可见边界</text>
+    <text x="498" y="217" class="small-dark">区间会随条件移动</text>
+    <text x="30" y="438" class="small-dark">实心 = 当前可见　空心 = 星仍存在，但越过了肉眼边界</text>
+  </g>
+
+  <!-- KF04 -->
+  <g transform="translate(820 730)" filter="url(#softShadow)">
+    <rect width="720" height="470" class="frame-light"/>
+    <text x="28" y="34" class="tag-dark">KF04 · CENTRAL REVEAL</text>
+    <text x="30" y="82" class="h2-dark">边界只移动一点，跨过去的却是一群星</text>
+    <text x="30" y="114" class="copy-dark">较暗的一端，恒星数量迅速增加。</text>
+    <line x1="72" y1="362" x2="660" y2="362" class="axis"/>
+    <line x1="72" y1="170" x2="72" y2="362" class="axis"/>
+    <path d="M72 350 C150 346 220 338 290 322 C370 303 438 272 500 225 C560 180 610 140 660 112" fill="none" stroke="#2f5660" stroke-width="4"/>
+    <path d="M72 350 C150 346 220 338 290 322 C370 303 438 272 500 225 C560 180 610 140 660 112 L660 362 L72 362Z" fill="#83c5d5" opacity=".12"/>
+    <g fill="#3e4b60">
+      <circle cx="130" cy="345" r="4"/><circle cx="180" cy="340" r="4"/><circle cx="232" cy="333" r="4"/>
+      <circle cx="278" cy="323" r="4"/><circle cx="320" cy="312" r="4"/><circle cx="354" cy="300" r="4"/>
+      <circle cx="382" cy="288" r="4"/><circle cx="410" cy="273" r="4"/><circle cx="438" cy="256" r="4"/>
+      <circle cx="462" cy="237" r="4"/><circle cx="485" cy="216" r="4"/><circle cx="507" cy="196" r="4"/>
+      <circle cx="528" cy="178" r="4"/><circle cx="548" cy="163" r="4"/><circle cx="568" cy="149" r="4"/>
+      <circle cx="588" cy="136" r="4"/><circle cx="608" cy="125" r="4"/><circle cx="630" cy="116" r="4"/>
+    </g>
+    <rect x="422" y="150" width="78" height="212" class="model" opacity=".18"/>
+    <line x1="438" y1="146" x2="438" y2="382" class="threshold"/>
+    <line x1="492" y1="146" x2="492" y2="382" stroke="#d38b4a" stroke-width="3"/>
+    <text x="438" y="400" text-anchor="middle" class="small-dark">较暗状态</text>
+    <text x="492" y="422" text-anchor="middle" class="small-dark">城市状态</text>
+    <path d="M438 146 L438 132 L492 132 L492 146" fill="none" stroke="#7f5735" stroke-width="1.5"/>
+    <text x="465" y="122" text-anchor="middle" class="data">一小步</text>
+    <rect x="516" y="256" width="160" height="78" rx="10" fill="#fff9e9" stroke="#d0b069"/>
+    <text x="532" y="282" class="tag-dark">跨线恒星</text>
+    <text x="532" y="309" class="copy-dark">数量不是线性减少</text>
+  </g>
+
+  <!-- KF05 -->
+  <g transform="translate(60 1250)" filter="url(#softShadow)">
+    <rect width="720" height="470" class="frame"/>
+    <rect x="1" y="1" width="718" height="468" rx="18" fill="url(#night)"/>
+    <text x="28" y="34" class="tag">KF05 · 18-YEAR SCENARIO</text>
+    <text x="30" y="80" class="h2">变化慢到足以骗过记忆</text>
+    <text x="30" y="112" class="copy">同一批恒星，同一条阈值，四个年龄节点。</text>
+    <g transform="translate(32 144)">
+      <rect width="150" height="246" rx="12" fill="#0b101a" stroke="#394252"/>
+      <rect x="166" width="150" height="246" rx="12" fill="#10141d" stroke="#394252"/>
+      <rect x="332" width="150" height="246" rx="12" fill="#15171d" stroke="#394252"/>
+      <rect x="498" width="150" height="246" rx="12" fill="#1e1918" stroke="#6d4a32"/>
+      <g filter="url(#starGlow)">
+        <g class="star">
+          <circle cx="20" cy="36" r="1.5"/><circle cx="55" cy="54" r="2"/><circle cx="94" cy="32" r="1.4"/><circle cx="128" cy="70" r="2.2"/>
+          <circle cx="35" cy="104" r="1.2"/><circle cx="75" cy="120" r="1.8"/><circle cx="116" cy="112" r="1.4"/><circle cx="45" cy="170" r="2.1"/>
+          <circle cx="95" cy="184" r="1.2"/><circle cx="128" cy="158" r="1.8"/><circle cx="72" cy="214" r="1.4"/>
+        </g>
+        <g transform="translate(166)" class="star">
+          <circle cx="20" cy="36" r="1.5"/><circle cx="55" cy="54" r="2"/><circle cx="128" cy="70" r="2.2"/>
+          <circle cx="35" cy="104" r="1.2"/><circle cx="75" cy="120" r="1.8"/><circle cx="45" cy="170" r="2.1"/>
+          <circle cx="128" cy="158" r="1.8"/><circle cx="72" cy="214" r="1.4"/>
+        </g>
+        <g transform="translate(332)" class="star">
+          <circle cx="20" cy="36" r="1.5"/><circle cx="55" cy="54" r="2"/><circle cx="128" cy="70" r="2.2"/>
+          <circle cx="75" cy="120" r="1.8"/><circle cx="45" cy="170" r="2.1"/><circle cx="128" cy="158" r="1.8"/>
+        </g>
+        <g transform="translate(498)" class="star">
+          <circle cx="55" cy="54" r="2"/><circle cx="128" cy="70" r="2.2"/>
+          <circle cx="75" cy="120" r="1.8"/><circle cx="45" cy="170" r="2.1"/>
+        </g>
+      </g>
+      <g class="small">
+        <text x="18" y="272">0岁</text><text x="184" y="272">6岁</text><text x="350" y="272">12岁</text><text x="516" y="272">18岁</text>
+      </g>
+      <text x="648" y="272" text-anchor="end" class="small">全球平均情景 · 不是纽约预测</text>
+    </g>
+    <text x="32" y="443" class="data">约250 → 不足100颗</text>
+    <text x="340" y="443" class="small">最终数值与区间由第四阶段复算</text>
+  </g>
+
+  <!-- KF06 -->
+  <g transform="translate(820 1250)" filter="url(#softShadow)">
+    <rect width="720" height="470" class="frame"/>
+    <text x="28" y="34" class="tag">KF06 · CITY TRANSECT + EXPLORER</text>
+    <text x="30" y="78" class="h2">一座城，不止一片夜空</text>
+    <g transform="translate(28 108)">
+      <rect width="296" height="286" rx="12" fill="#111925" stroke="#344153"/>
+      <path d="M28 214 C84 202 101 185 142 159 S220 118 267 74" fill="none" stroke="#6f8293" stroke-width="3"/>
+      <path d="M42 244 C98 222 142 226 180 191 S237 145 269 124" fill="none" stroke="#263849" stroke-width="34" opacity=".65"/>
+      <g>
+        <circle cx="42" cy="214" r="9" fill="#d38b4a"/><circle cx="42" cy="214" r="15" fill="none" stroke="#f1c56a"/>
+        <circle cx="96" cy="191" r="7" fill="#9b8fc8"/>
+        <circle cx="148" cy="158" r="7" fill="#9b8fc8"/>
+        <circle cx="213" cy="119" r="7" fill="#9b8fc8"/>
+        <circle cx="267" cy="74" r="7" fill="#83c5d5"/>
+      </g>
+      <text x="42" y="271" class="small" text-anchor="middle">Times Sq.</text>
+      <text x="267" y="55" class="small" text-anchor="middle">较暗参照地</text>
+      <text x="18" y="30" class="tag">真实点位 + 模型区间</text>
+    </g>
+    <g transform="translate(344 108)">
+      <rect width="348" height="286" rx="12" fill="url(#night)" stroke="#344153"/>
+      <rect width="348" height="286" rx="12" fill="url(#cityGlow)"/>
+      <g filter="url(#starGlow)">
+        <circle cx="106" cy="62" r="4.6" class="star-warm"/>
+        <circle cx="238" cy="72" r="3.5" class="star-cool"/>
+        <circle cx="156" cy="130" r="3" class="star"/>
+        <circle cx="181" cy="140" r="2.8" class="star"/>
+        <circle cx="207" cy="150" r="2.8" class="star"/>
+        <circle cx="110" cy="230" r="3.8" class="star"/>
+        <circle cx="256" cy="238" r="4.7" class="star-cool"/>
+      </g>
+      <circle cx="148" cy="202" r="10" class="tracked"/>
+      <rect x="18" y="214" width="185" height="52" class="note"/>
+      <text x="32" y="237" class="tag">TIMES SQUARE</text>
+      <text x="32" y="257" class="small">模型年份 · 区间 · 覆盖</text>
+    </g>
+    <g transform="translate(30 412)">
+      <rect width="112" height="34" class="button-on"/><text x="56" y="22" text-anchor="middle" class="button-text-dark">时代广场</text>
+      <rect x="122" width="112" height="34" class="button"/><text x="178" y="22" text-anchor="middle" class="button-text">中央公园</text>
+      <rect x="244" width="112" height="34" class="button"/><text x="300" y="22" text-anchor="middle" class="button-text">牙买加湾</text>
+      <rect x="366" width="112" height="34" class="button"/><text x="422" y="22" text-anchor="middle" class="button-text">佩勒姆湾</text>
+      <rect x="488" width="168" height="34" class="button"/><text x="572" y="22" text-anchor="middle" class="button-text">较暗参照地</text>
+    </g>
+  </g>
+
+  <!-- KF07 -->
+  <g transform="translate(60 1770)" filter="url(#softShadow)">
+    <rect width="720" height="470" class="frame"/>
+    <rect x="1" y="1" width="718" height="468" rx="18" fill="url(#atmo)"/>
+    <text x="28" y="34" class="tag">KF07 · MECHANISM + LIGHTING A/B</text>
+    <text x="30" y="76" class="h2">这颗星，把我们带回地面</text>
+    <circle cx="358" cy="104" r="2.5" class="star"/>
+    <circle cx="358" cy="104" r="12" class="tracked"/>
+    <text x="377" y="109" class="small">追踪星</text>
+    <line x1="360" y1="118" x2="360" y2="405" stroke="#f1c56a" stroke-width="1" stroke-dasharray="4 6" opacity=".55"/>
+    <g transform="translate(38 152)">
+      <rect width="286" height="246" rx="12" fill="#11151d" stroke="#47505e"/>
+      <text x="18" y="28" class="tag">A · 未遮罩</text>
+      <path d="M142 192 L77 54 M142 192 L126 49 M142 192 L205 59" stroke="#d38b4a" stroke-width="8" opacity=".62"/>
+      <path d="M142 192 L58 218 M142 192 L226 218" stroke="#f0d6a4" stroke-width="14" opacity=".42"/>
+      <path d="M58 218 Q105 151 126 49 M226 218 Q190 148 205 59" fill="none" stroke="#d38b4a" stroke-width="2" stroke-dasharray="7 5"/>
+      <line x1="142" y1="170" x2="142" y2="229" stroke="#b4b8bf" stroke-width="6"/>
+      <rect x="116" y="158" width="52" height="20" rx="4" fill="#f0d6a4"/>
+      <line x1="26" y1="230" x2="260" y2="230" stroke="#8d8170" stroke-width="2"/>
+      <text x="18" y="244" class="small">上射 + 反射 + 散射</text>
+    </g>
+    <g transform="translate(396 152)">
+      <rect width="286" height="246" rx="12" fill="#11151d" stroke="#47505e"/>
+      <text x="18" y="28" class="tag">B · 完全遮罩</text>
+      <path d="M142 192 L75 222 M142 192 L209 222" stroke="#f0d6a4" stroke-width="16" opacity=".48"/>
+      <path d="M75 222 Q112 181 119 163 M209 222 Q173 183 165 163" fill="none" stroke="#d38b4a" stroke-width="2" stroke-dasharray="7 5" opacity=".45"/>
+      <line x1="142" y1="170" x2="142" y2="229" stroke="#b4b8bf" stroke-width="6"/>
+      <path d="M112 158 L172 158 L162 178 L122 178Z" fill="#f0d6a4"/>
+      <line x1="26" y1="230" x2="260" y2="230" stroke="#8d8170" stroke-width="2"/>
+      <text x="18" y="244" class="small">同一任务区域 · 更少无效光路</text>
+    </g>
+    <text x="38" y="430" class="copy">方向改变光去哪里；不以任意指数换算“恢复多少颗星”。</text>
+  </g>
+
+  <!-- KF08 -->
+  <g transform="translate(820 1770)" filter="url(#softShadow)">
+    <rect width="720" height="470" class="frame"/>
+    <rect x="1" y="1" width="718" height="468" rx="18" fill="url(#night)"/>
+    <text x="28" y="34" class="tag">KF08 · RETURN</text>
+    <g opacity=".33">
+      <path d="M402 86 L456 195 L488 205 L520 216 L566 364 M523 102 L520 216 M456 195 L398 346" class="constellation"/>
+    </g>
+    <g filter="url(#starGlow)">
+      <circle cx="402" cy="86" r="5" class="star-warm"/>
+      <circle cx="523" cy="102" r="3.8" class="star-cool"/>
+      <circle cx="456" cy="195" r="3.2" class="star"/>
+      <circle cx="488" cy="205" r="3" class="star"/>
+      <circle cx="520" cy="216" r="3.1" class="star"/>
+      <circle cx="398" cy="346" r="4" class="star"/>
+      <circle cx="566" cy="364" r="5" class="star-cool"/>
+      <circle cx="340" cy="151" r="1.5" class="star"/><circle cx="372" cy="225" r="1.3" class="star"/>
+      <circle cx="430" cy="145" r="1.7" class="star"/><circle cx="494" cy="154" r="1.2" class="star"/>
+      <circle cx="553" cy="170" r="1.5" class="star"/><circle cx="607" cy="226" r="1.2" class="star"/>
+      <circle cx="342" cy="292" r="1.4" class="star"/><circle cx="447" cy="286" r="1.3" class="star"/>
+      <circle cx="522" cy="298" r="1.6" class="star"/><circle cx="618" cy="316" r="1.3" class="star"/>
+    </g>
+    <circle cx="447" cy="286" r="10" class="tracked"/>
+    <text x="34" y="118" class="h2">再看一次猎户座。</text>
+    <text x="34" y="160" class="copy">亮星组成的骨架，</text>
+    <text x="34" y="190" class="copy">不再等于完整的夜晚。</text>
+    <text x="34" y="324" class="h2">星星没有消失。</text>
+    <text x="34" y="365" class="copy">消失的，是夜晚让我们</text>
+    <text x="34" y="394" class="copy">看见它们的能力。</text>
+    <rect x="34" y="418" width="152" height="32" class="button"/>
+    <text x="110" y="439" text-anchor="middle" class="button-text">回到城市冬夜</text>
+  </g>
+
+  <text x="60" y="2320" class="board-sub">状态操作：实例化 → 揭示 → 对齐 → 聚合 → 跨线 → 时间化 → 地理化 → 机制化 → 返回</text>
+  <text x="60" y="2354" class="board-sub">所有关键恒星在生产实现中保持同一 star_id；观测、模型、估计与情景使用不同纹理和线型。</text>
+  <text x="60" y="2392" class="small">v3 detailed design · 2026-07-28 · not production data</text>
+</svg>
