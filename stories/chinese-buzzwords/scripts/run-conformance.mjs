@@ -186,8 +186,58 @@ async function runScene(browser, scene, viewportId) {
   };
 }
 
+async function runScrollPath(browser) {
+  const context = await browser.newContext({
+    viewport: { width: 1440, height: 900 },
+    reducedMotion: "reduce"
+  });
+  const page = await context.newPage();
+  page.setDefaultTimeout(20_000);
+  const consoleErrors = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") consoleErrors.push(message.text());
+  });
+  page.on("pageerror", (error) => consoleErrors.push(error.message));
+
+  await page.goto(storyUrl, { waitUntil: "networkidle" });
+
+  const steps = [];
+  for (const scene of contract.scenes) {
+    const step = page.locator(`#step-${scene.id}`);
+    await step.evaluate((node) => node.scrollIntoView({ block: "center" }));
+    await page.waitForFunction(
+      (id) =>
+        document.querySelector(".word-stage")?.getAttribute("data-scene-id") === id &&
+        document.querySelector(`#step-${id}`)?.classList.contains("active"),
+      scene.id
+    );
+
+    const declaredPopulation = Number(
+      await page.locator(".word-stage").getAttribute("data-population-count")
+    );
+    const visiblePopulation = await page.locator(".word-stage .word-mark.visible").count();
+    steps.push({
+      scene_id: scene.id,
+      declared_population: declaredPopulation,
+      visible_population: visiblePopulation,
+      pass: visiblePopulation === declaredPopulation
+    });
+  }
+
+  const result = {
+    steps,
+    console_errors: consoleErrors,
+    passed: steps.filter((step) => step.pass).length,
+    failed: steps.filter((step) => !step.pass).length,
+    pass: steps.every((step) => step.pass) && consoleErrors.length === 0
+  };
+  await context.close();
+  return result;
+}
+
 let browser;
 const results = [];
+let scrollPath;
 try {
   await waitForServer();
   browser = await chromium.launch({ headless: true });
@@ -210,6 +260,7 @@ try {
   await Promise.all(
     Array.from({ length: concurrency }, (_, index) => worker(index + 1))
   );
+  scrollPath = await runScrollPath(browser);
 } finally {
   await browser?.close();
   if (process.platform === "win32" || !server.pid) {
@@ -228,6 +279,7 @@ const summary = {
   design_version: contract.design_version,
   passed: results.filter((result) => result.pass).length,
   failed: results.filter((result) => !result.pass).length,
+  scroll_path: scrollPath,
   results
 };
 
@@ -238,6 +290,9 @@ await writeFile(
 );
 
 console.log(`Conformance: ${summary.passed} passed, ${summary.failed} failed.`);
+console.log(
+  `Scroll path: ${scrollPath?.passed ?? 0} passed, ${scrollPath?.failed ?? 0} failed.`
+);
 for (const result of results.filter((item) => !item.pass)) {
   console.error(
     `[failed] ${result.scene_id}/${result.viewport_id}`,
@@ -248,4 +303,4 @@ for (const result of results.filter((item) => !item.pass)) {
     })
   );
 }
-if (summary.failed > 0) process.exitCode = 1;
+if (summary.failed > 0 || !scrollPath?.pass) process.exitCode = 1;

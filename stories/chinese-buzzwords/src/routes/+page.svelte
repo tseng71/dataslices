@@ -187,8 +187,9 @@
   let initialQuery = "YYDS";
   let selectedTermId = "2021-02";
   let forcedSceneId = "";
+  let activeSceneId = steps[0].id;
 
-  $: railVisible = !["field-intro", "field-color"].includes(story.activeId);
+  $: railVisible = !["field-intro", "field-color"].includes(activeSceneId);
 
   onMount(() => {
     const params = new URLSearchParams(window.location.search);
@@ -200,10 +201,14 @@
     );
     if (selected) selectedTermId = selected.term_id;
     forcedSceneId = params.get("scene") ?? "";
-    if (forcedSceneId) story.setActive(forcedSceneId);
+    if (forcedSceneId) {
+      activeSceneId = forcedSceneId;
+      story.setActive(forcedSceneId);
+    }
     if (params.get("qa") === "contract") {
       window.__BUZZWORDS_QA_SET_SCENE__ = (id) => {
         forcedSceneId = id;
+        activeSceneId = id;
         story.setActive(id);
       };
     }
@@ -255,16 +260,19 @@
     <article>
       <Scrolly
         {steps}
-        activeId={story.activeId}
+        activeId={activeSceneId}
         onactive={(id) => {
-          if (!forcedSceneId) story.setActive(id);
+          if (!forcedSceneId) {
+            activeSceneId = id;
+            story.setActive(id);
+          }
         }}
         label="中文网络流行语的连续滚动叙事"
       >
         <div slot="graphic">
           <StoryGraphic
             state={story.visual}
-            sceneOverride={forcedSceneId}
+            sceneOverride={forcedSceneId || activeSceneId}
             terms={data.terms}
             annotations={data.annotations}
             {selectedTermId}
