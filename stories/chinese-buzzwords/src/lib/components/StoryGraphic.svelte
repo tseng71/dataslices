@@ -8,12 +8,13 @@
   } from "$lib/visual/word-layouts.js";
 
   export let state;
+  export let sceneOverride = "";
   export let terms = [];
   export let annotations = [];
   export let selectedTermId = "";
   export let onselect = () => {};
 
-  $: scene = state?.id ?? "field-intro";
+  $: scene = sceneOverride || state?.id || "field-intro";
   $: annotationById = new Map(annotations.map((row) => [row.term_id, row]));
   $: records = terms.map((term) => ({
     ...term,
