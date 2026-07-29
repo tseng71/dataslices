@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "design_version": "05-storyboard-wireframes-v3-stage4-approved",
+  "design_sources": [
+    "docs/04-overall-design-v2.md",
+    "docs/05-storyboard-wireframes-v3.md",
+    "docs/06-interaction-state-spec-v1.md",
+    "docs/visual-system-v2.md",
+    "docs/manuscript-v2.md"
+  ],
+  "viewports": [
+    { "id": "desktop", "width": 1440, "height": 900, "reduced_motion": false },
+    { "id": "mobile", "width": 390, "height": 844, "reduced_motion": false },
+    { "id": "mobile-compact", "width": 320, "height": 568, "reduced_motion": false },
+    { "id": "mobile-reduced", "width": 390, "height": 844, "reduced_motion": true }
+  ],
+  "scenes": [
+    {
+      "id": "opening-city",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=opening-city" },
+      "required_viewports": ["desktop", "mobile", "mobile-reduced"],
+      "requirements": {
+        "copy": ["消失的星空", "这是完整的猎户座吗？"],
+        "visual_entities": ["固定猎户座天区", "仍可见的亮星骨架"],
+        "encodings": ["星体位置编码天空坐标", "星点大小编码视星等"],
+        "annotations": ["城市条件不是完整星空"],
+        "controls": [],
+        "motion": "滚动后同一坐标上的暗星返回",
+        "reduced_motion": "直接切换到已批准的离散天空状态"
+      },
+      "assertions": [
+        { "id": "opening-title", "kind": "text", "selector": "h1", "expected": "消失的星空" },
+        { "id": "opening-count", "kind": "attribute", "selector": "[data-scene-id='opening-city']", "attribute": "data-visible-count", "expected": "7" }
+      ]
+    },
+    {
+      "id": "opening-dark-return",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=opening-dark-return" },
+      "required_viewports": ["desktop", "mobile"],
+      "requirements": {
+        "copy": ["星没有离开；改变的是它与背景之间的对比。"],
+        "visual_entities": ["同一批目录星", "星座骨架"],
+        "encodings": ["固定坐标保持星体身份"],
+        "annotations": ["Bright Star Catalogue"],
+        "controls": [],
+        "motion": "暗星在原坐标恢复",
+        "reduced_motion": "直接显示恢复后的固定状态"
+      },
+      "assertions": [
+        { "id": "return-count", "kind": "attribute", "selector": "[data-scene-id='opening-dark-return']", "attribute": "data-visible-count", "expected": "250" }
+      ]
+    },
+    {
+      "id": "magnitude-encoding",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=magnitude-encoding" },
+      "required_viewports": ["desktop", "mobile"],
+      "requirements": {
+        "copy": ["数字越小，星越亮。"],
+        "visual_entities": ["250 颗目录星", "视星等轴"],
+        "encodings": ["横向位置编码视星等"],
+        "annotations": ["更亮", "更暗"],
+        "controls": [],
+        "motion": "恒星从天空坐标移至星等轴",
+        "reduced_motion": "直接呈现星等轴"
+      },
+      "assertions": [
+        { "id": "magnitude-layout", "kind": "attribute", "selector": "[data-scene-id='magnitude-encoding']", "attribute": "data-state-layout", "expected": "magnitude" }
+      ]
+    },
+    {
+      "id": "threshold-reveal",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=threshold-reveal" },
+      "required_viewports": ["desktop", "mobile", "mobile-compact"],
+      "requirements": {
+        "copy": ["边界只移动一点，跨过去的却是一整片密度。"],
+        "visual_entities": ["可见阈值", "实心可见星", "空心位置环"],
+        "encodings": ["阈值位置编码显示边界", "实心与空心编码可见状态"],
+        "annotations": ["6.50 到 5.48", "100 / 250"],
+        "controls": [],
+        "motion": "阈值穿过暗星密集区",
+        "reduced_motion": "直接显示阈值终态与空心位置"
+      },
+      "assertions": [
+        { "id": "threshold-value", "kind": "attribute", "selector": "[data-scene-id='threshold-reveal']", "attribute": "data-threshold", "expected": "5.48" },
+        { "id": "threshold-count", "kind": "attribute", "selector": "[data-scene-id='threshold-reveal']", "attribute": "data-visible-count", "expected": "100" }
+      ]
+    },
+    {
+      "id": "distribution-reveal",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=distribution-reveal" },
+      "required_viewports": ["desktop"],
+      "requirements": {
+        "copy": ["较暗的一端，聚集着更多恒星。"],
+        "visual_entities": ["累计恒星曲线", "可见阈值"],
+        "encodings": ["曲线编码累计目录数量"],
+        "annotations": ["累计恒星数量"],
+        "controls": [],
+        "motion": "累计曲线从星点中显现",
+        "reduced_motion": "直接显示完整曲线"
+      },
+      "assertions": [
+        { "id": "distribution-layout", "kind": "attribute", "selector": "[data-scene-id='distribution-reveal']", "attribute": "data-state-layout", "expected": "distribution" }
+      ]
+    },
+    {
+      "id": "generation-zero",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=generation-zero" },
+      "required_viewports": ["desktop", "mobile"],
+      "requirements": {
+        "copy": ["一代人的夜空", "全球平均情景"],
+        "visual_entities": ["同一固定天区", "四个年龄节点"],
+        "encodings": ["离散年龄节点决定显示阈值"],
+        "annotations": ["0 岁", "250"],
+        "controls": ["年龄节点按钮"],
+        "motion": "滚动或按钮离散切换",
+        "reduced_motion": "无插值地直接切换"
+      },
+      "assertions": [
+        { "id": "generation-age-zero", "kind": "attribute", "selector": "[data-generation-scene]", "attribute": "data-age", "expected": "0" }
+      ]
+    },
+    {
+      "id": "generation-eighteen",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=generation-eighteen" },
+      "required_viewports": ["desktop", "mobile", "mobile-reduced"],
+      "requirements": {
+        "copy": ["18 年后", "约 100 颗"],
+        "visual_entities": ["同一固定天区", "18 岁节点"],
+        "encodings": ["5.48 显示阈值"],
+        "annotations": ["5.207 倍天空辉光", "不是纽约预报"],
+        "controls": ["年龄节点按钮"],
+        "motion": "从 0 岁离散切换至 18 岁",
+        "reduced_motion": "直接显示 18 岁终态"
+      },
+      "assertions": [
+        { "id": "generation-age-eighteen", "kind": "attribute", "selector": "[data-generation-scene]", "attribute": "data-age", "expected": "18" },
+        { "id": "generation-count-eighteen", "kind": "attribute", "selector": "[data-generation-scene] [data-scene-id='generation-eighteen']", "attribute": "data-visible-count", "expected": "100" }
+      ]
+    },
+    {
+      "id": "place-times-square",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=place-times-square" },
+      "required_viewports": ["desktop", "mobile"],
+      "requirements": {
+        "copy": ["同一座城，不只有一种夜晚"],
+        "visual_entities": ["纽约—长岛地点剖面", "固定天区"],
+        "encodings": ["横向位置编码距时代广场距离", "颜色档编码 Atlas 模型档"],
+        "annotations": ["模型", "2014", "30 角秒", "未使用局部观测"],
+        "controls": ["五个地点按钮"],
+        "motion": "地点间离散切换",
+        "reduced_motion": "直接显示选中地点"
+      },
+      "assertions": [
+        { "id": "place-id-times", "kind": "attribute", "selector": "[data-place-scene]", "attribute": "data-place-id", "expected": "times-square" }
+      ]
+    },
+    {
+      "id": "place-montauk-point",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=place-montauk-point" },
+      "required_viewports": ["desktop", "mobile"],
+      "requirements": {
+        "copy": ["蒙托克角"],
+        "visual_entities": ["纽约—长岛地点剖面", "固定天区"],
+        "encodings": ["地点模型隐含阈值作用于同一星表"],
+        "annotations": ["0.16—0.32 倍", "模型不是现场预报"],
+        "controls": ["五个地点按钮"],
+        "motion": "同一批星跨过地点阈值",
+        "reduced_motion": "直接显示蒙托克状态"
+      },
+      "assertions": [
+        { "id": "place-id-montauk", "kind": "attribute", "selector": "[data-place-scene]", "attribute": "data-place-id", "expected": "montauk-point" }
+      ]
+    },
+    {
+      "id": "light-path",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=light-path" },
+      "required_viewports": ["desktop", "mobile"],
+      "requirements": {
+        "copy": ["把视线从天空移回地面"],
+        "visual_entities": ["灯具", "路面", "大气", "光路"],
+        "encodings": ["实线为直接上射", "折线路径为反射", "弧线为散射"],
+        "annotations": ["直接上射", "反射", "散射"],
+        "controls": [],
+        "motion": "三条光路按因果次序显现",
+        "reduced_motion": "同时显示三条已标注光路"
+      },
+      "assertions": [
+        { "id": "light-path-scene", "kind": "exists", "selector": "[data-scene-id='light-path']" }
+      ]
+    },
+    {
+      "id": "lighting-unshielded",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=lighting-unshielded" },
+      "required_viewports": ["desktop"],
+      "requirements": {
+        "copy": ["光不必消失，只需要去对地方"],
+        "visual_entities": ["同一地面任务区", "灯具配光"],
+        "encodings": ["光束方向编码投向"],
+        "annotations": ["未遮罩", "不输出恢复星数"],
+        "controls": ["五项照明预设"],
+        "motion": "预设间直接切换配光",
+        "reduced_motion": "直接显示所选配光"
+      },
+      "assertions": [
+        { "id": "lighting-preset-unshielded", "kind": "attribute", "selector": "[data-lighting-scene]", "attribute": "data-preset-id", "expected": "unshielded" }
+      ]
+    },
+    {
+      "id": "lighting-shielded",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=lighting-shielded" },
+      "required_viewports": ["mobile"],
+      "requirements": {
+        "copy": ["完全遮罩"],
+        "visual_entities": ["同一地面任务区", "向下配光"],
+        "encodings": ["遮罩改变方向，不改变任务"],
+        "annotations": ["改变维度：方向"],
+        "controls": ["五项照明预设"],
+        "motion": "未遮罩与遮罩间直接切换",
+        "reduced_motion": "直接显示遮罩终态"
+      },
+      "assertions": [
+        { "id": "lighting-preset-shielded", "kind": "attribute", "selector": "[data-lighting-scene]", "attribute": "data-preset-id", "expected": "shielded" }
+      ]
+    },
+    {
+      "id": "bird-evidence",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=bird-evidence" },
+      "required_viewports": ["desktop"],
+      "requirements": {
+        "copy": ["超过 110 万只迁徙鸟累计受到光柱影响"],
+        "visual_entities": ["Tribute in Light 证据插页"],
+        "encodings": ["时间与场景范围作为证据边界"],
+        "annotations": ["2008—2016", "七个开启夜晚", "不能代表普通路灯"],
+        "controls": [],
+        "motion": "证据插页静态出现",
+        "reduced_motion": "保持相同静态插页"
+      },
+      "assertions": [
+        { "id": "bird-scene", "kind": "exists", "selector": "[data-scene-id='bird-evidence']" }
+      ]
+    },
+    {
+      "id": "ending",
+      "design_source": "docs/05-storyboard-wireframes-v3.md",
+      "route": "/",
+      "trigger": { "kind": "query", "value": "scene=ending" },
+      "required_viewports": ["desktop", "mobile", "mobile-reduced"],
+      "requirements": {
+        "copy": ["星星没有消失。", "消失的，是夜晚让我们看见它们的能力。"],
+        "visual_entities": ["回到开场的同一天区"],
+        "encodings": ["固定坐标回环开场"],
+        "annotations": ["亮星骨架与暗星密度同时存在"],
+        "controls": [],
+        "motion": "空心位置逐步回到实心",
+        "reduced_motion": "直接显示完整结尾星空"
+      },
+      "assertions": [
+        { "id": "ending-copy", "kind": "text", "selector": "[data-scene-id='ending'] .ending-line", "expected": "星星没有消失。" }
+      ]
+    }
+  ]
+}

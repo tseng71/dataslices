@@ -20,7 +20,19 @@
 
 ## 故事文档
 
-每个完整故事目录包含概念设计、故事板、正文母稿、数据说明、方法、来源、实现追溯和质量检查。最新故事使用 Svelte 5 / SvelteKit 静态预渲染；早期故事仍为独立静态页面。
+每个完整故事目录包含概念设计、故事板、正文母稿、数据说明、方法、来源、实现追溯和质量检查。《城市突然熄灯时》与重构后的《消失的星空》使用 Svelte 5 / SvelteKit 静态预渲染；早期故事仍为独立静态页面。
+
+### 《消失的星空》
+
+- [总体叙事与视觉设计 v2](stories/disappearing-stars/docs/04-overall-design-v2.md)
+- [详细故事板与关键帧 v3](stories/disappearing-stars/docs/05-storyboard-wireframes-v3.md)
+- [连续正文母稿 v2](stories/disappearing-stars/docs/manuscript-v2.md)
+- [方法与不确定性 v2](stories/disappearing-stars/docs/methodology-v2.md)
+- [来源清单 v2](stories/disappearing-stars/docs/sources-v2.md)
+- [冻结设计合同](stories/disappearing-stars/docs/design-contract.json)
+- [设计一致性报告](stories/disappearing-stars/docs/design-conformance.json)
+- [实现追溯](stories/disappearing-stars/docs/implementation-traceability-v2.md)
+- [QA 记录](stories/disappearing-stars/docs/qa-notes.md)
 
 ### 《城市突然熄灯时》
 
@@ -42,15 +54,19 @@
 
 ## 本地预览
 
-最新故事：
+Svelte 5 故事：
 
 ```bash
 cd stories/lights-out
 npm install
 npm run dev
+
+cd ../disappearing-stars
+npm install
+npm run dev
 ```
 
-全站静态页面可在仓库根目录启动普通静态服务器预览。推送到 `main` 后，`.github/workflows/pages.yml` 会先构建并检查 Svelte 故事，再与四篇早期静态故事一起部署。
+全站静态页面可在仓库根目录启动普通静态服务器预览。推送到 `main` 后，`.github/workflows/pages.yml` 会分别构建并检查两篇 Svelte 故事，再与三篇早期静态故事一起部署。
 
 ## 内容原则
 

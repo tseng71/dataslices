@@ -15,12 +15,12 @@ DataSlices 只使用 **GitHub 仓库 + GitHub Pages**，每个故事一个独立
 
 推送到 `main` 后，`.github/workflows/pages.yml` 会：
 
-1. 使用锁定版本安装《城市熄灯》的 Svelte 5 依赖；
-2. 运行 `svelte-check` 并静态预渲染故事；
-3. 检查四篇早期静态故事与新故事的文档、数据和构建产物；
+1. 使用锁定版本安装《城市熄灯》和《消失的星空》的 Svelte 5 依赖；
+2. 分别运行 `svelte-check`、数据校验并静态预渲染两篇故事；
+3. 检查三篇早期静态故事与两篇 Svelte 故事的文档、数据和构建产物；
 4. 组装 Pages artifact 并部署。
 
-构建产物只在工作流中写入 `stories/lights-out/build`，不会提交到仓库，也不会覆盖其他故事。
+构建产物只在工作流中写入对应故事的 `build` 目录，不会提交到仓库，也不会覆盖其他故事。
 
 ## 发布前检查
 
