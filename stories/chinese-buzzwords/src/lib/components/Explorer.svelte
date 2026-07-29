@@ -122,7 +122,7 @@
       <a data-empty-action href="#static-archive">浏览完整词表</a>
     </div>
   {:else if selected}
-    <article
+    <section
       class="term-detail"
       data-term-detail={selected.term === "YYDS" ? "yyds" : selected.term_id}
       aria-live="polite"
@@ -156,6 +156,6 @@
         <p>语域说明：{selectedAnnotation.cross_register_note}</p>
       {/if}
       <a data-source-link href={selected.source_url} target="_blank" rel="noreferrer">查看官方来源</a>
-    </article>
+    </section>
   {/if}
 </section>
