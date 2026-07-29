@@ -41,7 +41,8 @@ const server = spawn(
   {
     cwd: projectRoot,
     env: { ...process.env, BASE_PATH: basePath },
-    stdio: ["ignore", "pipe", "pipe"]
+    stdio: ["ignore", "pipe", "pipe"],
+    detached: process.platform !== "win32"
   }
 );
 
@@ -331,7 +332,18 @@ try {
   }
 } finally {
   await browser?.close();
-  server.kill("SIGTERM");
+  if (process.platform === "win32" || !server.pid) {
+    server.kill("SIGTERM");
+  } else {
+    try {
+      process.kill(-server.pid, "SIGTERM");
+    } catch {
+      server.kill("SIGTERM");
+    }
+  }
+  server.stdout?.destroy();
+  server.stderr?.destroy();
+  server.unref();
 }
 
 const failed = results.filter((result) => !result.pass);
