@@ -80,10 +80,10 @@ jobs:
           test -s stories/chinese-buzzwords/build/index.html
           test -s stories/chinese-buzzwords/build/methodology/index.html
           test -s stories/chinese-buzzwords/build/data/annual-network-terms.csv
-          test -s stories/chinese-buzzwords/build/qa/browser-conformance.json
-          test -s stories/chinese-buzzwords/build/qa/screenshots/desktop/opening-yyds.png
-          test -s stories/chinese-buzzwords/build/qa/screenshots/mobile/opening-yyds.png
-          test -s stories/chinese-buzzwords/build/qa/screenshots/mobile-reduced/opening-yyds.png
+          test -s stories/chinese-buzzwords/build/qa/conformance-report.json
+          test -s stories/chinese-buzzwords/build/qa/screenshots/desktop/field-intro.png
+          test -s stories/chinese-buzzwords/build/qa/screenshots/mobile/field-intro.png
+          test -s stories/chinese-buzzwords/build/qa/screenshots/mobile-reduced/field-intro.png
           test -s stories/chinese-buzzwords/docs/design-contract.json
           test -s stories/chinese-buzzwords/docs/implementation-traceability.md
           test -s stories/disappearing-stars/build/index.html
